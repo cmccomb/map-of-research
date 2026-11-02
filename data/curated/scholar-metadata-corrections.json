@@ -708,6 +708,351 @@
       "basis": "NSF-deposited publisher-version Cell Systems article confirms volume 12(3) and pages 272–288.e3 in March 2021.",
       "evidence_url": "https://par.nsf.gov/servlets/purl/10274110",
       "verified_at": "2026-10-31"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:u5HHmVD_uO8C",
+      "expected": {
+        "title": "CoolSpots reducing the power consumption of wireless mobile devices with multiple radio interfaces",
+        "year": 2006,
+        "venue": "Proceedings of the 4th international conference on Mobile systems …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 4th International Conference on Mobile Systems, Applications and Services"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Agarwal_MobiSys06_CoolSpots.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:mB3voiENLucC",
+      "expected": {
+        "title": "Sentinel: Occupancy based HVAC actuation using existing WiFi infrastructure within commercial buildings",
+        "year": 2013,
+        "venue": "Proceedings of the 11th ACM conference on embedded networked sensor systems …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 11th ACM Conference on Embedded Networked Sensor Systems"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Balaji_SenSys2013_Sentinel.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:WF5omc3nYNoC",
+      "expected": {
+        "title": "Duty-cycling buildings aggressively: The next frontier in HVAC control",
+        "year": 2011,
+        "venue": "Proceedings of the 10th ACM/IEEE international conference on information …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 10th ACM/IEEE International Conference on Information Processing in Sensor Networks"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Agarwal_IPSN2011_DutyCyclingBuildings.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:L8Ckcad2t8MC",
+      "expected": {
+        "title": "ProtectMyPrivacy: Detecting and Mitigating Privacy Leaks on iOS Devices Using Crowdsourcing",
+        "year": 2013,
+        "venue": "Proceedings of the 11th International Conference on Mobile Systems …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 11th Annual International Conference on Mobile Systems, Applications, and Services"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Agarwal_MobiSys2013_ProtectMyPrivacy.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:RtRctb2lSbAC",
+      "expected": {
+        "title": "Does this app really need my location? Context-aware privacy management for smartphones",
+        "year": 2017,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Chitkara_Ubicomp2017_ContextAwarePrivacy.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:9yKSN-GCB0IC",
+      "expected": {
+        "title": "Dynamic power management using on demand paging for networked embedded systems",
+        "year": 2005,
+        "venue": "Proceedings of the 2005 Asia and South Pacific Design Automation Conference …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 2005 Asia and South Pacific Design Automation Conference"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Agarwal_ASPDAC05_OnDemandPaging.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:kJDgFkosVoMC",
+      "expected": {
+        "title": "Data driven investigation of faults in HVAC systems with model, cluster and compare (MCC)",
+        "year": 2014,
+        "venue": "Proceedings of the 1st ACM conference on embedded systems for energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 1st ACM Conference on Embedded Systems for Energy-Efficient Buildings"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Narayanaswamy_BuildSys14_MCC.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:37UQlXuwjP4C",
+      "expected": {
+        "title": "Coconut: An IDE plugin for developing privacy-friendly apps",
+        "year": 2018,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://doi.org/10.1145/3287056",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:ULOm3_A8WrAC",
+      "expected": {
+        "title": "Verifying GPU kernels by test amplification",
+        "year": 2012,
+        "venue": "Proceedings of the 33rd ACM SIGPLAN Conference on Programming Language …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 33rd ACM SIGPLAN Conference on Programming Language Design and Implementation"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/leung_pldi2012_CUDATestAmplification.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:tHtfpZlB6tUC",
+      "expected": {
+        "title": "Zodiac: Organizing large deployment of sensors to create reusable applications for buildings",
+        "year": 2015,
+        "venue": "Proceedings of the 2nd ACM international conference on embedded systems for …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 2nd ACM International Conference on Embedded Systems for Energy-Efficient Built Environments"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Balaji_BuildSys15_Zodiac.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:YB4bud6kWLwC",
+      "expected": {
+        "title": "Privacystreams: Enabling transparency in personal data processing for mobile apps",
+        "year": 2017,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Li_Ubicomp2017_PrivacyStreams.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:2vr6o8x5NLkC",
+      "expected": {
+        "title": "Beyond a house of sticks: Formalizing metadata tags with brick",
+        "year": 2019,
+        "venue": "Proceedings of the 6th ACM international conference on systems for energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/fierro_buildsys19_houseofsticks.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:orDZ08hpP44C",
+      "expected": {
+        "title": "Honeysuckle: Annotation-guided code generation of in-app privacy notices",
+        "year": 2021,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Li_Ubicomp21_Honeysuckle.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:NxmKEeNBbOMC",
+      "expected": {
+        "title": "Genie: a longitudinal study comparing physical and software thermostats in office buildings",
+        "year": 2016,
+        "venue": "Proceedings of the 2016 ACM International Joint Conference on Pervasive and …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Balaji_Ubicomp16_GENIE.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:ghEM2AJqZyQC",
+      "expected": {
+        "title": "Wattshare: Detailed energy apportionment in shared living spaces within commercial buildings",
+        "year": 2014,
+        "venue": "Proceedings of the 1st ACM Conference on Embedded Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 1st ACM Conference on Embedded Systems for Energy-Efficient Buildings"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Thakur_BuildSys14_WattShare.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:pYKElYtJMmwC",
+      "expected": {
+        "title": "MLIoT: An end-to-end machine learning system for the Internet-of-Things",
+        "year": 2021,
+        "venue": "Proceedings of the International Conference on Internet-of-Things Design and …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the International Conference on Internet-of-Things Design and Implementation"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Boovaraghavan_IoTDI21_MLIoT.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:wyM6WWKXmoIC",
+      "expected": {
+        "title": "Tao: Context detection from daily activity patterns using temporal analysis and ontology",
+        "year": 2023,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Boovaraghavan_Ubicomp23_TAO.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:ndLnGcHYRF0C",
+      "expected": {
+        "title": "Marble: Collaborative scheduling of batteryless sensors with meta reinforcement learning",
+        "year": 2021,
+        "venue": "Proceedings of the 8th ACM International Conference on Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 8th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/fraternali_BuildSys21-Marble.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:AZju0d2GQJ0C",
+      "expected": {
+        "title": "Who can access what, and when? Understanding minimal access requirements of building applications",
+        "year": 2019,
+        "venue": "Proceedings of the 6th ACM International Conference on Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/koh_buildsys19_WhoWhatWhereWhen.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:Y9VhQm-5nPIC",
+      "expected": {
+        "title": "\" I would still use it but I wouldn't trust it\": Evaluating Mechanisms for Transparency and Control for Smart-Home Sensors",
+        "year": 2025,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Weinshel_Ubicomp25_EvaluatingMechanisms.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:xyvS_IvSCKsC",
+      "expected": {
+        "title": "SpiderGen: towards procedure generation for carbon life cycle assessments with generative AI",
+        "year": 2026,
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 40 (46), 39277 …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 40(46), 39277–39284"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/view/41276",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:60iIaj97TE0C",
+      "expected": {
+        "title": "The Price to Site: Cost-Effective Incentives for Solar Deployment",
+        "year": 2026,
+        "venue": "Proceedings of the 13th ACM International Conference on Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 13th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/sigrist_BuildSys26-PriceToSite.pdf",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:E7VqQtBCVmcC",
+      "expected": {
+        "title": "BuildingChat: Enabling User Interactions with General-Purpose Sensing Infrastructure for Buildings",
+        "year": 2026,
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies"
+      },
+      "basis": "Saved original author PDF and named owner bibliography support attribution; source document or publisher-deposited record resolves full venue, publication year and type. Exact captured venue is truncated.",
+      "evidence_url": "https://synergylabs.org/yuvraj/docs/Patidar_Ubicomp2026_BuildingChat.pdf",
+      "verified_at": "2026-11-02"
     }
   ]
 }
