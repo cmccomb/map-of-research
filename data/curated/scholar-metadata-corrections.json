@@ -1243,6 +1243,368 @@
       "basis": "Reviewed official publisher/proceedings record supplies full byline and exact title or venue where changed; saved Scholar row identity/year guarded.",
       "evidence_url": "https://aclanthology.org/2022.acl-long.207/",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:X1y8G5kAG8gC",
+      "expected": {
+        "title": "Active retrieval augmented generation",
+        "year": 2023,
+        "venue": "EMNLP 2023",
+        "authors": "Z Jiang, FF Xu, L Gao, Z Sun, Q Liu, J Dwivedi-Yu, Y Yang, J Callan, ..."
+      },
+      "corrected": {
+        "authors": "Zhengbao Jiang, Frank Xu, Luyu Gao, Zhiqing Sun, Qian Liu, Jane Dwivedi-Yu, Yiming Yang, Jamie Callan, Graham Neubig",
+        "title": "Active Retrieval Augmented Generation",
+        "venue": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2023.emnlp-main.495/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:BxcezVm2apwC",
+      "expected": {
+        "title": "Mmmu-pro: A more robust multi-discipline multimodal understanding benchmark",
+        "year": 2025,
+        "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational …",
+        "authors": "X Yue, T Zheng, Y Ni, Y Wang, K Zhang, S Tong, Y Sun, B Yu, G Zhang, ..."
+      },
+      "corrected": {
+        "authors": "Xiang Yue, Tianyu Zheng, Yuansheng Ni, Yubo Wang, Kai Zhang, Shengbang Tong, Yuxuan Sun, Botao Yu, Ge Zhang, Huan Sun, Yu Su, Wenhu Chen, Graham Neubig",
+        "title": "MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark",
+        "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2025.acl-long.736/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:J6OZcwVsj5AC",
+      "expected": {
+        "title": "Dynet: The dynamic neural network toolkit",
+        "year": 2017,
+        "venue": "arXiv preprint arXiv:1701.03980",
+        "authors": "G Neubig, C Dyer, Y Goldberg, A Matthews, W Ammar, A Anastasopoulos, ..."
+      },
+      "corrected": {
+        "authors": "Graham Neubig, Chris Dyer, Yoav Goldberg, Austin Matthews, Waleed Ammar, Antonios Anastasopoulos, Miguel Ballesteros, David Chiang, Daniel Clothiaux, Trevor Cohn, Kevin Duh, Manaal Faruqui, Cynthia Gan, Dan Garrette, Yangfeng Ji, Lingpeng Kong, Adhiguna Kuncoro, Gaurav Kumar, Chaitanya Malaviya, Paul Michel, Yusuke Oda, Matthew Richardson, Naomi Saphra, Swabha Swayamdipta, Pengcheng Yin",
+        "title": "DyNet: The Dynamic Neural Network Toolkit"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/1701.03980",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:PpfTWA6RG0gC",
+      "expected": {
+        "title": "Demystifying long chain-of-thought reasoning in llms",
+        "year": 2025,
+        "venue": "arXiv preprint arXiv:2502.03373",
+        "authors": "E Yeo, Y Tong, M Niu, G Neubig, X Yue"
+      },
+      "corrected": {
+        "authors": "Edward Yeo, Yuxuan Tong, Morry Niu, Graham Neubig, Xiang Yue",
+        "title": "Demystifying Long Chain-of-Thought Reasoning in LLMs"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/2502.03373",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:GO5CT2y9xrEC",
+      "expected": {
+        "title": "FacTool: factuality detection in generative AI--a tool augmented framework for multi-task and multi-domain scenarios",
+        "year": 2023,
+        "venue": "arXiv preprint arXiv:2307.13528",
+        "authors": "I Chern, S Chern, S Chen, W Yuan, K Feng, C Zhou, J He, G Neubig, ..."
+      },
+      "corrected": {
+        "authors": "I-Chun Chern, Steffi Chern, Shiqi Chen, Weizhe Yuan, Kehua Feng, Chunting Zhou, Junxian He, Graham Neubig, Pengfei Liu",
+        "title": "FacTool: Factuality Detection in Generative AI -- A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/2307.13528",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:Qovp55VTycgC",
+      "expected": {
+        "title": "Training software engineering agents and verifiers with swe-gym",
+        "year": 2024,
+        "venue": "arXiv preprint arXiv:2412.21139",
+        "authors": "J Pan, X Wang, G Neubig, N Jaitly, H Ji, A Suhr, Y Zhang"
+      },
+      "corrected": {
+        "authors": "Jiayi Pan, Xingyao Wang, Graham Neubig, Navdeep Jaitly, Heng Ji, Alane Suhr, Yizhe Zhang",
+        "title": "Training Software Engineering Agents and Verifiers with SWE-Gym"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/2412.21139",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:IF0FbId8XVwC",
+      "expected": {
+        "title": "Word Alignment by Fine-tuning Embeddings on Parallel Corpora",
+        "year": 2021,
+        "venue": "EACL 2021",
+        "authors": "ZY Dou, G Neubig"
+      },
+      "corrected": {
+        "authors": "Zi-Yi Dou, Graham Neubig",
+        "venue": "Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2021.eacl-main.181/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:d1gkVwhDpl0C",
+      "expected": {
+        "title": "Pointwise prediction for robust, adaptable Japanese morphological analysis",
+        "year": 2011,
+        "venue": "ACL 2011, 529-533",
+        "authors": "G Neubig, Y Nakata, S Mori"
+      },
+      "corrected": {
+        "authors": "Graham Neubig, Yosuke Nakata, Shinsuke Mori",
+        "title": "Pointwise Prediction for Robust, Adaptable Japanese Morphological Analysis",
+        "venue": "Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; primary BibTeX has blank DOI, retained honestly.",
+      "evidence_url": "https://aclanthology.org/P11-2093/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:bFuYayV9R1gC",
+      "expected": {
+        "title": "Choosing Transfer Languages for Cross-Lingual Learning",
+        "year": 2019,
+        "venue": "ACL 2019",
+        "authors": "YH Lin, CY Chen, J Lee, Z Li, Y Zhang, M Xia, S Rijhwani, J He, Z Zhang, ..."
+      },
+      "corrected": {
+        "authors": "Yu-Hsiang Lin, Chian-Yu Chen, Jean Lee, Zirui Li, Yuyan Zhang, Mengzhou Xia, Shruti Rijhwani, Junxian He, Zhisong Zhang, Xuezhe Ma, Antonios Anastasopoulos, Patrick Littell, Graham Neubig",
+        "venue": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/P19-1301/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:9o6PfxSMcEIC",
+      "expected": {
+        "title": "Neural machine translation and sequence-to-sequence models: A tutorial",
+        "year": 2017,
+        "venue": "arXiv preprint arXiv:1703.01619",
+        "authors": "G Neubig"
+      },
+      "corrected": {
+        "authors": "Graham Neubig",
+        "title": "Neural Machine Translation and Sequence-to-sequence Models: A Tutorial"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/1703.01619",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:lOG7zRu2uA8C",
+      "expected": {
+        "title": "TRANX: A Transition-based Neural Abstract Syntax Parser for Semantic Parsing and Code Generation",
+        "year": 2018,
+        "venue": "EMNLP 2018 Demo",
+        "authors": "P Yin, G Neubig"
+      },
+      "corrected": {
+        "authors": "Pengcheng Yin, Graham Neubig",
+        "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D18-2002/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:Xxrp-jDxsD4C",
+      "expected": {
+        "title": "Codebertscore: Evaluating code generation with pretrained models of code",
+        "year": 2023,
+        "venue": "EMNLP 2023",
+        "authors": "S Zhou, U Alon, S Agarwal, G Neubig"
+      },
+      "corrected": {
+        "authors": "Shuyan Zhou, Uri Alon, Sumit Agarwal, Graham Neubig",
+        "title": "CodeBERTScore: Evaluating Code Generation with Pretrained Models of Code",
+        "venue": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2023.emnlp-main.859/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:OkrdTXRNpVkC",
+      "expected": {
+        "title": "Learning to deceive with attention-based explanations",
+        "year": 2020,
+        "venue": "ACL 2020",
+        "authors": "D Pruthi, M Gupta, B Dhingra, G Neubig, ZC Lipton"
+      },
+      "corrected": {
+        "authors": "Danish Pruthi, Mansi Gupta, Bhuwan Dhingra, Graham Neubig, Zachary C. Lipton",
+        "title": "Learning to Deceive with Attention-Based Explanations",
+        "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2020.acl-main.432/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:JaLtl8ASYokC",
+      "expected": {
+        "title": "SwitchOut: an Efficient Data Augmentation Algorithm for Neural Machine Translation",
+        "year": 2018,
+        "venue": "EMNLP 2018",
+        "authors": "X Wang, H Pham, Z Dai, G Neubig"
+      },
+      "corrected": {
+        "authors": "Xinyi Wang, Hieu Pham, Zihang Dai, Graham Neubig",
+        "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D18-1100/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:8cBNEdFwSQkC",
+      "expected": {
+        "title": "Re-evaluating Evaluation in Text Summarization",
+        "year": 2020,
+        "venue": "EMNLP 2020",
+        "authors": "M Bhandari, P Gour, A Ashfaq, P Liu, G Neubig"
+      },
+      "corrected": {
+        "authors": "Manik Bhandari, Pranav Narayan Gour, Atabak Ashfaq, Pengfei Liu, Graham Neubig",
+        "venue": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2020.emnlp-main.751/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:polMJLZb0X8C",
+      "expected": {
+        "title": "XTREME-R: Towards More Challenging and Nuanced Multilingual Evaluation",
+        "year": 2021,
+        "venue": "EMNLP 2021",
+        "authors": "S Ruder, N Constant, J Botha, A Siddhant, O Firat, J Fu, P Liu, J Hu, ..."
+      },
+      "corrected": {
+        "authors": "Sebastian Ruder, Noah Constant, Jan Botha, Aditya Siddhant, Orhan Firat, Jinlan Fu, Pengfei Liu, Junjie Hu, Dan Garrette, Graham Neubig, Melvin Johnson",
+        "venue": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2021.emnlp-main.802/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:dw5aoL0HVgwC",
+      "expected": {
+        "title": "Learning to filter context for retrieval-augmented generation",
+        "year": 2023,
+        "venue": "arXiv preprint arXiv:2311.08377",
+        "authors": "Z Wang, J Araki, Z Jiang, MR Parvez, G Neubig"
+      },
+      "corrected": {
+        "authors": "Zhiruo Wang, Jun Araki, Zhengbao Jiang, Md Rizwan Parvez, Graham Neubig",
+        "title": "Learning to Filter Context for Retrieval-Augmented Generation"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/2311.08377",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:wE8AsS3ykUMC",
+      "expected": {
+        "title": "Beyond BLEU: Training Neural Machine Translation with Semantic Similarity",
+        "year": 2019,
+        "venue": "ACL 2019, 4344-4355",
+        "authors": "J Wieting, T Berg-Kirkpatrick, K Gimpel, G Neubig"
+      },
+      "corrected": {
+        "authors": "John Wieting, Taylor Berg-Kirkpatrick, Kevin Gimpel, Graham Neubig",
+        "venue": "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/P19-1427/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:kGbpvR7Ecy8C",
+      "expected": {
+        "title": "Skillweaver: Web agents can self-improve by discovering and honing skills",
+        "year": 2025,
+        "venue": "arXiv preprint arXiv:2504.07079",
+        "authors": "B Zheng, MY Fatemi, X Jin, ZZ Wang, A Gandhi, Y Song, Y Gu, J Srinivasa, ..."
+      },
+      "corrected": {
+        "authors": "Boyuan Zheng, Michael Y. Fatemi, Xiaolong Jin, Zora Zhiruo Wang, Apurva Gandhi, Yueqi Song, Yu Gu, Jayanth Srinivasa, Gaowen Liu, Graham Neubig, Yu Su",
+        "title": "SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/2504.07079",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:yaBp1wUtcLsC",
+      "expected": {
+        "title": "Stack-Pointer Networks for Dependency Parsing",
+        "year": 2018,
+        "venue": "ACL 2018",
+        "authors": "X Ma, Z Hu, J Liu, N Peng, G Neubig, E Hovy"
+      },
+      "corrected": {
+        "authors": "Xuezhe Ma, Zecong Hu, Jingzhou Liu, Nanyun Peng, Graham Neubig, Eduard Hovy",
+        "venue": "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/P18-1130/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:RF4BjkDOTHkC",
+      "expected": {
+        "title": "The danger of overthinking: Examining the reasoning-action dilemma in agentic tasks",
+        "year": 2025,
+        "venue": "arXiv preprint arXiv:2502.08235",
+        "authors": "A Cuadron, D Li, W Ma, X Wang, Y Wang, S Zhuang, S Liu, LG Schroeder, ..."
+      },
+      "corrected": {
+        "authors": "Alejandro Cuadron, Dacheng Li, Wenjie Ma, Xingyao Wang, Yichuan Wang, Siyuan Zhuang, Shu Liu, Luis Gaspar Schroeder, Tian Xia, Huanzhi Mao, Nicholas Thumiger, Aditya Desai, Ion Stoica, Ana Klimovic, Graham Neubig, Joseph E. Gonzalez",
+        "title": "The Danger of Overthinking: Examining the Reasoning-Action Dilemma in Agentic Tasks"
+      },
+      "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
+      "evidence_url": "https://arxiv.org/abs/2502.08235",
+      "verified_at": "2026-11-02"
     }
   ]
 }
