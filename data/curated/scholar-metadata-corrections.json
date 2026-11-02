@@ -1605,6 +1605,145 @@
       "basis": "Official arXiv preprint metadata supplies full byline, title, year and arXiv version venue; do not substitute later conference metadata or DOI.",
       "evidence_url": "https://arxiv.org/abs/2502.08235",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:09LM3QYkMKUC",
+      "expected": {
+        "title": "Controlling output length in neural encoder-decoders",
+        "year": 2016,
+        "venue": "EMNLP 2016",
+        "authors": "Y Kikuchi, G Neubig, R Sasano, H Takamura, M Okumura"
+      },
+      "corrected": {
+        "authors": "Yuta Kikuchi, Graham Neubig, Ryohei Sasano, Hiroya Takamura, Manabu Okumura",
+        "title": "Controlling Output Length in Neural Encoder-Decoders",
+        "venue": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D16-1140/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:xMZGxf1v-3YC",
+      "expected": {
+        "title": "ChatGPT MT: Competitive for High-(but not Low-) Resource Languages",
+        "year": 2023,
+        "venue": "WMT 2023",
+        "authors": "NR Robinson, P Ogayo, DR Mortensen, G Neubig"
+      },
+      "corrected": {
+        "authors": "Nathaniel Robinson, Perez Ogayo, David R. Mortensen, Graham Neubig",
+        "title": "ChatGPT MT: Competitive for High- (but Not Low-) Resource Languages",
+        "venue": "Proceedings of the Eighth Conference on Machine Translation"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2023.wmt-1.40/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:OlbiQ0ttILcC",
+      "expected": {
+        "title": "Rapid Adaptation of Neural Machine Translation to New Languages",
+        "year": 2018,
+        "venue": "EMNLP 2018",
+        "authors": "G Neubig, J Hu"
+      },
+      "corrected": {
+        "authors": "Graham Neubig, Junjie Hu",
+        "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D18-1103/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:KYgttONoxcsC",
+      "expected": {
+        "title": "FlowSeq: Non-Autoregressive Conditional Sequence Generation with Generative Flow",
+        "year": 2019,
+        "venue": "EMNLP 2019",
+        "authors": "X Ma, C Zhou, X Li, G Neubig, E Hovy"
+      },
+      "corrected": {
+        "authors": "Xuezhe Ma, Chunting Zhou, Xian Li, Graham Neubig, Eduard Hovy",
+        "venue": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing ({EMNLP}-{IJCNLP})"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D19-1437/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:-fu4zM_6qcIC",
+      "expected": {
+        "title": "Incorporating discrete translation lexicons into neural machine translation",
+        "year": 2016,
+        "venue": "EMNLP 2016",
+        "authors": "P Arthur, G Neubig, S Nakamura"
+      },
+      "corrected": {
+        "authors": "Philip Arthur, Graham Neubig, Satoshi Nakamura",
+        "title": "Incorporating Discrete Translation Lexicons into Neural Machine Translation",
+        "venue": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D16-1162/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:G887dSk7Sz8C",
+      "expected": {
+        "title": "Neural Cross-Lingual Named Entity Recognition with Minimal Resources",
+        "year": 2018,
+        "venue": "EMNLP 2018",
+        "authors": "J Xie, Z Yang, G Neubig, NA Smith, J Carbonell"
+      },
+      "corrected": {
+        "authors": "Jiateng Xie, Zhilin Yang, Graham Neubig, Noah A. Smith, Jaime Carbonell",
+        "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/D18-1034/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:KPAPMsW7zc0C",
+      "expected": {
+        "title": "Generalized Data Augmentation for Low-Resource Translation",
+        "year": 2019,
+        "venue": "ACL 2019",
+        "authors": "M Xia, X Kong, A Anastasopoulos, G Neubig"
+      },
+      "corrected": {
+        "authors": "Mengzhou Xia, Xiang Kong, Antonios Anastasopoulos, Graham Neubig",
+        "venue": "Proceedings of the 57th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/P19-1579/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:6xXPb0EiZccC",
+      "expected": {
+        "title": "X-FACTR: Multilingual Factual Knowledge Retrieval from Pretrained Language Models",
+        "year": 2020,
+        "venue": "EMNLP 2020, 5943-5959",
+        "authors": "Z Jiang, A Anastasopoulos, J Araki, H Ding, G Neubig"
+      },
+      "corrected": {
+        "authors": "Zhengbao Jiang, Antonios Anastasopoulos, Jun Araki, Haibo Ding, Graham Neubig",
+        "venue": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing ({EMNLP})"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
+      "evidence_url": "https://aclanthology.org/2020.emnlp-main.479/",
+      "verified_at": "2026-11-02"
     }
   ]
 }
