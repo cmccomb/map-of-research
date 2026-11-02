@@ -579,29 +579,29 @@
     {
       "person_id": "person-grahamneubig-767add33",
       "scholar_id": "wlosgkoAAAAJ",
-      "cache_sha256": "4ecb9ddda518b3338d12dfcaddd2f8f834a2886b7e2a4cbc1e5f2df7c14465e3",
+      "cache_sha256": "e9673a7cd08994a83e727cfec7215d11ae4b1fce6e6f594d9d2014e79f558ea8",
       "private_capture_sha256": "eb318cca62aea08ed50d6cd21bb0118ae7881c8ecd5a8a2553983d6b83a6570f",
-      "private_review_sha256": "5b9204576bda7f630e11cc10fb9e92f4d9024f3af6f81a7ae72758da65140113",
-      "selected_ids_sha256": "4d433d993e3e259ffeca39f0df43e67c63c9045883fec747f14e990fbbf66d20",
-      "withheld_ids_sha256": "932f06d3c44a7ebfd28d51b5659cea22353df74287ad30162e7c0979616ab77b",
+      "private_review_sha256": "c622d0573a33283f4b261ec09e37c36d25b266792a50bf48364536ee14762c5f",
+      "selected_ids_sha256": "89c4e7680aa329aa4d479ed0eba0f5e531fd5a05223399cb2b7f41bc65952dce",
+      "withheld_ids_sha256": "f8f6b74a72ac5f723417a7dadec426bbd0a3634abc4d4f9a5f61680025cc3b09",
       "observed_visible_rows": 904,
-      "selected_rows": 48,
-      "withheld_rows": 856,
-      "withheld_hold_rows": 783,
+      "selected_rows": 68,
+      "withheld_rows": 836,
+      "withheld_hold_rows": 763,
       "withheld_excluded_rows": 73
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "049f2b55b2f2b27eb027a51ad736f62e2a398bc6790b00ee0613a06aac7620fd",
-  "source_selection_manifest_sha256": "7f3b15259d0190d5803a35eef22750f219170487c8399a4b160e47dea30fe7bc",
-  "source_snapshot_sha256": "33122b2db9aec4b7cbed92f482d1bf1b95d1ddded9603078aa6e0e8ee6487d30",
+  "selected_ids_sha256": "59b954d0beab41d4e9f4b7a84743574e06c375cdbfccc71c3e0f5186d4a26d5f",
+  "source_selection_manifest_sha256": "2d156120ee9a8933517a10c9fc6398b22c0381f0845f3dece5ea63536bdd1d8b",
+  "source_snapshot_sha256": "1486623e152e72c33d6a3db3f1277cad6abfe542b8eec5b663b39367ef9cff6d",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
     "observed_visible_rows": 7747,
-    "selected_rows": 2091,
-    "withheld_rows": 5656,
-    "withheld_hold_rows": 5315,
+    "selected_rows": 2111,
+    "withheld_rows": 5636,
+    "withheld_hold_rows": 5295,
     "withheld_excluded_rows": 341
   },
-  "withheld_ids_sha256": "336a9bc4cf3d852fa436e63029e1a947df18ad41ba472ea58eb7d8e964002d16"
+  "withheld_ids_sha256": "4fa8b6950fec6b9f3ec7ef54aa16c7eb440ac646f6d2524ad6d6c32b4a033f08"
 }

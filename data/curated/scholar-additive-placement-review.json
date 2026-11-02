@@ -1,59 +1,131 @@
 {
   "schema_version": 1,
-  "prior_revision": "0a72b8ac2e6c8f1a976809848cf834511b26d909",
-  "source_snapshot_sha256": "33122b2db9aec4b7cbed92f482d1bf1b95d1ddded9603078aa6e0e8ee6487d30",
-  "selected_ids_sha256": "d0748d76a8555b4cc071f6f501dc782f043a480690bf81d01677989ae51a65b0",
-  "parent_map_sha256": "3dc453216ac93e3f5e7eedca7feecd020e03c1ff3888d78d69422519abc22b41",
-  "candidate_map_content_sha256": "5e1eba936cc836c0c78cefc1c3cc3e7daa2cbe8c8af7bc6641f8e7d8bca65319",
-  "new_work_ids_sha256": "7bf54e70597258bf0b2bdf4dc2e97d7e50bc979c7e6abcfe932eb261325f9711",
+  "prior_revision": "83df0287e60b804a37b8252bbc08561c3fe86e51",
+  "source_snapshot_sha256": "1486623e152e72c33d6a3db3f1277cad6abfe542b8eec5b663b39367ef9cff6d",
+  "selected_ids_sha256": "c80a86f8c9ef57a00cda54d230434816f01849a800a2ac16621d1c34e21a59af",
+  "parent_map_sha256": "798551cc49a669f10a5f1eba310befdb597c31ce2b32224db0647e70d11e4f2c",
+  "candidate_map_content_sha256": "87c3b1b311821e38892003e2da945edd7bc084b92e65d608befd0b88907d8f6f",
+  "new_work_ids_sha256": "ec87c9785fd4fe00067bf0828e90b96cb1220fb6fdb702437f534eb2a569a601",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-02",
   "new_points": [
     {
-      "work_id": "work-081ff2e70c2ed2bd4412ce1dd4b25cc468e2631e15094112d6c21950f5e30a28",
+      "work_id": "work-0bfe8d9b5e4a67bb7730e14287bcf5a241852391339e33b81c78a9b7d0cdf9fa",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-77d77879389617b90e7397fc656bf4ebc4b3e6f3df5f9af96aa8fd20856aa95d",
+      "work_id": "work-0ca459c832765f87a9a818e408dbb1defe66da46d004d8d491be6814cca44a91",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-b83338eaa1f2bda2c3944992f8c3b49af434d530cb646e69d90ac982f5836fd2",
+      "work_id": "work-1685c03948cc120734d338ddd4354ef84e4b1fd49ad9a2f3d432c77cce3b0e42",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-c1d69b49b5669de5195822b09725054b9cdc4214d0789a22a2b919a47864510c",
+      "work_id": "work-2610fa21e685a79e614bc7b9097c78b312ef35d58c7531c485158cdfa545ce9e",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-c4f2a60aa4183d07cb0bd13b77f5d68f93ff11174ac292055b1cf7cc5469745b",
+      "work_id": "work-376a9e16d84f7073d3d48fb08206e63b216ec60680d6f9a540220a677a4f6f40",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-d70ae276c8a5070b12f4759f94b2e3ceccc3386c2af4d9f2496a5ae85ed58c66",
+      "work_id": "work-3c92be934a2a00ff4967859bc8b3675b1b712dd7ce62831bec90a58e3a364fbf",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-f5939ba122073352f6f087681bfaf09833ef8398a07851903f0a515e2627dc4e",
+      "work_id": "work-459d5f741d44363dda70b73f1f5f8d5eca175be39401fda1b13f28bc1c32d554",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
     },
     {
-      "work_id": "work-f879a3cc46c94ee044b7d513b80694d37a0af22caf30acb451fecb600db53db0",
+      "work_id": "work-4c55d7fdd78ab4059c254b190dd64b84a75fa7af51e16e70d2c661dac599c1a1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-4d3676b268ff1221a6922ddf677559bae1660bd9da38505465d6f3ba2e8bfed0",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-5a2fe479fa61d5a3aeb75183c8a83f0485a4a2e8a3f4ba1cf2b1bad832f8b225",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-9095be80699f557b90365036e0814e2820b0aa1e19f349ac0fc8d9ff9923230c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-91c5378611f3d002f8e77ca32904ff52295de4eb0703ed693eab4152d2ad11be",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-a0937f2a18f26648fffdbbe43ec3effeb8937c37284f87621dae9d9c3a2dbba1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-a1e8e6e0db101c64e113b8d27784d793d71c69a89cd3368b562ea110a92945f1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-a810b49f744ca15134fea36825e38445ac1a2e12d9651fa2537df986cb8dd26e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-ada34576f2dbeadc4a93b74c7ce93c1b1fb9c1bd801b51fd9148103564771085",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-bde48df0a81f84c317c4d70747e1682022fa86930f556b2acf8101d1b4bf4982",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-e5b45cade42bbc55dacb83f7247b95779d8ed93791451cb89b40c160528caf56",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-f19ff7b4136cf86f42b055aa7b3b5a18e217683d6314dd1ada4f7c46b4034446",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-f32afeaf30ceb859cc88a951d79ce19c9d607cedb9de0c9cd482232f1aad4dca",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
