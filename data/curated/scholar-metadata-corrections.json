@@ -1744,6 +1744,144 @@
       "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue with verified DOI.",
       "evidence_url": "https://aclanthology.org/2020.emnlp-main.479/",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:EVUe1p4rgj0C",
+      "expected": {
+        "title": "Language models of code are few-shot commonsense learners",
+        "year": 2022,
+        "venue": "EMNLP 2022",
+        "authors": "A Madaan, S Zhou, U Alon, Y Yang, G Neubig"
+      },
+      "corrected": {
+        "authors": "Aman Madaan, Shuyan Zhou, Uri Alon, Yiming Yang, Graham Neubig",
+        "title": "Language Models of Code are Few-Shot Commonsense Learners",
+        "venue": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.emnlp-main.90/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:DwWRdx-KAo4C",
+      "expected": {
+        "title": "Cross-lingual word embeddings for low-resource language modeling",
+        "year": 2017,
+        "venue": "EACL 2017, 937-947",
+        "authors": "O Adams, A Makarucha, G Neubig, S Bird, T Cohn"
+      },
+      "corrected": {
+        "authors": "Oliver Adams, Adam Makarucha, Graham Neubig, Steven Bird, Trevor Cohn",
+        "title": "Cross-Lingual Word Embeddings for Low-Resource Language Modeling",
+        "venue": "Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; DOI blank in reviewed official ACL BibTeX and page metadata.",
+      "evidence_url": "https://aclanthology.org/E17-1088/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:v6PuF9mNY3oC",
+      "expected": {
+        "title": "What Do Recurrent Neural Network Grammars Learn About Syntax?",
+        "year": 2017,
+        "venue": "EACL 2017",
+        "authors": "A Kuncoro, M Ballesteros, L Kong, C Dyer, G Neubig, NA Smith"
+      },
+      "corrected": {
+        "authors": "Adhiguna Kuncoro, Miguel Ballesteros, Lingpeng Kong, Chris Dyer, Graham Neubig, Noah A. Smith",
+        "venue": "Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; DOI blank in reviewed official ACL BibTeX and page metadata.",
+      "evidence_url": "https://aclanthology.org/E17-1117/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:o0eFlWRwRSUC",
+      "expected": {
+        "title": "On Evaluation of Adversarial Perturbations for Sequence-to-Sequence Models",
+        "year": 2019,
+        "venue": "NAACL 2019",
+        "authors": "P Michel, X Li, G Neubig, JM Pino"
+      },
+      "corrected": {
+        "authors": "Paul Michel, Xian Li, Graham Neubig, Juan Pino",
+        "venue": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/N19-1314/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:Wqn_fehR_TUC",
+      "expected": {
+        "title": "MTNT: A Testbed for Machine Translation of Noisy Text",
+        "year": 2018,
+        "venue": "EMNLP 2018",
+        "authors": "P Michel, G Neubig"
+      },
+      "corrected": {
+        "authors": "Paul Michel, Graham Neubig",
+        "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/D18-1050/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:w9ZB08sdvuUC",
+      "expected": {
+        "title": "Guiding Neural Machine Translation with Retrieved Translation Pieces",
+        "year": 2018,
+        "venue": "NAACL 2018",
+        "authors": "J Zhang, M Utiyama, E Sumita, G Neubig, S Nakamura"
+      },
+      "corrected": {
+        "authors": "Jingyi Zhang, Masao Utiyama, Eiichro Sumita, Graham Neubig, Satoshi Nakamura",
+        "venue": "Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/N18-1120/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:0BSZZHtHo6cC",
+      "expected": {
+        "title": "Interpreting Language Models with Contrastive Explanations",
+        "year": 2022,
+        "venue": "EMNLP 2022",
+        "authors": "K Yin, G Neubig"
+      },
+      "corrected": {
+        "authors": "Kayo Yin, Graham Neubig",
+        "venue": "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/2022.emnlp-main.14/",
+      "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "wlosgkoAAAAJ",
+      "author_pub_id": "wlosgkoAAAAJ:MSzX15-gZgkC",
+      "expected": {
+        "title": "Retrieval-Based Neural Code Generation",
+        "year": 2018,
+        "venue": "EMNLP 2018",
+        "authors": "SA Hayati, R Olivier, P Avvaru, P Yin, A Tomasic, G Neubig"
+      },
+      "corrected": {
+        "authors": "Shirley Anugrah Hayati, Raphael Olivier, Pravalika Avvaru, Pengcheng Yin, Anthony Tomasic, Graham Neubig",
+        "venue": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing"
+      },
+      "basis": "Official ACL Anthology record supplies full byline, title and proceedings venue; verified DOI.",
+      "evidence_url": "https://aclanthology.org/D18-1111/",
+      "verified_at": "2026-11-02"
     }
   ]
 }
