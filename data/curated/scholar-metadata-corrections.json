@@ -2900,6 +2900,193 @@
       "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
       "evidence_url": "https://www.synergylabs.org/bharath/files/Koh_BuildSys2015_BuildingControlEngine.pdf",
       "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:pqnbT2bcN3wC",
+      "expected": {
+        "title": "Test sensitivity is secondary to frequency and turnaround time for COVID-19 screening",
+        "year": 2021,
+        "venue": "Science advances 7 (1), eabd5393",
+        "authors": "DB Larremore, B Wilder, E Lester, S Shehata, JM Burke, JA Hay, ..."
+      },
+      "corrected": {
+        "authors": "Daniel B. Larremore, Bryan Wilder, Evan Lester, Soraya Shehata, James M. Burke, James A. Hay, Milind Tambe, Michael J. Mina, Roy Parker",
+        "venue": "Science Advances 7(1), eabd5393"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/33219112/",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:Wp0gIr-vW9MC",
+      "expected": {
+        "title": "Melding the data-decisions pipeline: Decision-focused learning for combinatorial optimization",
+        "year": 2019,
+        "venue": "Proceedings of the AAAI conference on artificial intelligence 33 (01), 1658-1665",
+        "authors": "B Wilder, B Dilkina, M Tambe"
+      },
+      "corrected": {
+        "authors": "Bryan Wilder, Bistra Dilkina, Milind Tambe",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 33(01), 1658-1665"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/view/3982",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:-f6ydRqryjwC",
+      "expected": {
+        "title": "SATNet: Bridging deep learning and logical reasoning using a differentiable satisfiability solver",
+        "year": 2019,
+        "venue": "International Conference on Machine Learning",
+        "authors": "PW Wang, PL Donti, B Wilder, Z Kolter"
+      },
+      "corrected": {
+        "authors": "Po-Wei Wang, Priya Donti, Bryan Wilder, Zico Kolter",
+        "venue": "Proceedings of the 36th International Conference on Machine Learning, PMLR 97:6545-6554"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://proceedings.mlr.press/v97/wang19e.html",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:M3NEmzRMIkIC",
+      "expected": {
+        "title": "Learning to complement humans",
+        "year": 2020,
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "authors": "B Wilder, E Horvitz, E Kamar"
+      },
+      "corrected": {
+        "authors": "Bryan Wilder, Eric Horvitz, Ece Kamar",
+        "venue": "IJCAI 2020 main track, 1526-1533"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://ijcai.org/proceedings/2020/212",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:TQgYirikUcIC",
+      "expected": {
+        "title": "Mipaal: Mixed integer program as a layer",
+        "year": 2020,
+        "venue": "Proceedings of the AAAI conference on artificial intelligence 34 (02), 1504-1511",
+        "authors": "A Ferber, B Wilder, B Dilkina, M Tambe"
+      },
+      "corrected": {
+        "authors": "Aaron Ferber, Bryan Wilder, Bistra Dilkina, Milind Tambe",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 34(02), 1504-1511"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/view/5509",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:hC7cP41nSMkC",
+      "expected": {
+        "title": "Group-fairness in influence maximization",
+        "year": 2019,
+        "venue": "International Joint Conference on Artificial Intelligence",
+        "authors": "A Tsang, B Wilder, E Rice, M Tambe, Y Zick"
+      },
+      "corrected": {
+        "authors": "Alan Tsang, Bryan Wilder, Eric Rice, Milind Tambe, Yair Zick",
+        "venue": "IJCAI 2019 special track, 5997-6005"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://ijcai.org/proceedings/2019/831",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:hFOr9nPyWt4C",
+      "expected": {
+        "title": "End to end learning and optimization on graphs",
+        "year": 2019,
+        "venue": "Advances in Neural Information Processing Systems",
+        "authors": "B Wilder, E Ewing, B Dilkina, M Tambe"
+      },
+      "corrected": {
+        "authors": "Bryan Wilder, Eric Ewing, Bistra Dilkina, Milind Tambe",
+        "venue": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://papers.nips.cc/paper/2019/hash/8bd39eae38511daad6152e84545e504d-Abstract.html",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:abG-DnoFyZgC",
+      "expected": {
+        "title": "Decision-focused learning without decision-making: Learning locally optimized decision losses",
+        "year": 2022,
+        "venue": "Advances in Neural Information Processing Systems 35, 1320-1332",
+        "authors": "S Shah, K Wang, B Wilder, A Perrault, M Tambe"
+      },
+      "corrected": {
+        "authors": "Sanket Shah, Kai Wang, Bryan Wilder, Andrew Perrault, Milind Tambe",
+        "venue": "Advances in Neural Information Processing Systems 35 (NeurIPS 2022)"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/0904c7edde20d7134a77fc7f9cd86ea2-Abstract-Conference.html",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:dhFuZR0502QC",
+      "expected": {
+        "title": "Maximizing influence in an unknown social network",
+        "year": 2018,
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "authors": "B Wilder, N Immorlica, E Rice, M Tambe"
+      },
+      "corrected": {
+        "authors": "Bryan Wilder, Nicole Immorlica, Eric Rice, Milind Tambe",
+        "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 32(1)"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://ojs.aaai.org/index.php/AAAI/article/view/11585",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:70eg2SAEIzsC",
+      "expected": {
+        "title": "Modeling between-population variation in COVID-19 dynamics in Hubei, Lombardy, and New York City",
+        "year": 2020,
+        "venue": "Proceedings of the National Academy of Sciences 117 (41), 25904-25910",
+        "authors": "B Wilder, M Charpignon, JA Killian, HC Ou, A Mate, S Jabbari, A Perrault, ..."
+      },
+      "corrected": {
+        "authors": "Bryan Wilder, Marie Charpignon, Jackson A. Killian, Han-Ching Ou, Aditya Mate, Shahin Jabbari, Andrew Perrault, Angel N. Desai, Milind Tambe, Maimuna S. Majumder",
+        "venue": "Proceedings of the National Academy of Sciences, 2020"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7568285/",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "author_pub_id": "dQ0dT2sAAAAJ:eQOLeE2rZwMC",
+      "expected": {
+        "title": "Inferring individual-level processes from population-level patterns in cultural evolution",
+        "year": 2017,
+        "venue": "Royal Society Open Science 4 (9), 170949",
+        "authors": "A Kandler, B Wilder, L Fortunato"
+      },
+      "corrected": {
+        "authors": "Anne Kandler, Bryan Wilder, Laura Fortunato",
+        "venue": "Royal Society Open Science 4(9), 170949"
+      },
+      "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
+      "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5627126/",
+      "verified_at": "2026-11-03"
     }
   ]
 }

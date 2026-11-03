@@ -1835,6 +1835,26 @@
         "withheld_excluded_rows": 0,
         "withheld_ids_sha256": "97101d62a66f4acebfa3cf446f0353a01324ce4aa70f48055baa17cdb002699a"
       }
+    },
+    {
+      "person_id": "person-bryanwilder-6e2b6ae3",
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "state": "released",
+      "expected_source_rows": 11,
+      "cache_sha256": "e5985c7572846382fd7863cca2b432ce70b20af3692d8f691828673f7f435e6c",
+      "reason": "Private local stage: first 11 exact owner-linked source-verified Bryan Wilder citations; 9 verified DOI and 2 bounded blank DOI. Row13 year and row18 DOI/container are separately held; 111 other candidates deferred without adverse authorship finding, 42 other concrete holds and 8 exclusions remain private. New spatial placement pending; no upload approved.",
+      "reviewed_at": "2026-11-03",
+      "public_subset": {
+        "observed_visible_rows": 174,
+        "private_capture_sha256": "1534ae3a4dc99dfde515b10f32f89bf17ddb1fa879d54963ebe893c2bcbd5ca7",
+        "private_rendered_html_sha256": "3444cf66c327d1ba40f0e36b7ba1cdbe2f0e8042d1e7cc8b1f2583d2deff8a5d",
+        "private_review_sha256": "604cbf977b2b66cd86a37332e6a910156fb4c22843b251c7c3264d95b1a4ffa8",
+        "selected_ids_sha256": "e3049d5925e9258fad2905a142a482670091743d353ea115190ce3e106b38841",
+        "withheld_rows": 163,
+        "withheld_hold_rows": 155,
+        "withheld_excluded_rows": 8,
+        "withheld_ids_sha256": "cc5d313c2782f8437d165ac6a48ca0b7aaf7a95d7ae9a2d4e456107ef18bf98f"
+      }
     }
   ]
 }
