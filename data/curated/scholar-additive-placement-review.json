@@ -1,116 +1,80 @@
 {
   "schema_version": 1,
-  "prior_revision": "768b30e5265a13aa5d0e7f26bc8d68e16b8d5d53",
-  "source_snapshot_sha256": "973a87dae6afabf7ed4be00e792d6202d2f2b8934cf24352600b7b1b26b0cc2b",
-  "selected_ids_sha256": "f36557a11aaf0c3947fce579ea3b9d0b60c62f2021ffeb6c33247b9ea94f854f",
-  "parent_map_sha256": "cc963933a7a75e4b1b557e99f7d67081f2c3d8836901a73c977327f38875714d",
-  "candidate_map_content_sha256": "d7d827ae1bf16307fe6ee6d3498aea532e48d10e55f9f842696bfc1602189221",
-  "new_work_ids_sha256": "6e718b0f5219532a274eac93d0f68a57c87203e6ba5821b5e44c285847e78aa2",
+  "prior_revision": "ca27d2c9e649d022bdbfdb375e879532960a47a1",
+  "source_snapshot_sha256": "b64d42de1cb7235a94717e4a1595190abf0d851c59b1202ba7008fcb5fd465d8",
+  "selected_ids_sha256": "3efa7bd6829a463f6d0fc32454badd930de348d411b927ff2d8a3311ea11c41d",
+  "parent_map_sha256": "c4011f1869542ecd484c7ee481bc592af92df2e9297813c2ff2cace65fddb9ef",
+  "candidate_map_content_sha256": "5f744146df4159d465c38133b5241dbdcf5d1c1aa8107e38cb58a944065d4c42",
+  "new_work_ids_sha256": "8125685240594b61c800db7c1c10566fdff029e2ac8da14f1322dcb23576bc43",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-03",
   "new_points": [
     {
-      "work_id": "work-35568ee135312a0981099ab344e527e869cb22b247276e3067c13cc49af15e65",
+      "work_id": "work-23e413f6faf543a22c8f7667aa05523708567f0df64005267b5fa46f7f07f546",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-372682450337f935f9746f87ca961405f31f4cbbe25393f58a89fcc8634e63c1",
+      "work_id": "work-439b5d39e19f8d6513b06145760bca8e695ae20384cb5c052f91aa8991bf3f79",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster abstract subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; official proceedings page with bounded blank DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-53006d0cb074b8cb970faa9e803f974bd09bbb564ae1690cf0d4958e7c36f9c1",
+      "work_id": "work-474590d8ffd765feef8e658f61cac7ec2a2794be0c01abe5ca0ffc8e316faab8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-53ae4051ebbe1731186329c2427d05dfdb3eea0dd76adb8cf45c3bd024da0aea",
+      "work_id": "work-495356c25200556479bb83174db94db09bbb7d158c834694b974ef0009609edb",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; demo abstract subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-57c12c3e8b021bc476f76812424973d7c8ce0baa715e8f7fdd5c8bb24f388066",
+      "work_id": "work-7a082557032374c8e83a1b123843fcfdf8b770aaaef1afd7b31786f14c8cc453",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal official USENIX conference record with bounded blank DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-5ce1d55331840d15d2e8535d4606c7ce3bedb7bfba334f37ad9f4cf7a18aa62e",
+      "work_id": "work-9167804318bc50f849839d43c0637070015ae73b2badf385b0b742ce5daa995d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-7852f2fc7f1ed581f7a0f0ff78e7e05e03cfb11a133f48b2b607bec5d507233e",
+      "work_id": "work-947a0adad6c439a943c1686af4d2b49a83752f78af6ab87b689e1b2e3131b97f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-78554255be5b1a1127608c48183085b1af8b2a8b5fd191d40bc5ccf0087d7e22",
+      "work_id": "work-9e0a9d42cf8818c0848a6bfd86e8cf21ed18bde36474ff12cd33e2dafc65fddb",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-8f3881969e1d7d81f6ee8e66a4aba2c0b0ffe88efef8734aba616bdc6dab66de",
+      "work_id": "work-a82dd1698dee4512409a20bf3720e56c2a9fb23700be505aaec23fdbb6994590",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal official USENIX conference record with bounded blank DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; official proceedings page with bounded blank DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-93a9387fb53bf42891d9268e3a53e847320cae6e3670fe952cbad8a2ba027413",
+      "work_id": "work-d2efc7bf68cd89fe482e3540451c1ea66d937e0e9d7e26df91473eeb723d60fa",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-9eec8b2a224feafe8511f966acbc39331974a2e1258c2de7e8bf8ab40b5bf520",
+      "work_id": "work-f00cbc940ce94b3e55eb851e30f4c071122410ad2bdc3da2d833fcdf8617b6ff",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster subtype and credited byline reviewed; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-bb7263d82f75956368a3fd59dbc2b2c02977b98cc655f192c26b1e63e9a29188",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-d54d34434d20a22ca3ee3257c2d6b263d2c4d51fbcb3ef76eb38b0aea5fa42b3",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-e33e2bdede992c3949b00160db6d96aed23caf820140517be46a5ac37d88ea68",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster abstract subtype and credited byline reviewed; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-e5c946f89282ae33beda99845c2ec20c2cf87d5ede7c4dbe3c26b30097726b3a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-f4ef312131750e6adae4452acde9b96579a85898158ebda835a378faf2065a41",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-fd562cb53c9065db9351064fd86b39c3112788432a5ffeef6a222b84416c0c4e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
+      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
     }
   ]
 }
