@@ -1,164 +1,116 @@
 {
   "schema_version": 1,
-  "prior_revision": "2676f44aa9eb7ccebcfff3e019f9ad2cfdd2c3d2",
-  "source_snapshot_sha256": "4bb057cde8e36077e813ca04368f22f50ceeee473b80bc51f59af044e744fd27",
-  "selected_ids_sha256": "e004d14e42b6d7764fc4515de2c7a8f6ab27f8011afcad40a00e67e68ef7b972",
-  "parent_map_sha256": "982b6a00b2b6acce524f9cfb18c8df1cfa767ea2cc21dd85b79edcd3d709543b",
-  "candidate_map_content_sha256": "0df5c8edd2878b60bbe27ed4111a1a6c018953d70b86ba19ac6c0cb21d3846b5",
-  "new_work_ids_sha256": "1fc7108f0ec47e8a187e6fc7889dbe28b3f433f256cd340f1e0853bb69c7f7e2",
+  "prior_revision": "768b30e5265a13aa5d0e7f26bc8d68e16b8d5d53",
+  "source_snapshot_sha256": "973a87dae6afabf7ed4be00e792d6202d2f2b8934cf24352600b7b1b26b0cc2b",
+  "selected_ids_sha256": "f36557a11aaf0c3947fce579ea3b9d0b60c62f2021ffeb6c33247b9ea94f854f",
+  "parent_map_sha256": "cc963933a7a75e4b1b557e99f7d67081f2c3d8836901a73c977327f38875714d",
+  "candidate_map_content_sha256": "d7d827ae1bf16307fe6ee6d3498aea532e48d10e55f9f842696bfc1602189221",
+  "new_work_ids_sha256": "6e718b0f5219532a274eac93d0f68a57c87203e6ba5821b5e44c285847e78aa2",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
-  "reviewed_at": "2026-11-02",
+  "reviewed_at": "2026-11-03",
   "new_points": [
     {
-      "work_id": "work-22ebdfe0a34669db8e77e5128345c4526259b10594a99e83a7d5875c2e8c5883",
+      "work_id": "work-35568ee135312a0981099ab344e527e869cb22b247276e3067c13cc49af15e65",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-25b54b521a6390fa303e383c1622ab6fbf061139219d4f3a31b147153443396b",
+      "work_id": "work-372682450337f935f9746f87ca961405f31f4cbbe25393f58a89fcc8634e63c1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster abstract subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-292961c541aec8c038c3a17cc5d7e5220be2286d08bbcdece8e308d5272ba303",
+      "work_id": "work-53006d0cb074b8cb970faa9e803f974bd09bbb564ae1690cf0d4958e7c36f9c1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-374c9ed937adfdcb920453a34473bb52f6694bf5f77d64dd600e1e3b6f0d2bc7",
+      "work_id": "work-53ae4051ebbe1731186329c2427d05dfdb3eea0dd76adb8cf45c3bd024da0aea",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; demo abstract subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-45773b1fe9f2b0a58cd251c0184133c459cd775f32e5390134a7751f39d0c847",
+      "work_id": "work-57c12c3e8b021bc476f76812424973d7c8ce0baa715e8f7fdd5c8bb24f388066",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal official USENIX conference record with bounded blank DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-481f18e203bb928e298ea0ac0543dfb80d4adcfd43d708af7de943c4f82c0982",
+      "work_id": "work-5ce1d55331840d15d2e8535d4606c7ce3bedb7bfba334f37ad9f4cf7a18aa62e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-4e0b4d90ea77ec377d2384c1b8fac4fbcbe4648ee0a19185fa87f37d4c2f11e3",
+      "work_id": "work-7852f2fc7f1ed581f7a0f0ff78e7e05e03cfb11a133f48b2b607bec5d507233e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-57235935f962a0e09f4917490f9e6bd8ccea8001163b41441af0a2e245fb7caf",
+      "work_id": "work-78554255be5b1a1127608c48183085b1af8b2a8b5fd191d40bc5ccf0087d7e22",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-6317de5d47e181856301a1731f633fec23ed919d6c40910e4bdd1db1f924ecd6",
+      "work_id": "work-8f3881969e1d7d81f6ee8e66a4aba2c0b0ffe88efef8734aba616bdc6dab66de",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal official USENIX conference record with bounded blank DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-69d34d9abe81b505c966bb65dfc3698019d2a9896a59ad9c7e6dcfde9c144e91",
+      "work_id": "work-93a9387fb53bf42891d9268e3a53e847320cae6e3670fe952cbad8a2ba027413",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-8757ec952139f5d852d72f392c76960b9b02a7877880c77dfb3cefc2b8467ec5",
+      "work_id": "work-9eec8b2a224feafe8511f966acbc39331974a2e1258c2de7e8bf8ab40b5bf520",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-8a15adea25439ee163b63ca7073c1b9fb71a6ae94acf41b8e94d85654eab0fde",
+      "work_id": "work-bb7263d82f75956368a3fd59dbc2b2c02977b98cc655f192c26b1e63e9a29188",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-8fe730f4af80db290012fcad61406898c41edee222b246e00e63c1321d27004b",
+      "work_id": "work-d54d34434d20a22ca3ee3257c2d6b263d2c4d51fbcb3ef76eb38b0aea5fa42b3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-98fad5375c0828e71bb848994cea20af96da4fd1501e15414104d36afa3da5ba",
+      "work_id": "work-e33e2bdede992c3949b00160db6d96aed23caf820140517be46a5ac37d88ea68",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; poster abstract subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-9af11e4bf4be2f38f0f297e7e7ed84529b04a4cde96408bf7ba0ab0bba0a40df",
+      "work_id": "work-e5c946f89282ae33beda99845c2ec20c2cf87d5ede7c4dbe3c26b30097726b3a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-9f03477fc838ebdf700864b0b93c6839854de60052b9f51c618717ca0abe27ee",
+      "work_id": "work-f4ef312131750e6adae4452acde9b96579a85898158ebda835a378faf2065a41",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     },
     {
-      "work_id": "work-a26e49e743e487f1799d08f1d37611db16ddd7288b6d3681907a281028e514f1",
+      "work_id": "work-fd562cb53c9065db9351064fd86b39c3112788432a5ffeef6a222b84416c0c4e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-a4a89070e761baa7c784bd1f05f025130019e4e505aefa85fb0d7e230a4a7eaa",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-a4ee053190187649369c5ec6d17858f6ec5e7e1e4e5dfe31444964064ad45b1a",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-a57b0fc8e617a7cdf80d6d5e306405de0e408a8c9dc91fbdec91b58c0eb466ee",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-a7afcc65e012e93b84562a8877c1dff845c9b10cf3825fb457ab59045a1c737d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-b145cd69345d7d7d2bed51967f9676b1670ebf26ca1bdb40821e4821abd8b714",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-d65391b46d2ac4e71fbf76035433df2e82298a499830392d0bd617b4dd188b93",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-f063fd91d4ffe2c57d97d3b1c3b141d60692c80ff91c8acd1ce6a43234b62cc1",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
-    },
-    {
-      "work_id": "work-f998bb1ac32c6d4abf9b0eb1df18cd3a050efac2ce36d5e214440dc6d7e4107e",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yuvraj Agarwal verified publisher DOI; regular subtype and credited byline reviewed; spatial placement held pending independent review."
     }
   ]
 }
