@@ -1,134 +1,164 @@
 {
   "schema_version": 1,
-  "prior_revision": "83df0287e60b804a37b8252bbc08561c3fe86e51",
-  "source_snapshot_sha256": "1486623e152e72c33d6a3db3f1277cad6abfe542b8eec5b663b39367ef9cff6d",
-  "selected_ids_sha256": "c80a86f8c9ef57a00cda54d230434816f01849a800a2ac16621d1c34e21a59af",
-  "parent_map_sha256": "798551cc49a669f10a5f1eba310befdb597c31ce2b32224db0647e70d11e4f2c",
-  "candidate_map_content_sha256": "87c3b1b311821e38892003e2da945edd7bc084b92e65d608befd0b88907d8f6f",
-  "new_work_ids_sha256": "ec87c9785fd4fe00067bf0828e90b96cb1220fb6fdb702437f534eb2a569a601",
+  "prior_revision": "2676f44aa9eb7ccebcfff3e019f9ad2cfdd2c3d2",
+  "source_snapshot_sha256": "4bb057cde8e36077e813ca04368f22f50ceeee473b80bc51f59af044e744fd27",
+  "selected_ids_sha256": "e004d14e42b6d7764fc4515de2c7a8f6ab27f8011afcad40a00e67e68ef7b972",
+  "parent_map_sha256": "982b6a00b2b6acce524f9cfb18c8df1cfa767ea2cc21dd85b79edcd3d709543b",
+  "candidate_map_content_sha256": "0df5c8edd2878b60bbe27ed4111a1a6c018953d70b86ba19ac6c0cb21d3846b5",
+  "new_work_ids_sha256": "1fc7108f0ec47e8a187e6fc7889dbe28b3f433f256cd340f1e0853bb69c7f7e2",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-02",
   "new_points": [
     {
-      "work_id": "work-0bfe8d9b5e4a67bb7730e14287bcf5a241852391339e33b81c78a9b7d0cdf9fa",
+      "work_id": "work-22ebdfe0a34669db8e77e5128345c4526259b10594a99e83a7d5875c2e8c5883",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-0ca459c832765f87a9a818e408dbb1defe66da46d004d8d491be6814cca44a91",
+      "work_id": "work-25b54b521a6390fa303e383c1622ab6fbf061139219d4f3a31b147153443396b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-1685c03948cc120734d338ddd4354ef84e4b1fd49ad9a2f3d432c77cce3b0e42",
+      "work_id": "work-292961c541aec8c038c3a17cc5d7e5220be2286d08bbcdece8e308d5272ba303",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-2610fa21e685a79e614bc7b9097c78b312ef35d58c7531c485158cdfa545ce9e",
+      "work_id": "work-374c9ed937adfdcb920453a34473bb52f6694bf5f77d64dd600e1e3b6f0d2bc7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-376a9e16d84f7073d3d48fb08206e63b216ec60680d6f9a540220a677a4f6f40",
+      "work_id": "work-45773b1fe9f2b0a58cd251c0184133c459cd775f32e5390134a7751f39d0c847",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-3c92be934a2a00ff4967859bc8b3675b1b712dd7ce62831bec90a58e3a364fbf",
+      "work_id": "work-481f18e203bb928e298ea0ac0543dfb80d4adcfd43d708af7de943c4f82c0982",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-459d5f741d44363dda70b73f1f5f8d5eca175be39401fda1b13f28bc1c32d554",
+      "work_id": "work-4e0b4d90ea77ec377d2384c1b8fac4fbcbe4648ee0a19185fa87f37d4c2f11e3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-4c55d7fdd78ab4059c254b190dd64b84a75fa7af51e16e70d2c661dac599c1a1",
+      "work_id": "work-57235935f962a0e09f4917490f9e6bd8ccea8001163b41441af0a2e245fb7caf",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-4d3676b268ff1221a6922ddf677559bae1660bd9da38505465d6f3ba2e8bfed0",
+      "work_id": "work-6317de5d47e181856301a1731f633fec23ed919d6c40910e4bdd1db1f924ecd6",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-5a2fe479fa61d5a3aeb75183c8a83f0485a4a2e8a3f4ba1cf2b1bad832f8b225",
+      "work_id": "work-69d34d9abe81b505c966bb65dfc3698019d2a9896a59ad9c7e6dcfde9c144e91",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-9095be80699f557b90365036e0814e2820b0aa1e19f349ac0fc8d9ff9923230c",
+      "work_id": "work-8757ec952139f5d852d72f392c76960b9b02a7877880c77dfb3cefc2b8467ec5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-91c5378611f3d002f8e77ca32904ff52295de4eb0703ed693eab4152d2ad11be",
+      "work_id": "work-8a15adea25439ee163b63ca7073c1b9fb71a6ae94acf41b8e94d85654eab0fde",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-a0937f2a18f26648fffdbbe43ec3effeb8937c37284f87621dae9d9c3a2dbba1",
+      "work_id": "work-8fe730f4af80db290012fcad61406898c41edee222b246e00e63c1321d27004b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-a1e8e6e0db101c64e113b8d27784d793d71c69a89cd3368b562ea110a92945f1",
+      "work_id": "work-98fad5375c0828e71bb848994cea20af96da4fd1501e15414104d36afa3da5ba",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-a810b49f744ca15134fea36825e38445ac1a2e12d9651fa2537df986cb8dd26e",
+      "work_id": "work-9af11e4bf4be2f38f0f297e7e7ed84529b04a4cde96408bf7ba0ab0bba0a40df",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-ada34576f2dbeadc4a93b74c7ce93c1b1fb9c1bd801b51fd9148103564771085",
+      "work_id": "work-9f03477fc838ebdf700864b0b93c6839854de60052b9f51c618717ca0abe27ee",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-bde48df0a81f84c317c4d70747e1682022fa86930f556b2acf8101d1b4bf4982",
+      "work_id": "work-a26e49e743e487f1799d08f1d37611db16ddd7288b6d3681907a281028e514f1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-e5b45cade42bbc55dacb83f7247b95779d8ed93791451cb89b40c160528caf56",
+      "work_id": "work-a4a89070e761baa7c784bd1f05f025130019e4e505aefa85fb0d7e230a4a7eaa",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-f19ff7b4136cf86f42b055aa7b3b5a18e217683d6314dd1ada4f7c46b4034446",
+      "work_id": "work-a4ee053190187649369c5ec6d17858f6ec5e7e1e4e5dfe31444964064ad45b1a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     },
     {
-      "work_id": "work-f32afeaf30ceb859cc88a951d79ce19c9d607cedb9de0c9cd482232f1aad4dca",
+      "work_id": "work-a57b0fc8e617a7cdf80d6d5e306405de0e408a8c9dc91fbdec91b58c0eb466ee",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact saved owner-linked Graham Neubig citation with official ACL type/full byline and DOI where present; spatial placement awaits review."
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-a7afcc65e012e93b84562a8877c1dff845c9b10cf3825fb457ab59045a1c737d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-b145cd69345d7d7d2bed51967f9676b1670ebf26ca1bdb40821e4821abd8b714",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-d65391b46d2ac4e71fbf76035433df2e82298a499830392d0bd617b4dd188b93",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-f063fd91d4ffe2c57d97d3b1c3b141d60692c80ff91c8acd1ce6a43234b62cc1",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
+    },
+    {
+      "work_id": "work-f998bb1ac32c6d4abf9b0eb1df18cd3a050efac2ce36d5e214440dc6d7e4107e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Yang P. Liu citation with verified publisher DOI and publication type; spatial placement awaits review."
     }
   ]
 }
