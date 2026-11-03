@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "d5b47fc1d9b936a12e0d2143886c4d3b787e4b59",
-  "registry_producer_commit": "dd5cb5f67db5aa2bb55f34b058ca74c103baaecd",
+  "base_source_status_commit": "08e5e367d41c83454856f993eaa4bd3e063ea84d",
+  "registry_producer_commit": "050c744f7a8598ee8d83e00931e48fb0c9656165",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -3016,16 +3016,47 @@
         "withheld_ids_sha256": "97101d62a66f4acebfa3cf446f0353a01324ce4aa70f48055baa17cdb002699a"
       },
       "cache_sha256": "311357ecf2015d31887daab1642fe3bab9499d75e196fe58c08651ce28cc7a2f"
+    },
+    {
+      "slug": "bryan-wilder",
+      "person_id": "person-bryanwilder-6e2b6ae3",
+      "scholar_id": "dQ0dT2sAAAAJ",
+      "expected_source_rows": 11,
+      "selected_author_pub_ids": [
+        "dQ0dT2sAAAAJ:-f6ydRqryjwC",
+        "dQ0dT2sAAAAJ:70eg2SAEIzsC",
+        "dQ0dT2sAAAAJ:M3NEmzRMIkIC",
+        "dQ0dT2sAAAAJ:TQgYirikUcIC",
+        "dQ0dT2sAAAAJ:Wp0gIr-vW9MC",
+        "dQ0dT2sAAAAJ:abG-DnoFyZgC",
+        "dQ0dT2sAAAAJ:dhFuZR0502QC",
+        "dQ0dT2sAAAAJ:eQOLeE2rZwMC",
+        "dQ0dT2sAAAAJ:hC7cP41nSMkC",
+        "dQ0dT2sAAAAJ:hFOr9nPyWt4C",
+        "dQ0dT2sAAAAJ:pqnbT2bcN3wC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 174,
+        "private_capture_sha256": "1534ae3a4dc99dfde515b10f32f89bf17ddb1fa879d54963ebe893c2bcbd5ca7",
+        "private_rendered_html_sha256": "3444cf66c327d1ba40f0e36b7ba1cdbe2f0e8042d1e7cc8b1f2583d2deff8a5d",
+        "private_review_sha256": "604cbf977b2b66cd86a37332e6a910156fb4c22843b251c7c3264d95b1a4ffa8",
+        "selected_ids_sha256": "e3049d5925e9258fad2905a142a482670091743d353ea115190ce3e106b38841",
+        "withheld_rows": 163,
+        "withheld_hold_rows": 155,
+        "withheld_excluded_rows": 8,
+        "withheld_ids_sha256": "cc5d313c2782f8437d165ac6a48ca0b7aaf7a95d7ae9a2d4e456107ef18bf98f"
+      },
+      "cache_sha256": "e5985c7572846382fd7863cca2b432ce70b20af3692d8f691828673f7f435e6c"
     }
   ],
   "totals": {
-    "observed_visible_rows": 7785,
-    "selected_rows": 2153,
-    "withheld_rows": 5632,
-    "withheld_hold_rows": 5291,
-    "withheld_excluded_rows": 341
+    "observed_visible_rows": 7959,
+    "selected_rows": 2164,
+    "withheld_rows": 5795,
+    "withheld_hold_rows": 5446,
+    "withheld_excluded_rows": 349
   },
-  "selected_ids_sha256": "1c9141896d67391ae9a1de4ec214f74cc6e1871f007c6f847c5e7e5cb4bf6fdc",
-  "withheld_ids_sha256": "31b1256b3af101d44fa9792f183ad218688a5f62c2988b4682f93968c88e39db",
+  "selected_ids_sha256": "d12a81660eaae05ea2d76cee36bfacd7d54ee0cfd667c307fdcb0c95bfa37b01",
+  "withheld_ids_sha256": "0b66ba72f80e35a190afdddb9be29cc89524ac812b873b66f81d44b7cf15f44f",
   "private_capture_files_or_html_copied": false
 }
