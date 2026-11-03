@@ -1780,20 +1780,20 @@
       "person_id": "person-yuvrajagarwal-6115c679",
       "scholar_id": "H4UeZ2MAAAAJ",
       "state": "released",
-      "expected_source_rows": 76,
-      "cache_sha256": "e4f6acc9e5c024637f4e286ec5ee76781a71e39a8e7b0f784e1f6cad4129f80a",
-      "reason": "Private local stage: 53 prior plus 23 saved original/publisher verified citations, exact guarded venues and known DOIs; 102 other saved rows remain withheld. New placements pending; no upload approved.",
-      "reviewed_at": "2026-11-02",
+      "expected_source_rows": 93,
+      "cache_sha256": "c167cdc4e3e86eb0b6fcc52b781f1114b0c566669d0f822b24a7f2e4331ab2a4",
+      "reason": "Private local stage: 76 prior plus 17 exact owner-linked, official/publisher verified Yuvraj Agarwal citations; 15 transported DOI and two bounded official USENIX DOI blanks. Five poster/demo subtypes and credited coauthors reviewed, row148 version held; 85 other saved rows remain withheld. New spatial placements pending; no upload approved.",
+      "reviewed_at": "2026-11-03",
       "public_subset": {
         "observed_visible_rows": 178,
         "private_capture_sha256": "89b03b416d196da2d3bed6b8738bc3c9eadcd5375d1cee39afe61509219ec2cd",
         "private_rendered_html_sha256": "2d52f731a1fc0af481392fce3e7e0db38fe78fa18fdea18652e258702e8ede96",
-        "private_review_sha256": "6fc99b4d9a352494a7ce6ef38f2dc6f3d5f05cd53992ff421a611f2b7f76e949",
-        "selected_ids_sha256": "1bf45907a7decd4c7065a174bdadd751322a08c0f6e07c025d3abea14a7250a0",
-        "withheld_rows": 102,
-        "withheld_hold_rows": 86,
+        "private_review_sha256": "91f01e512d890f05ad8947380912beb14bf6c0e99cb7574cc85f5db1dfd00052",
+        "selected_ids_sha256": "1b38a62e787665ee6a46f72feecfcc1364a9fffe7f734f56fe262c7ac5d16056",
+        "withheld_rows": 85,
+        "withheld_hold_rows": 69,
         "withheld_excluded_rows": 16,
-        "withheld_ids_sha256": "c4fa11f8e887e9e668c79838f80f3c560b6fa6fb7b37ccceebe75f0f42ff7bd7"
+        "withheld_ids_sha256": "62ca72ac5d05f573de626a3869db3bf799816ce0061ce526eb9bc4d3add2f8aa"
       }
     },
     {

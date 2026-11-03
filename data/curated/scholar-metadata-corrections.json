@@ -2639,6 +2639,267 @@
       "basis": "Reviewed publisher DOI metadata supplies the full byline, publication type and venue where corrected; row 8 author order follows the official IEEE PDF; rows 19 and 26 retain verified print issue years.",
       "evidence_url": "https://doi.org/10.1145/3798129.3800733",
       "verified_at": "2026-11-02"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:IjCSPb-OGe4C",
+      "expected": {
+        "title": "Occupancy-driven energy management for smart building automation",
+        "year": 2010,
+        "venue": "Proceedings of the 2nd ACM workshop on embedded sensing systems for energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 2nd ACM Workshop on Embedded Sensing Systems for Energy-Efficiency in Building"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://api.crossref.org/works/10.1145%2F1878431.1878433",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:u-x6o8ySG0sC",
+      "expected": {
+        "title": "Wireless wakeups revisited: energy management for voip over wi-fi smartphones",
+        "year": 2007,
+        "venue": "Proceedings of the 5th international conference on Mobile systems …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 5th international conference on Mobile systems, applications and services"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.usenix.org/events/mobisys07/full_papers/p179.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:UeHWp8X0CEIC",
+      "expected": {
+        "title": "The energy dashboard: improving the visibility of energy consumption at a campus-wide scale",
+        "year": 2009,
+        "venue": "Proceedings of the First ACM Workshop on Embedded Sensing Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the First ACM Workshop on Embedded Sensing Systems for Energy-Efficiency in Buildings"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://mesl.ucsd.edu/pubs/Agarwal_ACMESS09.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:TQgYirikUcIC",
+      "expected": {
+        "title": "Zonepac: Zonal power estimation and control via hvac metering and occupant feedback",
+        "year": 2013,
+        "venue": "Proceedings of the 5th ACM Workshop on Embedded Systems For Energy-Efficient …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 5th ACM Workshop on Embedded Systems For Energy-Efficient Buildings"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.synergylabs.org/bharath/files/Balaji_BuildSys2013_ZonePAC.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:kNdYIx-mwKoC",
+      "expected": {
+        "title": "Managing plug-loads for demand response within buildings",
+        "year": 2011,
+        "venue": "Proceedings of the Third ACM Workshop on Embedded Sensing Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the Third ACM Workshop on Embedded Sensing Systems for Energy-Efficiency in Buildings"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.synergylabs.org/bharath/files/Weng_BuildSys2011_ManagingPlugLoads.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:c_xDhezhKKUC",
+      "expected": {
+        "title": "Why are they collecting my data? inferring the purposes of network traffic in mobile apps",
+        "year": 2018,
+        "venue": "Proceedings of the ACM on interactive, mobile, wearable and ubiquitous …",
+        "authors": "H Jin, M Liu, K Dodhia, Y Li, G Srivastava, M Fredrikson, Y Agarwal, ..."
+      },
+      "corrected": {
+        "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+        "authors": "Haojian Jin, Minyi Liu, Kevan Dodhia, Yuanchun Li, Gaurav Srivastava, Matthew Fredrikson, Yuvraj Agarwal, Jason I. Hong"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://antprivacy.org/paper.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:M3ejUd6NZC8C",
+      "expected": {
+        "title": "Towards verifying android apps for the absence of {No-Sleep} energy bugs",
+        "year": 2012,
+        "venue": "2012 Workshop on Power-Aware Computing and Systems (HotPower 12)",
+        "authors": "P Vekris, R Jhala, S Lerner, Y Agarwal"
+      },
+      "corrected": {
+        "authors": "Panagiotis Vekris, Ranjit Jhala, Sorin Lerner, Yuvraj Agarwal"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.usenix.org/conference/hotpower12/workshop-program/presentation/vekris",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:R3hNpaxXUhUC",
+      "expected": {
+        "title": "Buildingdepot 2.0: An integrated management system for building analysis and control",
+        "year": 2013,
+        "venue": "Proceedings of the 5th ACM Workshop on Embedded Systems For Energy-Efficient …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 5th ACM Workshop on Embedded Systems For Energy-Efficient Buildings"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.synergylabs.org/yuvraj/docs/Weng_BuildSys2013_BuildingDepot-V2.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:4DMP91E08xMC",
+      "expected": {
+        "title": "Buildingdepot: an extensible and distributed architecture for building data storage, access and sharing",
+        "year": 2012,
+        "venue": "Proceedings of the Fourth ACM Workshop on Embedded Sensing Systems for …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the Fourth ACM Workshop on Embedded Sensing Systems for Energy-Efficiency in Buildings"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.synergylabs.org/yuvraj/docs/Agarwal_BuildSys12_BuildingDepot.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:WwIwg2wKZ0QC",
+      "expected": {
+        "title": "Capture: Centralized library management for heterogeneous {IoT} devices",
+        "year": 2021,
+        "venue": "30th USENIX Security Symposium (USENIX Security 21), 4187-4204",
+        "authors": "H Zhang, A Anilkumar, M Fredrikson, Y Agarwal"
+      },
+      "corrected": {
+        "authors": "Han Zhang, Abhijith Anilkumar, Matt Fredrikson, Yuvraj Agarwal"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.usenix.org/conference/usenixsecurity21/presentation/zhang-han",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:LGlY6t8CeOMC",
+      "expected": {
+        "title": "Scrabble: converting unstructured metadata into brick for many buildings",
+        "year": 2017,
+        "venue": "Proceedings of the 4th ACM International Conference on Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 4th ACM International Conference on Systems for Energy-Efficient Built Environments"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://jbkoh.github.io/pdf/buildsys2017_scrabbleposter.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:hGdtkIFZdKAC",
+      "expected": {
+        "title": "CharIoT: an end-user programming environment for the IoT",
+        "year": 2017,
+        "venue": "Proceedings of the Seventh International Conference on the Internet of …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the Seventh International Conference on the Internet of Things"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://pure.au.dk/portal/en/publications/chariot-an-end-user-programming-environment-for-the-iot",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:JP7YXuLIOvAC",
+      "expected": {
+        "title": "Dynamic data center load response to variability in private and public electricity costs",
+        "year": 2016,
+        "venue": "2016 IEEE International Conference on Smart Grid Communications …"
+      },
+      "corrected": {
+        "venue": "2016 IEEE International Conference on Smart Grid Communications (SmartGridComm)"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.synergylabs.org/publications/7778742/",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:9DLIHnF0jcYC",
+      "expected": {
+        "title": "Vista: spatial data representation for smart buildings",
+        "year": 2020,
+        "venue": "Proceedings of the 7th ACM International Conference on Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 7th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://sudershanb.com/assets/publications/Vista_2020.pdf",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:m4fbC6XIj1kC",
+      "expected": {
+        "title": "Interactive building metadata normalization",
+        "year": 2019,
+        "venue": "Proceedings of the 6th ACM International Conference on Systems for Energy …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 6th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://jbkoh.github.io/publication/plaster_poster/",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:I858iXPj1OkC",
+      "expected": {
+        "title": "Semantic Technologies in Practical Demand Response: An Information Requirement-based Roadmap",
+        "year": 2026,
+        "venue": "Proceedings of the 17th ACM International Conference on Future and …",
+        "authors": "OB Mulayim, AK Prakash, Y Agarwal, M Bergés, M Pritoni, D Supple, ..."
+      },
+      "corrected": {
+        "venue": "Proceedings of the 17th ACM International Conference on Future and Sustainable Energy Systems",
+        "authors": "Ozan Baris Mulayim, Anand Krishnan Prakash, Yuvraj Agarwal, Mario Bergés, Marco Pritoni, Derek Supple, Steve Schaefer, Mitali Shah"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://escholarship.org/uc/item/39z1x0vq",
+      "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "H4UeZ2MAAAAJ",
+      "author_pub_id": "H4UeZ2MAAAAJ:SAZ1SQo2q1kC",
+      "expected": {
+        "title": "Controlling Actuation in Central HVAC Systems in Buildings",
+        "year": 2015,
+        "venue": "Proceedings of the 2nd ACM International Conference on Embedded Systems for …"
+      },
+      "corrected": {
+        "venue": "Proceedings of the 2nd ACM International Conference on Embedded Systems for Energy-Efficient Built Environments"
+      },
+      "basis": "Exact saved Scholar owner citation plus source-backed full byline, year, venue and proceedings/article type; correct only the captured truncated fields.",
+      "evidence_url": "https://www.synergylabs.org/bharath/files/Koh_BuildSys2015_BuildingControlEngine.pdf",
+      "verified_at": "2026-11-03"
     }
   ]
 }
