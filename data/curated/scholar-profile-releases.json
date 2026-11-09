@@ -1855,6 +1855,26 @@
         "withheld_excluded_rows": 8,
         "withheld_ids_sha256": "cc5d313c2782f8437d165ac6a48ca0b7aaf7a95d7ae9a2d4e456107ef18bf98f"
       }
+    },
+    {
+      "person_id": "person-fernandodelatorrefrade-857d94c1",
+      "scholar_id": "YB8_6gkAAAAJ",
+      "state": "released",
+      "expected_source_rows": 5,
+      "cache_sha256": "3077b7ef6ae87ea3eeb8b1c7ca70eb8af7c89fcf501874ca4a5ccfae66d863bd",
+      "reason": "Five exact owner-linked saved citations with verified publisher DOI/type/year/full byline; spatial placement pending. Other350 private rows comprise242 deferred candidates,63 concrete holds,44 exclusions and one conditional venue hold; deferrals are not adverse authorship findings.",
+      "reviewed_at": "2026-11-08",
+      "public_subset": {
+        "observed_visible_rows": 355,
+        "private_capture_sha256": "722ee30c8815bc23a3d12db59de11c2716a03a34beae7dea14689fe17efcb174",
+        "private_rendered_html_sha256": "68b7406992c7439e3ad08fdd09eaab9a123e15a7882029333f40801ad59e6923",
+        "private_review_sha256": "9734bffa3cca505a1d9978b63e014d74f6353f2a0b14b5387c5f97a8bf29cf25",
+        "selected_ids_sha256": "1ba92ae097e12f384039d5af527283a46f867278557e802f614a8fd6f11b761a",
+        "withheld_rows": 350,
+        "withheld_hold_rows": 306,
+        "withheld_excluded_rows": 44,
+        "withheld_ids_sha256": "612eb95b2118cd623e25ce561e77488e7e3d1bcc24861c0470c0574edf1c9618"
+      }
     }
   ]
 }

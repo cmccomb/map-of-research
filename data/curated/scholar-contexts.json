@@ -14267,6 +14267,76 @@
       "map_eligible": true,
       "collaboration_eligible": true,
       "verified_doi": "10.1098/rsos.170949"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:u-x6o8ySG0sC",
+      "publication_type": "journal_article",
+      "document_id": "",
+      "reason": "Exact owner-linked saved citation and official DOI deposit verify full credited byline, title, year and publication type. Preserve captured nontruncated venue. Collaboration graph requires independent review; spatial placement pending.",
+      "evidence_url": "https://api.crossref.org/works/10.1023/a%3A1023709501986",
+      "verified_at": "2026-11-08",
+      "expected_title": "A framework for robust subspace learning",
+      "expected_year": 2003,
+      "map_eligible": true,
+      "collaboration_eligible": true,
+      "verified_doi": "10.1023/a:1023709501986"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:tzM49s52ZIMC",
+      "publication_type": "journal_article",
+      "document_id": "",
+      "reason": "Exact owner-linked saved citation and official DOI deposit verify full credited byline, title, year and publication type. Preserve captured nontruncated venue. Collaboration graph requires independent review; spatial placement pending.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/tits.2015.2396031",
+      "verified_at": "2026-11-08",
+      "expected_title": "Driver gaze tracking and eyes off the road detection system",
+      "expected_year": 2015,
+      "map_eligible": true,
+      "collaboration_eligible": true,
+      "verified_doi": "10.1109/tits.2015.2396031"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:Br1UauaknNIC",
+      "publication_type": "conference_paper",
+      "document_id": "",
+      "reason": "Exact owner-linked saved citation and official DOI deposit verify full credited byline, title, year and publication type. Preserve captured nontruncated venue. Collaboration graph requires independent review; spatial placement pending.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/iccv48922.2021.00121",
+      "verified_at": "2026-11-08",
+      "expected_title": "Meshtalk: 3d face animation from speech using cross-modality disentanglement",
+      "expected_year": 2021,
+      "map_eligible": true,
+      "collaboration_eligible": true,
+      "verified_doi": "10.1109/iccv48922.2021.00121"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:LkGwnXOMwfcC",
+      "publication_type": "journal_article",
+      "document_id": "",
+      "reason": "Exact owner-linked saved citation and official DOI deposit verify full credited byline, title, year and publication type. Preserve captured nontruncated venue. Collaboration graph requires independent review; spatial placement pending.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.patcog.2009.09.003",
+      "verified_at": "2026-11-08",
+      "expected_title": "Optimal feature selection for support vector machines",
+      "expected_year": 2010,
+      "map_eligible": true,
+      "collaboration_eligible": true,
+      "verified_doi": "10.1016/j.patcog.2009.09.003"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:isC4tDSrTZIC",
+      "publication_type": "conference_paper",
+      "document_id": "",
+      "reason": "Exact owner-linked saved citation and official DOI deposit verify full credited byline, title, year and publication type. Preserve captured nontruncated venue. Collaboration graph requires independent review; spatial placement pending.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/cvpr.2011.5995470",
+      "verified_at": "2026-11-08",
+      "expected_title": "Joint segmentation and classification of human actions in video",
+      "expected_year": 2011,
+      "map_eligible": true,
+      "collaboration_eligible": true,
+      "verified_doi": "10.1109/cvpr.2011.5995470"
     }
   ]
 }
