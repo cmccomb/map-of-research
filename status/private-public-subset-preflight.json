@@ -617,19 +617,33 @@
       "withheld_rows": 163,
       "withheld_hold_rows": 155,
       "withheld_excluded_rows": 8
+    },
+    {
+      "person_id": "person-fernandodelatorrefrade-857d94c1",
+      "scholar_id": "YB8_6gkAAAAJ",
+      "cache_sha256": "3077b7ef6ae87ea3eeb8b1c7ca70eb8af7c89fcf501874ca4a5ccfae66d863bd",
+      "private_capture_sha256": "722ee30c8815bc23a3d12db59de11c2716a03a34beae7dea14689fe17efcb174",
+      "private_review_sha256": "9734bffa3cca505a1d9978b63e014d74f6353f2a0b14b5387c5f97a8bf29cf25",
+      "selected_ids_sha256": "1ba92ae097e12f384039d5af527283a46f867278557e802f614a8fd6f11b761a",
+      "withheld_ids_sha256": "612eb95b2118cd623e25ce561e77488e7e3d1bcc24861c0470c0574edf1c9618",
+      "observed_visible_rows": 355,
+      "selected_rows": 5,
+      "withheld_rows": 350,
+      "withheld_hold_rows": 306,
+      "withheld_excluded_rows": 44
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "d12a81660eaae05ea2d76cee36bfacd7d54ee0cfd667c307fdcb0c95bfa37b01",
-  "source_selection_manifest_sha256": "7ecda2f29b48e4ca0f9144970be85a77ac2946f5e93de134b5ffd7a7544d5614",
-  "source_snapshot_sha256": "b64d42de1cb7235a94717e4a1595190abf0d851c59b1202ba7008fcb5fd465d8",
+  "selected_ids_sha256": "08c7d58a7c9a2913d6e77a85cc3d1b4004531419b0c5381d69a2abfdbec01b43",
+  "source_selection_manifest_sha256": "8a05c5f60cb9208b945ca9ed5d4f5dc47000a2fe7f6b577317c2766eb1584068",
+  "source_snapshot_sha256": "7e17b571183eb167dd4e00cbc4e9c97bf5569c198edd5f2bea45df121903567f",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 7959,
-    "selected_rows": 2164,
-    "withheld_rows": 5795,
-    "withheld_hold_rows": 5446,
-    "withheld_excluded_rows": 349
+    "observed_visible_rows": 8314,
+    "selected_rows": 2169,
+    "withheld_rows": 6145,
+    "withheld_hold_rows": 5752,
+    "withheld_excluded_rows": 393
   },
-  "withheld_ids_sha256": "0b66ba72f80e35a190afdddb9be29cc89524ac812b873b66f81d44b7cf15f44f"
+  "withheld_ids_sha256": "deb7f2a8d7599e8c5ef8ae47f35f3453bcff1ad0d094f48ee5cebc074334355d"
 }
