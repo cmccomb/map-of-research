@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source_type": "researcher_bibliography",
+  "status": "staged_source_only_unpublished",
+  "description": "Public author-maintained page observations; not Google Scholar rows or map-ready publications.",
+  "sources": [
+    {
+      "person_id": "person-gautamiyer-3894621b",
+      "person_name": "Gautam Iyer",
+      "official_profile_url": "https://www.cmu.edu/math/people/faculty/iyer.html",
+      "source_url": "https://www.math.cmu.edu/~gautam/sj/index.html",
+      "retrieved_at_utc": "2026-10-24T23:12:32.516512+00:00",
+      "html_path": "data/author-sites/gautam-iyer.html",
+      "html_sha256": "eacc58030ec7ab967198d16343305df7e37f1a89057deb68654a27fd1b413bfc",
+      "original_html_sha256_local_only": "264cca147620a53e60d51b83b97339b3556646cb906cc46fdae53df6e500107b",
+      "json_path": "data/author-sites/gautam-iyer.json",
+      "json_sha256": "aeb7cc4bee5f09003d18c75318668d05db846ca6850102e7d712d927f06530d7",
+      "observations": 47,
+      "section_counts": {
+        "all_publications": 47
+      },
+      "direct_linked_doi_count": 20,
+      "redacted_session_url_occurrences": 4,
+      "links_with_session_component_removed": 1
+    },
+    {
+      "person_id": "person-robinneumayer-a5f54a8c",
+      "person_name": "Robin Neumayer",
+      "official_profile_url": "https://www.cmu.edu/math/people/faculty/neumayer.html",
+      "source_url": "https://www.math.cmu.edu/~rneumaye/",
+      "retrieved_at_utc": "2026-10-24T23:12:32.598159+00:00",
+      "html_path": "data/author-sites/robin-neumayer.html",
+      "html_sha256": "2f1a748418141ebe13a1fabb7f35d72167cf19096cadc01785194b809c4cde1c",
+      "original_html_sha256_local_only": "2f1a748418141ebe13a1fabb7f35d72167cf19096cadc01785194b809c4cde1c",
+      "json_path": "data/author-sites/robin-neumayer.json",
+      "json_sha256": "93336bc2094a08139a5ecf3411f81cb648b1080bf13d129fa708b670b105f8cb",
+      "observations": 30,
+      "section_counts": {
+        "publications_preprints": 23,
+        "proceedings_surveys": 5,
+        "phd_thesis": 1,
+        "expository_notes": 1
+      },
+      "direct_linked_doi_count": 0,
+      "redacted_session_url_occurrences": 0,
+      "links_with_session_component_removed": 0
+    }
+  ]
+}
