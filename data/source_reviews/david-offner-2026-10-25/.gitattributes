@@ -1,0 +1,4 @@
+# Keep the captured source bytes identical to their pinned SHA-256 values.
+*.html -text -diff
+*.csv text eol=lf
+*.pdf -text -diff
