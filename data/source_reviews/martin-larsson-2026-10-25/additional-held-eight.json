@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "person_id": "person-martinlarsson-970afb46",
+  "source_scope": "eight_additional_attributable_artifacts_outside_researcher_site",
+  "observations": [
+    {
+      "observation_id": "arxiv:2402.00713",
+      "source_kind": "research_preprint",
+      "title_as_listed": "Distribution-uniform strong laws of large numbers",
+      "authors_as_listed": [
+        "Ian Waudby-Smith",
+        "Martin Larsson",
+        "Aaditya Ramdas"
+      ],
+      "source_url": "https://arxiv.org/abs/2402.00713",
+      "source_page_file": "arxiv-2402.00713.html.gz",
+      "source_page_sha256": "123fd9f0de7ce6015043e4b4a992c62d3b7bd744fa4f925c9a792c741034cf2b",
+      "arxiv_id": "2402.00713",
+      "arxiv_first_posted": "2024-02-01",
+      "withdrawn": false,
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "whole_researcher_reconciliation_and_genre_policy"
+    },
+    {
+      "observation_id": "arxiv:2601.05217",
+      "source_kind": "research_preprint",
+      "title_as_listed": "A complete characterization of testable hypotheses",
+      "authors_as_listed": [
+        "Martin Larsson",
+        "Johannes Ruf",
+        "Aaditya Ramdas"
+      ],
+      "source_url": "https://arxiv.org/abs/2601.05217",
+      "source_page_file": "arxiv-2601.05217.html.gz",
+      "source_page_sha256": "660dae9b24c90fbacc14319f26fd63ddeba5c5454ff7a9f2b092b4f06894410c",
+      "arxiv_id": "2601.05217",
+      "arxiv_first_posted": "2026-01-08",
+      "withdrawn": false,
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "whole_researcher_reconciliation_and_genre_policy"
+    },
+    {
+      "observation_id": "arxiv:2606.24768",
+      "source_kind": "research_preprint",
+      "title_as_listed": "Strong duality for the GROW criterion",
+      "authors_as_listed": [
+        "Ashwin Ram",
+        "Martin Larsson",
+        "Johannes Ruf",
+        "Aaditya Ramdas"
+      ],
+      "source_url": "https://arxiv.org/abs/2606.24768",
+      "source_page_file": "arxiv-2606.24768.html.gz",
+      "source_page_sha256": "b32c3cd052a93635055facfb71b635edf3ed0f1010698168a55bf22385628096",
+      "arxiv_id": "2606.24768",
+      "arxiv_first_posted": "2026-06-23",
+      "withdrawn": false,
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "whole_researcher_reconciliation_and_genre_policy"
+    },
+    {
+      "observation_id": "arxiv:2608.09840",
+      "source_kind": "research_preprint",
+      "title_as_listed": "Langevin dynamics along the zero set of real-analytic potentials",
+      "authors_as_listed": [
+        "Martin Larsson"
+      ],
+      "source_url": "https://arxiv.org/abs/2608.09840",
+      "source_page_file": "arxiv-2608.09840.html.gz",
+      "source_page_sha256": "f541058452064c6938e826cf9e0c0cee0c0cf48eeade51b58dbb923d8c5b23d5",
+      "arxiv_id": "2608.09840",
+      "arxiv_first_posted": "2026-08-10",
+      "withdrawn": false,
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "whole_researcher_reconciliation_and_genre_policy"
+    },
+    {
+      "observation_id": "arxiv:1008.1754",
+      "source_kind": "masters_thesis",
+      "title_as_listed": "Tail Properties of Multivariate Archimedean Copulas",
+      "authors_as_listed": [
+        "Martin Larsson"
+      ],
+      "source_url": "https://arxiv.org/abs/1008.1754",
+      "source_page_file": "arxiv-1008.1754.html.gz",
+      "source_page_sha256": "affc6c0c6b77f0e540538d7eea11f419c6d276c9d7b568bcf14216a32ad558d7",
+      "arxiv_id": "1008.1754",
+      "arxiv_first_posted": "2010-08-10",
+      "withdrawn": false,
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "whole_researcher_reconciliation_and_genre_policy"
+    },
+    {
+      "observation_id": "arxiv:1104.5272",
+      "source_kind": "withdrawn_preprint",
+      "title_as_listed": "Credit contagion and risk management with multiple non-ordered defaults",
+      "authors_as_listed": [
+        "Younes Kchia",
+        "Martin Larsson"
+      ],
+      "source_url": "https://arxiv.org/abs/1104.5272",
+      "source_page_file": "arxiv-1104.5272.html.gz",
+      "source_page_sha256": "9ea21ac7a7810da21402865e68bc12aeff68b30dd351609461d9581c75706c86",
+      "arxiv_id": "1104.5272",
+      "arxiv_first_posted": "2011-04-27",
+      "withdrawn": true,
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "withdrawn_work_no_collaboration_edge"
+    },
+    {
+      "observation_id": "ercim-news:145:optimal-gambling-strategies-when-testing-by-betting",
+      "source_kind": "magazine_article",
+      "title_as_listed": "Optimal Gambling Strategies when Testing by Betting",
+      "authors_as_listed": [
+        "Martin Larsson",
+        "Aaditya Ramdas",
+        "Johannes Ruf"
+      ],
+      "source_url": "https://ercim-news.ercim.eu/en145/special/optimal-gambling-strategies-when-testing-by-betting",
+      "source_page_file": "ercim-optimal-gambling-strategies-when-testing-by-betting.html.gz",
+      "source_page_sha256": "adba0fe3996dcc6d494c36ab02cd216c753480c418bb4ad6d6a103ac150e66b7",
+      "published_date": "2026-07-01",
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "magazine_genre_and_whole_researcher_reconciliation"
+    },
+    {
+      "observation_id": "ercim-news:145:a-map-of-sub-gaussian-e-variables",
+      "source_kind": "magazine_article",
+      "title_as_listed": "A Map of Sub-Gaussian E-variables",
+      "authors_as_listed": [
+        "Wouter M. Koolen",
+        "Shubhada Agrawal",
+        "Martin Larsson"
+      ],
+      "source_url": "https://ercim-news.ercim.eu/en145/special/a-map-of-sub-gaussian-e-variables",
+      "source_page_file": "ercim-a-map-of-sub-gaussian-e-variables.html.gz",
+      "source_page_sha256": "8569b3812b03a8e8dc4779125f86247680fea0d78b79a1701b2dc8825ca6bbe8",
+      "published_date": "2026-07-02",
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "release_eligible": false,
+      "map_eligible": false,
+      "collaboration_eligible": false,
+      "row_hold": "magazine_genre_and_whole_researcher_reconciliation"
+    }
+  ]
+}

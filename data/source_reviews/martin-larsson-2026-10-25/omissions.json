@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "person_id": "person-martinlarsson-970afb46",
+  "observations": [
+    {
+      "observation_id": "10.1093/jrsssb/qkae061",
+      "source_kind": "journal_discussion",
+      "title_as_registered": "Martin Larsson, Aaditya Ramdas, and Johannes Ruf’s contribution to the Discussion of ‘Safe testing’ by Grünwald, de Heide, and Koolen",
+      "authors_as_registered": [
+        "Martin Larsson",
+        "Aaditya Ramdas",
+        "Johannes Ruf"
+      ],
+      "online_year": 2024,
+      "doi": "10.1093/jrsssb/qkae061",
+      "registry_url": "https://api.crossref.org/works/10.1093/jrsssb/qkae061",
+      "publisher_url": "https://academic.oup.com/jrsssb/article/86/5/1135/7700656",
+      "crossref_file": "qkae061.crossref.json",
+      "crossref_response_sha256": "cd006b51b13f9b120ab9163dadf1c12a9f6dc1db6a9d1d078d2c8ca8b348dcdb",
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "journal_issue_year": 2024,
+      "volume": "86",
+      "issue": "5",
+      "pages": "1135-1136",
+      "affiliation_basis": "Crossref publisher-deposited Mathematical Sciences, Carnegie Mellon affiliation for Martin Larsson"
+    },
+    {
+      "observation_id": "10.1093/jrsssb/qkad120",
+      "source_kind": "journal_discussion",
+      "title_as_registered": "Martin Larsson and Johannes Ruf’s contribution to the Discussion of ‘Estimating means of bounded random variables by betting’ by Waudby-Smith and Ramdas",
+      "authors_as_registered": [
+        "Martin Larsson",
+        "Johannes Ruf"
+      ],
+      "online_year": 2023,
+      "doi": "10.1093/jrsssb/qkad120",
+      "registry_url": "https://api.crossref.org/works/10.1093/jrsssb/qkad120",
+      "publisher_url": "https://academic.oup.com/jrsssb/article/86/1/39/7303215",
+      "crossref_file": "qkad120.crossref.json",
+      "crossref_response_sha256": "b1abf57e2c6b24d8d3e9ef4b2c63dbf7d5bef1bc4e2f4727503b0b82d05acc73",
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "journal_issue_year": 2024,
+      "volume": "86",
+      "issue": "1",
+      "pages": "39-40",
+      "affiliation_basis": "Crossref publisher-deposited Mathematical Sciences, Carnegie Mellon affiliation for Martin Larsson"
+    },
+    {
+      "observation_id": "10.2139/ssrn.3170978",
+      "source_kind": "research_preprint",
+      "title_as_registered": "Polynomial Processes for Power Prices",
+      "authors_as_registered": [
+        "Damir Filipovic",
+        "Martin Larsson",
+        "Tony Ware"
+      ],
+      "online_year": 2018,
+      "doi": "10.2139/ssrn.3170978",
+      "registry_url": "https://api.crossref.org/works/10.2139/ssrn.3170978",
+      "publisher_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3170978",
+      "crossref_file": "ssrn.3170978.crossref.json",
+      "crossref_response_sha256": "a6e6f08c1bfd7b0301b056cbcc771e8882ce7197fd109827f1ddcb60639bd3c0",
+      "listed_in_author_site": false,
+      "scholar_profile_observation": false,
+      "arxiv_id": "1710.10293",
+      "arxiv_url": "https://arxiv.org/abs/1710.10293",
+      "arxiv_file": "arxiv-1710.10293.html.gz",
+      "arxiv_page_sha256": "6e1bc3e67861446f7f621989ad901239172589721f5fd0861f69257f27d4d019",
+      "arxiv_first_year": 2017,
+      "ssrn_affiliation_basis": "SSRN author page lists Martin Larsson at ETH Zurich Department of Mathematics; coauthors and arXiv title match the registered preprint."
+    }
+  ]
+}
