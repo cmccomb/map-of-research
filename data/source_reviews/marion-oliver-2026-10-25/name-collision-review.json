@@ -1,0 +1,44 @@
+[
+  {
+    "openalex_author_id": "https://openalex.org/A5023340417",
+    "display_name": "Marion Oliver",
+    "works_count_as_search": 41,
+    "review_decision": "excluded_medical_namesake",
+    "reason": "University of Toledo Medical Center and Spectrum Health; distinct neurology publication context"
+  },
+  {
+    "openalex_author_id": "https://openalex.org/A5130714641",
+    "display_name": "Marion Oliver",
+    "works_count_as_search": 8,
+    "review_decision": "excluded_medical_namesake",
+    "reason": "Advocate Health Care; distinct medical publication context"
+  },
+  {
+    "openalex_author_id": "https://openalex.org/A5014311491",
+    "display_name": "Marion L. Oliver",
+    "works_count_as_search": 3,
+    "review_decision": "included_source_candidate",
+    "reason": "Exact Marion L. Oliver cluster, 1972–1975 mixtures research, Carnegie Mellon affiliation"
+  },
+  {
+    "openalex_author_id": "https://openalex.org/A5013714748",
+    "display_name": "Marion M. Oliver",
+    "works_count_as_search": 1,
+    "review_decision": "unresolved_name_collision",
+    "reason": "Marion M. Oliver; no corroborating CMU affiliation"
+  },
+  {
+    "openalex_author_id": "https://openalex.org/A5070200711",
+    "display_name": "Katrin Oliver",
+    "works_count_as_search": 14,
+    "review_decision": "excluded_different_name",
+    "reason": "Katrin Oliver; query artifact"
+  },
+  {
+    "openalex_author_id": "https://openalex.org/A5090646262",
+    "display_name": "Marion Washington Oliver",
+    "works_count_as_search": 1,
+    "review_decision": "unresolved_name_collision",
+    "reason": "Marion Washington Oliver; no corroborating CMU affiliation"
+  }
+]

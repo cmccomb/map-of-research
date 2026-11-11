@@ -1,0 +1,289 @@
+{
+  "id": "https://openalex.org/A5014311491",
+  "orcid": null,
+  "observed_orcids": [],
+  "display_name": "Marion L. Oliver",
+  "raw_author_names": [
+    "M. L. Oliver",
+    "Marion L. Oliver"
+  ],
+  "full_name": "Marion L. Oliver",
+  "relevance_score": 579.04987,
+  "works_count": 3,
+  "cited_by_count": 43,
+  "summary_stats": {
+    "2yr_mean_citedness": 0.0,
+    "h_index": 3,
+    "i10_index": 2
+  },
+  "ids": {
+    "openalex": "https://openalex.org/A5014311491",
+    "orcid": null,
+    "observed_orcids": []
+  },
+  "affiliations": [
+    {
+      "institution": {
+        "id": "https://openalex.org/I74973139",
+        "ror": "https://ror.org/05x2bcf33",
+        "display_name": "Carnegie Mellon University",
+        "country_code": "US",
+        "type": "education",
+        "lineage": [
+          "https://openalex.org/I74973139"
+        ]
+      },
+      "years": [
+        1975,
+        1973,
+        1972
+      ]
+    }
+  ],
+  "last_known_institutions": [
+    {
+      "id": "https://openalex.org/I74973139",
+      "ror": "https://ror.org/05x2bcf33",
+      "display_name": "Carnegie Mellon University",
+      "country_code": "US",
+      "type": "education",
+      "lineage": [
+        "https://openalex.org/I74973139"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "https://openalex.org/T13261",
+      "display_name": "Elasticity and Wave Propagation",
+      "count": 2,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2211",
+        "display_name": "Mechanics of Materials"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T13951",
+      "display_name": "Fluid dynamics and aerodynamics studies",
+      "count": 2,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2206",
+        "display_name": "Computational Mechanics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10229",
+      "display_name": "Geometric Analysis and Curvature Flows",
+      "count": 1,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2604",
+        "display_name": "Applied Mathematics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/26",
+        "display_name": "Mathematics"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10962",
+      "display_name": "Thermodynamic properties of mixtures",
+      "count": 1,
+      "subfield": {
+        "id": "https://openalex.org/subfields/1507",
+        "display_name": "Fluid Flow and Transfer Processes"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/15",
+        "display_name": "Chemical Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T11366",
+      "display_name": "Elasticity and Material Modeling",
+      "count": 1,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2204",
+        "display_name": "Biomedical Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "topic_share": [
+    {
+      "id": "https://openalex.org/T13261",
+      "display_name": "Elasticity and Wave Propagation",
+      "value": 7.3e-06,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2211",
+        "display_name": "Mechanics of Materials"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T11366",
+      "display_name": "Elasticity and Material Modeling",
+      "value": 6.3e-06,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2204",
+        "display_name": "Biomedical Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T10962",
+      "display_name": "Thermodynamic properties of mixtures",
+      "value": 5.5e-06,
+      "subfield": {
+        "id": "https://openalex.org/subfields/1507",
+        "display_name": "Fluid Flow and Transfer Processes"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/15",
+        "display_name": "Chemical Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T12350",
+      "display_name": "Particle Dynamics in Fluid Flows",
+      "value": 5.5e-06,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2212",
+        "display_name": "Ocean Engineering"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    },
+    {
+      "id": "https://openalex.org/T13951",
+      "display_name": "Fluid dynamics and aerodynamics studies",
+      "value": 4.5e-06,
+      "subfield": {
+        "id": "https://openalex.org/subfields/2206",
+        "display_name": "Computational Mechanics"
+      },
+      "field": {
+        "id": "https://openalex.org/fields/22",
+        "display_name": "Engineering"
+      },
+      "domain": {
+        "id": "https://openalex.org/domains/3",
+        "display_name": "Physical Sciences"
+      }
+    }
+  ],
+  "x_concepts": [
+    {
+      "id": "168031717",
+      "wikidata": "https://www.wikidata.org/wiki/Q1530280",
+      "display_name": "Balance (ability)",
+      "score": 0.7302650809288025
+    },
+    {
+      "id": "33923547",
+      "wikidata": "https://www.wikidata.org/wiki/Q395",
+      "display_name": "Mathematics",
+      "score": 0.5058969855308533
+    },
+    {
+      "id": "121332964",
+      "wikidata": "https://www.wikidata.org/wiki/Q413",
+      "display_name": "Physics",
+      "score": 0.34273481369018555
+    },
+    {
+      "id": "15744967",
+      "wikidata": "https://www.wikidata.org/wiki/Q9418",
+      "display_name": "Psychology",
+      "score": 0.15313613414764404
+    },
+    {
+      "id": "169760540",
+      "wikidata": "https://www.wikidata.org/wiki/Q207011",
+      "display_name": "Neuroscience",
+      "score": 0.0
+    }
+  ],
+  "counts_by_year": [
+    {
+      "year": 1972,
+      "works_count": 1,
+      "oa_works_count": 0,
+      "cited_by_count": 15
+    },
+    {
+      "year": 1973,
+      "works_count": 1,
+      "oa_works_count": 1,
+      "cited_by_count": 20
+    },
+    {
+      "year": 1975,
+      "works_count": 1,
+      "oa_works_count": 1,
+      "cited_by_count": 8
+    }
+  ],
+  "display_name_alternatives": [
+    "M. L. Oliver",
+    "Marion L. Oliver"
+  ],
+  "block_key": "m oliver",
+  "works_api_url": "https://api.openalex.org/works?filter=author.id:A5014311491",
+  "updated_date": "2026-10-10T12:59:14",
+  "created_date": "2025-10-10T00:00:00"
+}
