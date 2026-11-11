@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "review_only_no_snapshot_no_release",
+  "person_id": "person-janepanangaden-dc0f9aec",
+  "orcid": "0000-0002-6214-2130",
+  "scholar_account_status": "no_verified_account",
+  "career_completeness": "unverified",
+  "captured_at_utc_date": "2026-10-25",
+  "source_urls": {
+    "cmu_profile": "https://www.cmu.edu/math/people/faculty/panangaden.html",
+    "orcid_record": "https://pub.orcid.org/v3.0/0000-0002-6214-2130/record",
+    "arxiv_author_query": "https://export.arxiv.org/api/query?search_query=au:%22Panangaden%2C_Jane%22&start=0&max_results=100",
+    "caltech_phd": "https://thesis.caltech.edu/14622/",
+    "mcgill_masters_index": "https://www.erudit.org/en/theses/mcgill/P/?page=12&sort_by=date_desc",
+    "mcgill_masters_pdf": "https://arxiv.org/pdf/2110.01678",
+    "science_for_the_people_magazine": "https://magazine.scienceforthepeople.org/vol23-3-bio-politics/socialists-of-caltech/"
+  },
+  "mcgill_masters_pdf_sha256": "62a72594213d3105c16dcb21bd48e46e3fd4cbe5ee7f88eee76ea8f6cf7a0ab6",
+  "files": {
+    "cmu-profile.html": "1c6084c68efc603920ed288e633bc5f4990b5d73ea3c36c2dc8dc25eaaac994f",
+    "orcid-record.json": "57deec47a4ba089a60e1fdda864e816adc7464824d8aa593dc0eae535f3e5198",
+    "arxiv-author-query.xml": "43c641331441c271dfca13f2b1d3ad092db2671690bd240ea5693f6c5cd1ad19",
+    "caltech-phd.html": "a0964298c80685df03c5ede8e8d6c908f4e476c3da8d02f7bf98d3fff3d53fab",
+    "mcgill-masters-index.html": "5a58c9c536fdcf027c5e0efce0b2785dbb82600454e43bb2ec0136d3b97fe9c4",
+    "masters-cover.txt": "fef2d83db8a5555cb395fae1910d844eb1f798c3d21ccb996cf8f5d396f5c6fc",
+    "magazine-article-metadata.json": "04e013f2d456695eb8cb5fffd77562164aa7d635c527ae871ee087d4e48b9875"
+  }
+}

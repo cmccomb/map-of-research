@@ -1,0 +1,5 @@
+# Keep third-party source bytes exact and out of textual whitespace checks.
+*.html -text -diff
+*.xml -text -diff
+orcid-record.json -text -diff
+*.csv text eol=lf
