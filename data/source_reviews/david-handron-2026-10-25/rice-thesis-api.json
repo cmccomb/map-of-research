@@ -1,0 +1,203 @@
+{
+  "id" : "3f2f6423-2661-454a-8d2e-e17e4814b734",
+  "uuid" : "3f2f6423-2661-454a-8d2e-e17e4814b734",
+  "name" : "Generalized billiard paths and Morse theory for manifolds with corners",
+  "handle" : "1911/19389",
+  "metadata" : {
+    "dc.contributor.advisor" : [ {
+      "value" : "Forman, Robin",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.creator" : [ {
+      "value" : "Handron, David Gerard Christian",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.accessioned" : [ {
+      "value" : "2009-06-04T06:43:09Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.available" : [ {
+      "value" : "2009-06-04T06:43:09Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.issued" : [ {
+      "value" : "1999",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.abstract" : [ {
+      "value" : "A billiard path on a manifold M embedded in Euclidean space is a series of line segments connecting reflection points on M. In a generalized billiard path we also allow the path to pass through M. The two segments at a 'reflection' point either form a straight angle, or an angle whose bisector is normal to  M. Our goal is to estimate the number of generalized billiard paths connecting fixed points with a given number of reflections.\nWe begin by broadening our point of view and allowing line segments that connect any sequence of points on M. Since a path is determined by its 'reflection' points, the length of a path with  k reflections may be thought of as a function on M k. Generalized billiard paths correspond to critical points of this length function. The length function is not smooth on M k, having singularities along some of its diagonals. Following the procedure of Fulton and MacPherson we may blow up Mk to obtain a compact manifold with corners to which the length function extends smoothly.\nWe then develop a version of Morse theory for manifolds with corners and use it to study the length function. There are already versions of Morse theory that may be used in this case, but ours is a generalization of the work of Braess, retaining both a global 'gradient' flow and the intrinsic stratification of a manifold with corners.\nWe find that the number of generalized billiard paths with k  reflections connecting two points in   RN  can be estimated in terms of the homology of the Fulton-MacPherson blow up. Proceeding further, we find lower bounds for the number of such paths directly in terms of the homology of M. In part, we show the number of these paths is at least   j=0n-1 i1+&dot;&dot;&dot;+ik=jb i1M&ldots; bikM .",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.format.extent" : [ {
+      "value" : "88 p.",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.format.mimetype" : [ {
+      "value" : "application/pdf",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.callno" : [ {
+      "value" : "THESIS MATH. 1999 HANDRON",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.citation" : [ {
+      "value" : "Handron, David Gerard Christian. \"Generalized billiard paths and Morse theory for manifolds with corners.\" (1999) Diss.,  Rice University.  <a href=\"https://hdl.handle.net/1911/19389\">https://hdl.handle.net/1911/19389</a>.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.uri" : [ {
+      "value" : "https://hdl.handle.net/1911/19389",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.language.iso" : [ {
+      "value" : "eng",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.rights" : [ {
+      "value" : "Copyright is held by the author, unless otherwise indicated. Permission to reuse, publish, or reproduce the work beyond the bounds of fair use or other exemptions to copyright law must be obtained from the copyright holder.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.subject" : [ {
+      "value" : "Mathematics",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.title" : [ {
+      "value" : "Generalized billiard paths and Morse theory for manifolds with corners",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type" : [ {
+      "value" : "Thesis",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type.material" : [ {
+      "value" : "Text",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.department" : [ {
+      "value" : "Mathematics",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.discipline" : [ {
+      "value" : "Natural Sciences",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.grantor" : [ {
+      "value" : "Rice University",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.level" : [ {
+      "value" : "Doctoral",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.name" : [ {
+      "value" : "Doctor of Philosophy",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ]
+  },
+  "inArchive" : true,
+  "discoverable" : true,
+  "withdrawn" : false,
+  "lastModified" : "2024-01-11T21:04:16.990Z",
+  "entityType" : null,
+  "type" : "item",
+  "_links" : {
+    "accessStatus" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/accessStatus"
+    },
+    "bundles" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/bundles"
+    },
+    "identifiers" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/identifiers"
+    },
+    "mappedCollections" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/mappedCollections"
+    },
+    "owningCollection" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/owningCollection"
+    },
+    "relationships" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/relationships"
+    },
+    "version" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/version"
+    },
+    "templateItemOf" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/templateItemOf"
+    },
+    "thumbnail" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/thumbnail"
+    },
+    "submitter" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734/submitter"
+    },
+    "self" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/3f2f6423-2661-454a-8d2e-e17e4814b734"
+    }
+  }
+}

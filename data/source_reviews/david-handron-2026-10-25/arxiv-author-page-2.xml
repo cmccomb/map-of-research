@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DeYWKWgzRfVx3XzHjUhF+KEQgIg</id>
+  <title>arXiv Query: search_query=au:"David G. C. Handron"&amp;id_list=&amp;start=100&amp;max_results=100</title>
+  <updated>2026-10-25T13:51:24Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22David+G.+C.+Handron%22&amp;start=100&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>100</opensearch:startIndex>
+</feed>

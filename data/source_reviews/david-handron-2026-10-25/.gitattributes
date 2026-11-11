@@ -1,0 +1,4 @@
+*.html -text -diff
+*.xml -text -diff
+*.json text eol=lf
+*.csv text eol=lf
