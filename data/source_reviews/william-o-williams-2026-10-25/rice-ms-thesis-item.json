@@ -1,0 +1,203 @@
+{
+  "id" : "aafe1492-3eac-4306-aaa4-7b9b85d60d5e",
+  "uuid" : "aafe1492-3eac-4306-aaa4-7b9b85d60d5e",
+  "name" : "Torsional buckling of an extended twisted cylindrical rod under one-sided constraint",
+  "handle" : "1911/88982",
+  "metadata" : {
+    "dc.contributor.advisor" : [ {
+      "value" : "Paslay, Paul R.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.creator" : [ {
+      "value" : "Williams, William Orville",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.accessioned" : [ {
+      "value" : "2016-04-20T21:17:26Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.available" : [ {
+      "value" : "2016-04-20T21:17:26Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.issued" : [ {
+      "value" : "1964",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.abstract" : [ {
+      "value" : "The problem considered is that of the determination of stability criteria for an extended twisted cylindrical rod resting on a rigid plane inclined with respect to a gravity field. It was assumed that the tensile strain of the rod was no larger than that compatible with infinitesimal elasticity theory but that the torsion might be finite. The energy theory of buckling was used. Prior to consideration of the specific problem, a formulation of the strain energy of an arbitrarily displaced cylindrical rod was made. It was assumed for this purpose that the rod suffers no lateral deformation and that sections of the rod initially plane and perpendicular to the center line remain plane and perpendicular to the tangent of the center line curve. The potential energy contributed by external loadings (the gravity force, axial tensile force and axial moment) was then computed and added to the strain energy expression above. An equilibrium configuration was then assumed and the total energy variation for perturbations of this configuration considered, The variation of energy for arbitrary displacements was found to be positive to first order effects so that the configuration is stable in the classical sense. Consideration of second order effects revealed that instability may develop for sufficiently large displacements from the equilibrium configuration. The conditions under which such instabilities can occur were formulated and reduced to a simple sequence of calculations for application.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.format.digitalOrigin" : [ {
+      "value" : "reformatted digital",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.format.extent" : [ {
+      "value" : "61 pp",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.callno" : [ {
+      "value" : "Thesis M.E. 1964 WILLIAMS",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.citation" : [ {
+      "value" : "Williams, William Orville. \"Torsional buckling of an extended twisted cylindrical rod under one-sided constraint.\" (1964) Master’s Thesis,  Rice University.  <a href=\"https://hdl.handle.net/1911/88982\">https://hdl.handle.net/1911/88982</a>.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.digital" : [ {
+      "value" : "RICE0018",
+      "language" : "en_US",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.uri" : [ {
+      "value" : "https://hdl.handle.net/1911/88982",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.language.iso" : [ {
+      "value" : "eng",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.rights" : [ {
+      "value" : "Copyright is held by the author, unless otherwise indicated. Permission to reuse, publish, or reproduce the work beyond the bounds of fair use or other exemptions to copyright law must be obtained from the copyright holder.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.title" : [ {
+      "value" : "Torsional buckling of an extended twisted cylindrical rod under one-sided constraint",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type" : [ {
+      "value" : "Thesis",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type.material" : [ {
+      "value" : "Text",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.department" : [ {
+      "value" : "Mechanical Engineering",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.discipline" : [ {
+      "value" : "Engineering",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.grantor" : [ {
+      "value" : "Rice University",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.level" : [ {
+      "value" : "Masters",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "thesis.degree.name" : [ {
+      "value" : "Master of Science",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ]
+  },
+  "inArchive" : true,
+  "discoverable" : true,
+  "withdrawn" : false,
+  "lastModified" : "2024-01-11T21:18:10.085Z",
+  "entityType" : null,
+  "type" : "item",
+  "_links" : {
+    "accessStatus" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/accessStatus"
+    },
+    "bundles" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/bundles"
+    },
+    "identifiers" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/identifiers"
+    },
+    "mappedCollections" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/mappedCollections"
+    },
+    "owningCollection" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/owningCollection"
+    },
+    "relationships" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/relationships"
+    },
+    "version" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/version"
+    },
+    "templateItemOf" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/templateItemOf"
+    },
+    "thumbnail" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/thumbnail"
+    },
+    "submitter" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e/submitter"
+    },
+    "self" : {
+      "href" : "https://repository.rice.edu/server/api/core/items/aafe1492-3eac-4306-aaa4-7b9b85d60d5e"
+    }
+  }
+}
