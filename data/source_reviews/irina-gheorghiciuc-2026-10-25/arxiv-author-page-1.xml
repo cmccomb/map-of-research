@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/SZmnyyA+P1utH62ohyPJjZMWZTM</id>
+  <title>arXiv Query: search_query=au:"Irina Gheorghiciuc"&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-25T13:38:28Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=au:%22Irina+Gheorghiciuc%22&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>4</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1403.5296v2</id>
+    <title>On super Catalan polynomials</title>
+    <updated>2014-08-31T22:04:07Z</updated>
+    <link href="https://arxiv.org/abs/1403.5296v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1403.5296v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present a $q$-analog of the super Catalan number $(2m)!(2n)!/2m!n!(m+n)!$, which also generalizes the $q$-Catalan numbers $c_n(λ)$, due to Fürlinger and Hofbauer, for $λ=0$ and $λ=1$. We give a combinatorial interpretation for this analog when $m=2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-03-20T20:59:56Z</published>
+    <arxiv:comment>10 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Emily Allen</name>
+    </author>
+    <author>
+      <name>Irina Gheorghiciuc</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1403.5246v2</id>
+    <title>A weighted interpretation for the super Catalan numbers</title>
+    <updated>2014-08-26T18:46:10Z</updated>
+    <link href="https://arxiv.org/abs/1403.5246v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1403.5246v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The super Catalan numbers $T(m,n)=(2m)!(2n)!/2m!n!(m+n)!$ are integers which generalize the Catalan numbers. With the exception of a few values of $m$, no combinatorial interpretation in known for $T(m,n)$. We give a weighted interpretation for $T(m,n)$ and develop a technique that converts this weighted interpretation into a conventional combinatorial interpretation in the case $m=2$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-03-20T19:37:50Z</published>
+    <arxiv:comment>8 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Emily Allen</name>
+    </author>
+    <author>
+      <name>Irina Gheorghiciuc</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0512256v1</id>
+    <title>The subword complexity of a class of infinite binary words</title>
+    <updated>2005-12-13T05:06:53Z</updated>
+    <link href="https://arxiv.org/abs/math/0512256v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0512256v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Let $A_q$ be a $q$-letter alphabet and $w$ be a right infinite word on this alphabet. A subword of $w$ is a block of consecutive letters of $w$. The subword complexity function of $w$ assigns to each positive integer $n$ the number $f_w(n)$ of distinct subwords of length $n$ of $w$.
+  The gap function of an infinite word over the binary alphabet $\{0,1 \}$ gives the distances between consecutive 1's in this word. In this paper we study infinite binary words whose gap function is injective or "almost injective". A method for computing the subword complexity of such words is given. A necessary and sufficient condition for a function to be the subword complexity function of a binary word whose gap function is strictly increasing is obtained.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-12-13T05:06:53Z</published>
+    <arxiv:comment>29 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Irina Gheorghiciuc</name>
+      <arxiv:affiliation>University of Delaware</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2008.00133v1</id>
+    <title>Super-Catalan Numbers of the Third and Fourth Kind</title>
+    <updated>2020-08-01T00:32:55Z</updated>
+    <link href="https://arxiv.org/abs/2008.00133v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2008.00133v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Super-Catalan numbers are a generalization of the Catalan numbers defined as $T(m,n) = \frac{(2m)!(2n)!}{2m!n!(m+n)!}$. It is an open problem to find a combinatorial interpretation for $T(m,n)$. We resolve this for $m=3,4$ using a common form; no such solution exists for $m=5$.</summary>
+    <category term="math.CO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-08-01T00:32:55Z</published>
+    <arxiv:comment>13 pages, no figures</arxiv:comment>
+    <arxiv:primary_category term="math.CO"/>
+    <author>
+      <name>Irina Gheorghiciuc</name>
+    </author>
+    <author>
+      <name>Gidon Orelowitz</name>
+    </author>
+  </entry>
+</feed>
