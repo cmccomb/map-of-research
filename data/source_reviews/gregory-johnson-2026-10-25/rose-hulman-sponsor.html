@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- inj yui3-seed: --><script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/yui/3.6.0/yui/yui-min.js'></script><script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script><!-- Adobe Analytics --><script type='text/javascript' src='https://assets.adobedtm.com/4a848ae9611a/d0e96722185b/launch-d525bb0064d8.min.js'></script><script type='text/javascript' src=/assets/nr_browser_production.js></script>
+
+<!-- def.1 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>
+"Giuga's Primality Conjecture for Number Fields" by Jamaris Burns, Katherine Casey et al.
+</title>
+
+
+<!-- FILE article_meta-tags.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/article_meta-tags.inc -->
+<meta itemprop="name" content="Giuga's Primality Conjecture for Number Fields">
+<meta property="og:title" content="Giuga's Primality Conjecture for Number Fields">
+<meta name="twitter:title" content="Giuga's Primality Conjecture for Number Fields">
+<meta property="article:author" content="Jamaris Burns">
+<meta name="author" content="Jamaris Burns">
+<meta property="article:author" content="Katherine Casey">
+<meta name="author" content="Katherine Casey">
+<meta property="article:author" content="Duncan Gichimu">
+<meta name="author" content="Duncan Gichimu">
+<meta property="article:author" content="Kerrek Stinson">
+<meta name="author" content="Kerrek Stinson">
+<meta name="robots" content="noodp, noydir">
+<meta name="description" content="Giuseppe Giuga conjectured in 1950 that a natural number n is prime if and only if it satisfies the congruence 1n-1+2n-1+ ... + (n-1)n-1 = -1 mod n. Progress in validating or disproving the conjecture has been minimal, with the most significant advance being the knowledge that a counter-example would need at least 19,907 digits. To gain new insights into Giuga&#039;s conjecture, we explore it in the broader context of number fields. We present a generalized version of the conjecture and prove generalizations of many of the major results related to the conjecture. We introduce the concept of a Giuga ideal and perform computational searches for partial counter-examples to the generalized conjecture. We investigate the relationship between the existence of a counter-example in one number field with the existence of counter-examples in others, with a particular focus on quadratic extensions. This paper lays the preliminary foundation for answering the question: When does the existence of a counter-example in a number field imply the existence of a counter-example in the integers?">
+<meta itemprop="description" content="Giuseppe Giuga conjectured in 1950 that a natural number n is prime if and only if it satisfies the congruence 1n-1+2n-1+ ... + (n-1)n-1 = -1 mod n. Progress in validating or disproving the conjecture has been minimal, with the most significant advance being the knowledge that a counter-example would need at least 19,907 digits. To gain new insights into Giuga&#039;s conjecture, we explore it in the broader context of number fields. We present a generalized version of the conjecture and prove generalizations of many of the major results related to the conjecture. We introduce the concept of a Giuga ideal and perform computational searches for partial counter-examples to the generalized conjecture. We investigate the relationship between the existence of a counter-example in one number field with the existence of counter-examples in others, with a particular focus on quadratic extensions. This paper lays the preliminary foundation for answering the question: When does the existence of a counter-example in a number field imply the existence of a counter-example in the integers?">
+<meta name="twitter:description" content="Giuseppe Giuga conjectured in 1950 that a natural number n is prime if and only if it satisfies the congruence 1n-1+2n-1+ ... + (n-1)n-1 = -1 mod n. Progress in validating or disproving the conjecture has been minimal, with the most significant advance being the knowledge that a counter-example would need at least 19,907 digits. To gain new insights into Giuga&#039;s conjecture, we explore it in the broader context of number fields. We present a generalized version of the conjecture and prove generalizations of many of the major results related to the conjecture. We introduce the concept of a Giuga ideal and perform computational searches for partial counter-examples to the generalized conjecture. We investigate the relationship between the existence of a counter-example in one number field with the existence of counter-examples in others, with a particular focus on quadratic extensions. This paper lays the preliminary foundation for answering the question: When does the existence of a counter-example in a number field imply the existence of a counter-example in the integers?">
+<meta property="og:description" content="Giuseppe Giuga conjectured in 1950 that a natural number n is prime if and only if it satisfies the congruence 1n-1+2n-1+ ... + (n-1)n-1 = -1 mod n. Progress in validating or disproving the conjecture has been minimal, with the most significant advance being the knowledge that a counter-example would need at least 19,907 digits. To gain new insights into Giuga&#039;s conjecture, we explore it in the broader context of number fields. We present a generalized version of the conjecture and prove generalizations of many of the major results related to the conjecture. We introduce the concept of a Giuga ideal and perform computational searches for partial counter-examples to the generalized conjecture. We investigate the relationship between the existence of a counter-example in one number field with the existence of counter-examples in others, with a particular focus on quadratic extensions. This paper lays the preliminary foundation for answering the question: When does the existence of a counter-example in a number field imply the existence of a counter-example in the integers?">
+<meta name="bepress_citation_journal_title" content="Rose-Hulman Undergraduate Mathematics Journal">
+<meta name="bepress_citation_firstpage" content="5">
+<meta name="bepress_citation_author" content="Burns, Jamaris">
+<meta name="bepress_citation_author_institution" content="Johnson C. Smith University">
+<meta name="bepress_citation_author" content="Casey, Katherine">
+<meta name="bepress_citation_author_institution" content="Cornell University">
+<meta name="bepress_citation_author" content="Gichimu, Duncan">
+<meta name="bepress_citation_author_institution" content="Towson University">
+<meta name="bepress_citation_author" content="Stinson, Kerrek">
+<meta name="bepress_citation_author_institution" content="Colorado School of Mines">
+<meta name="bepress_citation_title" content="Giuga's Primality Conjecture for Number Fields">
+<meta name="bepress_citation_date" content="2017">
+<meta name="bepress_citation_volume" content="18">
+<meta name="bepress_citation_issue" content="1">
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/article_meta-tags.inc (cont) -->
+<meta name="bepress_citation_pdf_url" content="https://scholar.rose-hulman.edu/cgi/viewcontent.cgi?article=1345&amp;context=rhumj">
+<meta name="bepress_citation_abstract_html_url" content="https://scholar.rose-hulman.edu/rhumj/vol18/iss1/5">
+<meta name="bepress_citation_online_date" content="2017/7/31">
+<meta name="viewport" content="width=device-width">
+<!-- Additional Twitter data -->
+<meta name="twitter:card" content="summary">
+<!-- Additional Open Graph data -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://scholar.rose-hulman.edu/rhumj/vol18/iss1/5">
+<meta property="og:site_name" content="Rose-Hulman Scholar">
+
+
+
+
+<!-- FILE: article_meta-tags.inc (cont) -->
+<meta name="bepress_is_article_cover_page" content="1">
+
+
+<!-- sh.1 -->
+<link rel="stylesheet" href="/rhumj/ir-journal-style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Rose-Hulman Undergraduate Mathematics Journal Newsfeed" href="/rhumj/recent.rss">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<link type="text/css" rel="stylesheet" href="/assets/floatbox/floatbox.css">
+<script type="text/javascript" src="/assets/jsUtilities.js"></script>
+<script type="text/javascript" src="/assets/footnoteLinks.js"></script>
+<link rel="stylesheet" href="/ir-print.css" type="text/css" media="print">
+<!--[if IE]>
+<link rel="stylesheet" href="/ir-ie.css" type="text/css" media="screen">
+<![endif]-->
+<!-- end sh.1 -->
+
+
+
+
+<script type="text/javascript">var pageData = {"page":{"environment":"prod","productName":"bpdg","language":"en","name":"ir_journal:volume:issue:article","businessUnit":"els:rp:st"},"visitor":{}};</script>
+
+</head>
+<body >
+<!-- FILE /srv/sequoia/main/data/assets/site/ir_journal/header.pregen -->
+
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/mobile_nav.inc --><!--[if !IE]>-->
+<script src="/assets/scripts/dc-mobile/dc-responsive-nav.js"></script>
+
+<header id="mobile-nav" class="nav-down device-fixed-height" style="visibility: hidden;">
+  
+  
+  <nav class="nav-collapse">
+    <ul>
+      <li class="menu-item active device-fixed-width"><a href="https://scholar.rose-hulman.edu" title="Home" data-scroll >Home</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://scholar.rose-hulman.edu/do/search/advanced/" title="Search" data-scroll ><i class="icon-search"></i> Search</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://scholar.rose-hulman.edu/communities.html" title="Browse" data-scroll >Browse Collections</a></li>
+      <li class="menu-item device-fixed-width"><a href="/cgi/myaccount.cgi?context=" title="My Account" data-scroll >My Account</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://scholar.rose-hulman.edu/about.html" title="About" data-scroll >About</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://network.bepress.com" title="Digital Commons Network" data-scroll ><img width="16" height="16" alt="DC Network" style="vertical-align:top;" src="/assets/md5images/8e240588cf8cd3a028768d4294acd7d3.png"> Digital Commons Network™</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script src="/assets/scripts/dc-mobile/dc-mobile-nav.js"></script>
+<!--<![endif]-->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+
+
+
+<div id="rhumj">
+	<div id="container">
+		<a href="#main" class="skiplink" accesskey="2" >Skip to main content</a>
+
+					
+			<div id="header">
+				<a href="https://scholar.rose-hulman.edu/rhumj" id="banner_link" title="Rose-Hulman Undergraduate Mathematics Journal" >
+					<img id="banner_image" alt="Rose-Hulman Undergraduate Mathematics Journal" width='980' height='101' src="/assets/md5images/b03fc7384d61d24cf37ac0eedc713ad7.png">
+				</a>	
+				
+					<a href="https://www.rose-hulman.edu/" id="logo_link" title="Rose-Hulman Institute of Technology" >
+						<img id="logo_image" alt="Rose-Hulman Institute of Technology" width='248' height='101' src="/assets/md5images/f7013243f110c6c2475679331cc730bc.png">
+					</a>	
+				
+			</div>
+					
+			<div id="navigation">
+				<!-- FILE: /srv/sequoia/main/data/assets/site/ir_navigation.inc --><div id="tabs" role="navigation" aria-label="Main"><ul><li id="tabone"><a href="https://scholar.rose-hulman.edu" title="Home" ><span>Home</span></a></li><li id="tabtwo"><a href="https://scholar.rose-hulman.edu/about.html" title="About" ><span>About</span></a></li><li id="tabthree"><a href="https://scholar.rose-hulman.edu/faq.html" title="FAQ" ><span>FAQ</span></a></li><li id="tabfour"><a href="https://scholar.rose-hulman.edu/cgi/myaccount.cgi?context=" title="My Account" ><span>My Account</span></a></li></ul></div>
+
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+			</div>
+			
+			
+		<div id="wrapper">
+			<div id="content">
+				<div id="main" class="text">					
+					<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_breadcrumb.inc -->
+	<ul id="pager">
+		<li>&nbsp;</li>
+		 
+		<li>&nbsp;</li> 
+		
+	</ul>
+
+<div class="crumbs" role="navigation" aria-label="Breadcrumb">
+	<p>
+		
+
+		
+		
+		
+			<a href="https://scholar.rose-hulman.edu" class="ignore" >Home</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://scholar.rose-hulman.edu/rhumj" class="ignore" >RHUMJ</a>
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://scholar.rose-hulman.edu/rhumj/vol18" class="ignore" >Vol. 18 (2017)</a>
+		
+		
+		
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://scholar.rose-hulman.edu/rhumj/vol18/iss1" class="ignore" >Iss. 1</a>
+		
+		
+		
+		
+		
+	</p>
+</div>
+
+<div class="clear">&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+					
+						<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/volume/issue/ir_journal_logo.inc -->
+
+
+
+
+
+ 
+
+
+
+
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+					
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header.pregen (cont) -->
+
+<script type="text/javascript" src="/assets/floatbox/floatbox.js"></script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_article_header.inc --><div id="sub">
+<div id="alpha"><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --><div id='title' class='element'>
+<h1><a href='https://scholar.rose-hulman.edu/cgi/viewcontent.cgi?article=1345&amp;context=rhumj'>Giuga's Primality Conjecture for Number Fields</a></h1>
+</div>
+<div class='clear'></div>
+<div id='authors' class='element'>
+<h2 class='visually-hidden'>Authors</h2>
+<ul class="author"><li><a href='https://scholar.rose-hulman.edu/do/search/?q=author%3A%22Jamaris%20Burns%22&start=0&context=4752797'><strong>Jamaris Burns</strong>, <em>Johnson C. Smith University</em></a></li>
+<li><a href='https://scholar.rose-hulman.edu/do/search/?q=author%3A%22Katherine%20Casey%22&start=0&context=4752797'><strong>Katherine Casey</strong>, <em>Cornell University</em></a></li>
+<li><a href='https://scholar.rose-hulman.edu/do/search/?q=author%3A%22Duncan%20Gichimu%22&start=0&context=4752797'><strong>Duncan Gichimu</strong>, <em>Towson University</em></a></li>
+<li><a href='https://scholar.rose-hulman.edu/do/search/?q=author%3A%22Kerrek%20Stinson%22&start=0&context=4752797'><strong>Kerrek Stinson</strong>, <em>Colorado School of Mines</em></a></li>
+</ul></div>
+<div class='clear'></div>
+<div id='abstract' class='element'>
+<h2 class='field-heading'>Abstract</h2>
+<p>Giuseppe Giuga conjectured in 1950 that a natural number <em>n</em> is prime if and only if it satisfies the congruence 1<sup><em>n</em>-1</sup>+2<sup><em>n</em>-1</sup>+ ... + (<em>n</em>-1)<sup><em>n</em>-1</sup> = -1 mod <em>n</em>. Progress in validating or disproving the conjecture has been minimal, with the most significant advance being the knowledge that a counter-example would need at least 19,907 digits. To gain new insights into Giuga's conjecture, we explore it in the broader context of number fields. We present a generalized version of the conjecture and prove generalizations of many of the major results related to the conjecture. We introduce the concept of a Giuga ideal and perform computational searches for partial counter-examples to the generalized conjecture. We investigate the relationship between the existence of a counter-example in one number field with the existence of counter-examples in others, with a particular focus on quadratic extensions. This paper lays the preliminary foundation for answering the question: When does the existence of a counter-example in a number field imply the existence of a counter-example in the integers?</p>
+</div>
+<div class='clear'></div>
+<div id='author_bio' class='element'>
+<h2 class='field-heading'>Author Bio</h2>
+<p>Jamaris Burns graduated from Johnson C. Smith University in 2015 with a B.S. in Mathematics. She worked on this research while in the SUAMI 2013 cohort at Carnegie Mellon University. She is currently pursuing her Masters degree in Data Analytics and working as a Project Management Specialist for a data and technology management company. Other interests of hers are painting, writing poetry and traveling.</p>
+<p>Katherine Casey graduated in 2014 with a B.A. in mathematics from Cornell University with honors as a Rawlings Cornell presidential research scholar. She worked on this project in 2013 while at Carnegie Mellon University's SUAMI. She presented part of this work at the student poster session at JMM 2014. She has since graduated from the University of Oxford with an MSc in Mathematics and Foundations of Computer Science. In her spare time, she loves to sing classical choral and vocal works.</p>
+<p>Duncan Gichimu studied Mathematics And Economics at Towson University. He worked on this research at Carnegie Mellon Unveristiy's SUAMI in 2015. His hobbies include calisthenics, reading and programming. His favorite programming language is Python and he is especially intrigued by algebraic data types in Haskell.</p>
+<p>Kerrek Stinson is presently a graduate student at Carnegie Mellon University focusing on applied analysis. His work on this paper was completed during his time as an undergraduate at CMU's SUAMI in 2015. Some of his hobbies include, but are not limited to, math.</p>
+</div>
+<div class='clear'></div>
+<div id='sponsor' class='element'>
+<h2 class='field-heading'>Faculty Sponsor</h2>
+<p>Gregory Johnson</p>
+</div>
+<div class='clear'></div>
+<div id='recommended_citation' class='element'>
+<h2 class='field-heading'>Recommended Citation</h2>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_citation.inc -->
+<p class="citation">
+Burns, Jamaris; Casey, Katherine; Gichimu, Duncan; and Stinson, Kerrek
+(2017)
+"Giuga's Primality Conjecture for Number Fields,"
+<em>Rose-Hulman Undergraduate Mathematics Journal</em>: Vol. 18:
+Iss.
+1, Article 5.
+<br>
+Available at:
+https://scholar.rose-hulman.edu/rhumj/vol18/iss1/5</p>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --></div>
+<div class='clear'></div>
+</div>
+    </div>
+    <div id='beta_7-3'>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_download_button.inc --><div class="aside download-button">
+      <a id="pdf" class="btn" href="https://scholar.rose-hulman.edu/cgi/viewcontent.cgi?article=1345&amp;context=rhumj" title="PDF (414&nbsp;KB) opens in new window" target="_blank" > 
+    	<i class="icon-download-alt" aria-hidden="true"></i>
+        Download
+      </a>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_embargo.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_custom_upper.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_article_metrics.inc -->
+<div id="article-stats" class="aside hidden">
+    <p class="article-downloads-wrapper hidden"><span id="article-downloads"></span> DOWNLOADS</p>
+    <p class="article-stats-date hidden">Since July 31, 2017</p>
+<script type="text/javascript">
+// magic has trouble rendering macros embedded directly in the the plumx-widget tag
+// so we have to emit the macro value into some js and let js
+// render and append the plumx-widget tag at view time
+const widget = document.createElement('plumx-widget');
+widget.setAttribute('type', 'artifact');
+widget.setAttribute('identifier-type', 'repo_url');
+widget.setAttribute('identifier', 'https://scholar.rose-hulman.edu/rhumj/vol18/iss1/5');
+widget.setAttribute('display', 'badge');
+widget.setAttribute('theme', 'bigben');
+widget.setAttribute('config', '{"hideWhenEmpty":true}');
+document.querySelector('#article-stats').appendChild(widget);
+</script>
+</div>
+<script src="https://plumx.elsevier.com/widget/plumx-widget.js" defer></script>
+<!-- Article Download Counts -->
+<script type="text/javascript" src="/assets/scripts/article-downloads.pack.js"></script>
+<script type="text/javascript">
+    insertDownloads(10511341);
+</script>
+<!-- Add border to Plum badge & download counts when visible -->
+<script>
+// bind to event when PlumX widget loads
+widget.addEventListener('plumx:load', (event) => {
+  jQuery('#article-stats').removeClass('hidden');
+  jQuery('.article-stats-date').addClass('plum-border');
+});
+// bind to event when page loads
+jQuery(window).on('load',function(e){
+// if DC downloads are visible
+  if (jQuery('#article-downloads').text().length > 0) {
+// add border to aside
+  jQuery('#article-stats').removeClass('hidden');
+  }
+});
+</script>
+<!-- Adobe Analytics: Download Click Tracker -->
+<script>
+$(function() {
+  // Download button click event tracker for PDFs
+  $(".aside.download-button").on("click", "a#pdf", function(event) {
+    pageDataTracker.trackEvent('navigationClick', {
+      link: {
+          location: 'aside download-button',
+          name: 'pdf'
+      }
+    });
+  });
+  // Download button click event tracker for native files
+  $(".aside.download-button").on("click", "a#native", function(event) {
+    pageDataTracker.trackEvent('navigationClick', {
+        link: {
+            location: 'aside download-button',
+            name: 'native'
+        }
+     });
+  });
+});
+</script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_disciplines.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/bookmark_widget.inc -->
+<div id="share" class="aside">
+<h2>Share</h2>
+	<div class="a2a_kit a2a_kit_size_24 a2a_default_style">
+    	<a class="a2a_button_facebook"></a>
+    	<a class="a2a_button_linkedin"></a>
+		<a class="a2a_button_whatsapp"></a>
+		<a class="a2a_button_email"></a>
+    	<a class="a2a_dd"></a>
+    	<script async src="https://static.addtoany.com/menu/page.js"></script>
+	</div>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_geolocate.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_geolocate_enabled_and_displayed.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_geolocate.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/zotero_coins.inc -->
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=https%3A%2F%2Fscholar.rose-hulman.edu%2Frhumj%2Fvol18%2Fiss1%2F5&amp;rft.atitle=Giuga%27s%20Primality%20Conjecture%20for%20Number%20Fields&amp;rft.aufirst=Jamaris&amp;rft.aulast=Burns&amp;rft.au=Katherine%20Casey&amp;rft.au=Duncan%20Gichimu&amp;rft.au=Kerrek%20Stinson&amp;rft.jtitle=Rose-Hulman%20Undergraduate%20Mathematics%20Journal&amp;rft.volume=18&amp;rft.issue=1&amp;rft.date=2017-07-31">COinS</span>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_custom_lower.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --></div>
+<div class='clear'>&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_article_custom_fields.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/volume/issue/article/index.html (cont) --> 
+
+<!-- FILE /srv/sequoia/main/data/assets/site/ir_journal/footer.pregen -->
+
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc -->				</div>
+
+<div class="verticalalign">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+
+			</div>
+
+				<div id="sidebar">
+					<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc -->
+
+	<!-- FILE: /srv/sequoia/main/data/journals/scholar.rose-hulman.edu/rhumj/assets/ir_journal_sidebar_links_7_8.inc --><ul class="sb-custom-journal">
+	<li class="sb-home">
+		<a href="https://scholar.rose-hulman.edu/rhumj" title="Rose-Hulman Undergraduate Mathematics Journal" accesskey="1" >
+				Journal Home
+		</a>
+	</li>
+		<li class="sb-ed-board">
+			<a href="https://scholar.rose-hulman.edu/rhumj/editorialboard.html" title="Editorial Board" >
+					Editorial Board
+			</a>
+		</li>
+		<li class="sb-policies">
+			<a href="https://scholar.rose-hulman.edu/rhumj/policies.html" title="Rose-Hulman Undergraduate Mathematics Journal Policies" >
+					Submission Guidelines and Policies
+			</a>
+		</li>
+<li class="sb">
+			<a href="https://scholar.rose-hulman.edu/rhumj/sponsor_guidelines.html" title="Sponsor Guidelines" >
+					Sponsor Guidelines
+			</a>
+		</li>
+<li class="sb">
+	<a href="https://scholar.rose-hulman.edu/rhumj/styleguide.html" title="Final Manuscript Preparation Guidelines" >Final Manuscript Preparation Guidelines</a></li>
+</ul>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+		<!-- FILE: /srv/sequoia/main/data/assets/site/urc_badge.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_navcontainer_7_8.inc --><div id="navcontainer">
+	<ul id="navlist">
+			<li class="sb-submit">
+					<a href="https://scholar.rose-hulman.edu/cgi/submit.cgi?context=rhumj" title="Submit a Paper to Rose-Hulman Undergraduate Mathematics Journal" >
+						Submit a Paper</a>
+			</li>
+			<li class="sb-rss">
+				<a href="https://scholar.rose-hulman.edu/rhumj/announcements.html" title="Receive notifications of new content" >
+					Receive Email Notices or RSS
+				</a>
+			</li>
+	</ul>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_special_issue_7_8.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_navcontainer_7_8.inc (cont) -->
+</div><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc --><div class="sidebar-search">
+	<form method="post" action="https://scholar.rose-hulman.edu/cgi/redirect.cgi" id="browse">
+		<label for="url">
+			Select an issue:
+		</label>
+			<br>
+		<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_volume_issue_popup_7_8.inc --><div>
+	<span class="border">
+								<select name="url" id="url">
+							<option value="https://scholar.rose-hulman.edu/rhumj/all_issues.html">
+								All Issues
+							</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol26/iss2">
+											Vol. 26, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol26/iss1">
+											Vol. 26, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol25/iss2">
+											Vol. 25, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol25/iss1">
+											Vol. 25, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol24/iss2">
+											Vol. 24, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol24/iss1">
+											Vol. 24, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol23/iss2">
+											Vol. 23, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol23/iss1">
+											Vol. 23, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol22/iss2">
+											Vol. 22, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol22/iss1">
+											Vol. 22, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol21/iss2">
+											Vol. 21, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol21/iss1">
+											Vol. 21, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol20/iss2">
+											Vol. 20, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol20/iss1">
+											Vol. 20, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol19/iss1">
+											Vol. 19, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol18/iss2">
+											Vol. 18, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol18/iss1">
+											Vol. 18, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol17/iss2">
+											Vol. 17, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol17/iss1">
+											Vol. 17, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol16/iss2">
+											Vol. 16, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol16/iss1">
+											Vol. 16, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol15/iss2">
+											Vol. 15, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol15/iss1">
+											Vol. 15, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol14/iss2">
+											Vol. 14, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol14/iss1">
+											Vol. 14, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol13/iss2">
+											Vol. 13, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol13/iss1">
+											Vol. 13, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol12/iss2">
+											Vol. 12, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol12/iss1">
+											Vol. 12, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol11/iss2">
+											Vol. 11, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol11/iss1">
+											Vol. 11, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol10/iss2">
+											Vol. 10, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol10/iss1">
+											Vol. 10, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol9/iss2">
+											Vol. 9, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol9/iss1">
+											Vol. 9, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol8/iss2">
+											Vol. 8, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol8/iss1">
+											Vol. 8, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol7/iss2">
+											Vol. 7, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol7/iss1">
+											Vol. 7, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol6/iss2">
+											Vol. 6, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol6/iss1">
+											Vol. 6, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol5/iss2">
+											Vol. 5, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol5/iss1">
+											Vol. 5, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol4/iss2">
+											Vol. 4, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol4/iss1">
+											Vol. 4, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol3/iss2">
+											Vol. 3, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol3/iss1">
+											Vol. 3, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol2/iss2">
+											Vol. 2, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol2/iss1">
+											Vol. 2, 
+											Iss. 1
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol1/iss2">
+											Vol. 1, 
+											Iss. 2
+										</option>
+										<option value="https://scholar.rose-hulman.edu/rhumj/vol1/iss1">
+											Vol. 1, 
+											Iss. 1
+										</option>
+						</select>
+		<input type="submit" value="Browse" class="searchbutton" style="font-size:11px;">
+	</span>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc (cont) -->
+			<div style="clear:left;">&nbsp;</div>
+	</form>
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_search_7_8.inc --><h2>Search</h2>
+<form method='get' action='https://scholar.rose-hulman.edu/do/search/' id="sidebar-search">
+	<label for="search" accesskey="4">
+		Enter search terms:
+	</label>
+		<div>
+			<span class="border">
+				<input type="text" name='q' class="search" id="search">
+			</span> 
+			<input type="submit" value="Search" class="searchbutton" style="font-size:11px;">
+		</div>
+	<label for="context">
+		Select context to search:
+	</label> 
+		<div>
+			<span class="border">
+				<select name="fq" id="context">
+						<option value='virtual_ancestor_link:"https://scholar.rose-hulman.edu/rhumj"'>in this journal</option>
+					<option value='virtual_ancestor_link:"https://scholar.rose-hulman.edu"'>in this repository</option>
+					<option value='virtual_ancestor_link:"http:/"'>across all repositories</option>
+				</select>
+			</span>
+		</div>
+</form>
+<p class="advanced">
+		<a href="https://scholar.rose-hulman.edu/do/search/advanced/?fq=virtual_ancestor_link:%22https://scholar.rose-hulman.edu/rhumj%22" >
+			Advanced Search
+		</a>
+</p>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc (cont) -->
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_issn_7_8.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_custom_lower_7_8.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_custom_sidebar_images.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_geolocate.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_geolocate_enabled_and_displayed.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_geolocate.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_custom_lowest_7_8.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc (cont) -->
+						<div class="verticalalign">&nbsp;</div>
+				</div>
+
+		</div>
+
+			<!-- FILE: /srv/sequoia/main/data/journals/scholar.rose-hulman.edu/rhumj/assets/ir_journal_footer_content.inc --><div id="footer">
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_bepress_logo.inc --><div id="bepress">
+
+<a href="https://www.elsevier.com/solutions/digital-commons" title="Elsevier - Digital Commons" >
+	<em>Elsevier - Digital Commons</em>
+</a>
+
+</div>
+<!-- FILE: /srv/sequoia/main/data/journals/scholar.rose-hulman.edu/rhumj/assets/ir_journal_footer_content.inc (cont) -->
+		<p>
+			<a href="https://scholar.rose-hulman.edu" title="Home page" accesskey="1" >Home
+			</a> | 
+			<a href="https://scholar.rose-hulman.edu/about.html" title="About" >About
+			</a> | 
+			<a href="https://scholar.rose-hulman.edu/faq.html" title="FAQ" >FAQ
+			</a> | 
+			<a href="/cgi/myaccount.cgi?context=" title="My Account Page" accesskey="3" >My Account
+			</a> | 
+			<a href="https://scholar.rose-hulman.edu/accessibility.html" title="Accessibility Statement" accesskey="0" >Accessibility Statement
+			</a>
+		</p>
+		<p>
+    			<a class="secondary-link" href="https://www.elsevier.com/legal/privacy-policy" title="Privacy Policy" >
+                                        Privacy
+    			</a>
+    			<a class="secondary-link" href="https://www.elsevier.com/legal/elsevier-website-terms-and-conditions" title="Copyright Policy" >
+                                        Copyright
+    			</a>	
+		</p> 
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc (cont) -->
+
+	</div>
+</div>
+
+
+<!-- FILE: /srv/sequoia/main/data/scholar.rose-hulman.edu/assets/ir_analytics.inc --><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42891787-25"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-42891787-25');
+</script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc (cont) -->
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer.pregen (cont) -->
+<script type='text/javascript' src='/assets/scripts/bpbootstrap-20160726.pack.js'></script><script type='text/javascript'>BPBootstrap.init({appendCookie:''})</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a501bfc43ace188c',t:'MTc5MjkzNjg0Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
