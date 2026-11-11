@@ -1,0 +1,102 @@
+{
+  "person_id": "person-manuelblum-943b6e0a",
+  "person_name": "Manuel Blum",
+  "review_date": "2026-10-25",
+  "release_status": "held_source_only",
+  "scholar_id_status": "unverified",
+  "coverage_status": "historical_cv_incomplete",
+  "source": {
+    "type": "researcher_cv",
+    "url": "https://www.cs.cmu.edu/~mblum/pdfs/manuel_blum_cv.pdf",
+    "pdf_sha256": "2bc879ab3418635b1ec0bfd706a3d4642456c155fed76992cfd844d0016149c5",
+    "pdf_modified": "2011-09-22",
+    "section": "Publications",
+    "first_ordinal": 1,
+    "last_ordinal": 59
+  },
+  "capture": {
+    "path": "cv-citations.csv",
+    "sha256": "010835307b4f64a28bf9b77d41a55f9aff5ba12fac0b064a40132faab6456bad",
+    "row_count": 59,
+    "interpretation": "Verbatim bibliography observations; neither deduplicated works nor complete career output"
+  },
+  "post_2011_candidates": {
+    "path": "post-2011-candidates.csv",
+    "sha256": "135b0988ccebf97570992d3d3203392f48008a40ce4fe2fc2e7a93ea760b9dfb",
+    "row_count": 12,
+    "interpretation": "Held post-2011 arXiv and CMU-manuscript observations; some preprint/journal families are reviewed, other version and genre questions remain; not twelve distinct works"
+  },
+  "known_omission": {
+    "doi": "10.1073/pnas.1801839117",
+    "year": 2020,
+    "title": "The complexity of human computation via a concrete model with an application to passwords",
+    "evidence_url": "https://pubmed.ncbi.nlm.nih.gov/32291338/",
+    "identity_basis": "Publisher record names Manuel Blum, Carnegie Mellon School of Computer Science, and mblum@cs.cmu.edu",
+    "status": "held_external_source_observation"
+  },
+  "reviewed_work_family_links": [
+    {
+      "preprint_id": "arxiv:1707.01204",
+      "published_doi": "10.1073/pnas.1801839117",
+      "decision": "same_work_family_distinct_manifestations",
+      "basis": "The arXiv preprint and PNAS article name Manuel Blum and Santosh Vempala, have near-identical titles, and describe the same concrete model of human computation and password application.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1707.01204",
+        "https://pubmed.ncbi.nlm.nih.gov/32291338/"
+      ]
+    },
+    {
+      "preprint_id": "arxiv:2107.13704",
+      "published_doi": "10.1073/pnas.2115934119",
+      "decision": "same_work_family_distinct_manifestations",
+      "basis": "The arXiv record explicitly lists the PNAS DOI as a related DOI; text overlap with arXiv:2011.09850 remains a separate unresolved question.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/2107.13704",
+        "https://doi.org/10.1073/pnas.2115934119"
+      ]
+    },
+    {
+      "preprint_id": "arxiv:1310.1137",
+      "published_doi": "10.1145/2517312.2517319",
+      "decision": "same_work_family_distinct_manifestations",
+      "basis": "The arXiv record explicitly links the ACM DOI and names AISEC 2013; coauthor Jeremiah Blocki's CMU research page lists the exact title, byline, and venue.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1310.1137",
+        "https://www.cs.cmu.edu/~jblocki/",
+        "https://doi.org/10.1145/2517312.2517319"
+      ]
+    }
+  ],
+  "reviewed_identity_links": [
+    {
+      "source_id": "arxiv:1906.00029",
+      "decision": "cmu_manuel_blum_attributed",
+      "basis": "Coauthor Elan Rosenfeld's CMU-hosted CV lists the exact title and Rosenfeld-Vempala-Blum trio as a 2016 senior thesis; CMU's research abstract identifies Manuel Blum as Rosenfeld's advisor for that title. The 2019 arXiv record lists the same trio. Thesis-to-preprint text identity remains unresolved.",
+      "evidence_urls": [
+        "https://arxiv.org/abs/1906.00029",
+        "https://www.cs.cmu.edu/~elan/docs/Elan_CV.pdf",
+        "https://www.cmu.edu/uro/MoM/2016%20MoM%20Abstract%20Book.pdf"
+      ]
+    },
+    {
+      "source_ids": ["arxiv:1302.5122", "arxiv:1310.1137", "arxiv:1404.0024"],
+      "decision": "cmu_manuel_blum_attributed",
+      "basis": "Coauthor Jeremiah Blocki's CMU researcher page identifies Manuel Blum as his doctoral co-advisor and names Blum on the exact titles, with ASIACRYPT, AISEC, or working-paper context; each arXiv record has a matching full byline.",
+      "evidence_urls": [
+        "https://www.cs.cmu.edu/~jblocki/",
+        "https://arxiv.org/abs/1302.5122",
+        "https://arxiv.org/abs/1310.1137",
+        "https://arxiv.org/abs/1404.0024"
+      ]
+    },
+    {
+      "source_id": "cmu:blocki-wildenhain-2012",
+      "decision": "cmu_manuel_blum_attributed_draft_genre_held",
+      "basis": "A full draft manuscript hosted under CMU coauthor Jeremiah Blocki's site gives the exact title, Anne Wildenhain-Jeremiah Blocki-Anupam Datta-Manuel Blum byline, and August 11 2012 date. The page contains drafting notes and does not establish a peer-reviewed venue or distinct later version.",
+      "evidence_urls": [
+        "https://www.cs.cmu.edu/~jblocki/Anne_Wildenhain_2012.htm"
+      ]
+    }
+  ],
+  "graph_eligible": false
+}
