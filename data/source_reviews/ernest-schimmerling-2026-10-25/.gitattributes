@@ -1,0 +1,3 @@
+# Preserve the captured HTML and the reviewed CSV line endings exactly.
+*.html -text -diff
+*.csv text eol=lf

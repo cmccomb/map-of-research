@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "person_id": "person-ernestschimmerling-2b6af882",
+  "source_native_id": "orcid:0000-0001-6740-4809:work:30000450",
+  "source_url": "https://pub.orcid.org/v3.0/0000-0001-6740-4809/work/30000450",
+  "title": "Combinatorial principles in the core model for one Woodin cardinal",
+  "author": "Ernest Schimmerling",
+  "year": 1992,
+  "publication_type": "doctoral_dissertation",
+  "institution": "University of California, Los Angeles",
+  "pages": 109,
+  "mr_number": "2688939",
+  "proquest_number": "9317054",
+  "same_title_1995_article": {
+    "cmu_elements_object_id": 66288,
+    "doi": "10.1016/0168-0072(94)00036-3",
+    "version_relation": "possible_thesis_article_family_held"
+  },
+  "release_eligible": false,
+  "map_eligible": false,
+  "collaboration_eligible": false,
+  "review_note": "ORCID labels the item book, but its self-asserted citation explicitly calls it a UCLA Ph.D. thesis; preserve it separately from the 1995 journal article while the version family is reviewed."
+}
