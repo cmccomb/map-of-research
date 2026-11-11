@@ -1,0 +1,150 @@
+{
+  "review_id": "noha-abdelghany-2026-10-25",
+  "captured_at_utc": "2026-10-25T13:47:16Z",
+  "producer_base_commit": "a68fbf0c",
+  "person_id": "person-nohaabdelghany-c393dec3",
+  "status": "held_source_review",
+  "verified_google_scholar_id": null,
+  "publisher_attributed_orcid": "0000-0002-0117-4358",
+  "lifetime_complete": false,
+  "release_eligible": false,
+  "map_eligible": false,
+  "collaboration_eligible": false,
+  "counts": {
+    "confirmed_person_candidate_manifestations": 3,
+    "confirmed_research_articles": 2,
+    "confirmed_dissertations": 1,
+    "unresolved_elgarem_alias_manifestations": 2,
+    "observed_confirmed_coauthors": 2,
+    "orcid_public_work_groups": 0,
+    "openalex_exact_cluster_query_works": 3
+  },
+  "files": {
+    "anglisticum-elgarem-2013.html.gz": {
+      "source": "https://www.anglisticum.org.mk/index.php/IJLLIS/article/view/698",
+      "kind": "unresolved_alias_publisher_article",
+      "bytes": 5654,
+      "sha256": "e8a9a4a539fc314065ceebf93c4e93c119ca96815e4c20207818528a09201692"
+    },
+    "candidate-crosswalk-5.csv": {
+      "source": "All primary and discovery sources enumerated in manifest",
+      "kind": "derived_held_candidate_crosswalk",
+      "bytes": 2102,
+      "sha256": "c561e7b3bb02ca7b30fb3c2ff47515067836aad069a65e75b2146779f93102e3"
+    },
+    "cmu-interview.html.gz": {
+      "source": "https://www.cmu.edu/mcs/news-events/2023/0217-abdelghany-education-tradition",
+      "kind": "official_education_and_research_identity",
+      "bytes": 21126,
+      "sha256": "fdc66147152340781857914e129deac420622931fb27f2375e72a41956da0061"
+    },
+    "cmu-profile.html.gz": {
+      "source": "https://www.cmu.edu/math/people/faculty/abdelghany.html",
+      "kind": "official_person_profile",
+      "bytes": 6143,
+      "sha256": "673da7579a50134b42ae33116ca77357f56f148e5918799a9af47676ee7ef491"
+    },
+    "cmu-selected-pubs-index.json": {
+      "source": "https://www.cmu.edu/math/research/docs/sample-faculty-publications-2018-2023.pdf",
+      "kind": "inspected_pdf_index",
+      "bytes": 385,
+      "sha256": "14f71cbb6ab21ba92bc3d2e8275142ffe3de9a098cc57881eabe851dba20c3b2"
+    },
+    "crossref-2017.json": {
+      "source": "https://api.crossref.org/works/10.13069%2Fjacodesmath.284939",
+      "kind": "publisher_deposited_metadata",
+      "bytes": 1726,
+      "sha256": "13a31214db1b037fefecceb72781b9ddcef066893b31e5bfd64f5fc1e0b7f9e2"
+    },
+    "crossref-2020.json": {
+      "source": "https://api.crossref.org/works/10.1016%2Fj.disc.2020.112036",
+      "kind": "publisher_deposited_metadata",
+      "bytes": 7715,
+      "sha256": "4d856f603457ab2396b140ac2667083b8cf6081ebb97978a075ceb21c20672b9"
+    },
+    "crossref-elgarem-2015.json": {
+      "source": "https://api.crossref.org/works/10.1007%2F978-3-319-17296-5_18",
+      "kind": "unresolved_alias_publisher_deposit",
+      "bytes": 9455,
+      "sha256": "6a21fc98313f38047f7d02f3e5d3e88aa5f29b77d8aaa048d4b178e5df9a12fe"
+    },
+    "gulfcoast-namesake.html.gz": {
+      "source": "https://www.gulfcoast.edu/directories/faculty-directory/natural-sciences/abdelghany_noha.html",
+      "kind": "unlinked_exact_name_context",
+      "bytes": 30043,
+      "sha256": "1e2b52cbea3dec884b3fa87d2c5b91be419115307c2c91687c99f137d39ad76f"
+    },
+    "identity-and-attribution-review.json": {
+      "source": "Cross-source identity and attribution audit",
+      "kind": "derived_review_decisions",
+      "bytes": 1949,
+      "sha256": "4cdbf73abd891ada4dc88d8780d68e0bdd81414a063eb097f83e6dfe794b953e"
+    },
+    "jacodesmath-2017-pdf-index.json": {
+      "source": "https://jacodesmath.com/index.php/jacodesmath/article/download/61/53/103",
+      "kind": "inspected_pdf_index",
+      "bytes": 391,
+      "sha256": "cfc83f432dc72940f4b5b7dba44d159a22d6e1158da59d4b26713012bb6d4d5d"
+    },
+    "jacodesmath-2017.html.gz": {
+      "source": "https://jacodesmath.com/index.php/jacodesmath/article/view/61",
+      "kind": "publisher_article",
+      "bytes": 10081,
+      "sha256": "9064d389f8bd529fcb8ea274f23e0cc80a1db5b4042abe2b9771890f903cc50b"
+    },
+    "openalex-abdelghany-author-search.json": {
+      "source": "https://api.openalex.org/authors?search=Noha%20Abdelghany&per-page=50",
+      "kind": "discovery_author_search",
+      "bytes": 7381,
+      "sha256": "bb4361bfaa81ff0e26a0acbfd058e6f5b23a68e64c86b5bbea6befb44d36b810"
+    },
+    "openalex-abdelghany-works.json": {
+      "source": "https://api.openalex.org/works?filter=author.id:A5010204925&per-page=200",
+      "kind": "discovery_exact_author_works",
+      "bytes": 35645,
+      "sha256": "dd9bfae0789b4fa0d2db8d17dfc80af9a99dfd43a905e47f7552ff30a93d1b83"
+    },
+    "openalex-elgarem-author-search.json": {
+      "source": "https://api.openalex.org/authors?search=Noha%20ElGarem&per-page=50",
+      "kind": "unresolved_alias_author_search",
+      "bytes": 6706,
+      "sha256": "de50bb479862aa42392a1730ea769874a2d0d30ba8ff9b575dce792c20592125"
+    },
+    "openalex-elgarem-works.json": {
+      "source": "https://api.openalex.org/works?filter=author.id:A5001560604&per-page=200",
+      "kind": "unresolved_alias_works",
+      "bytes": 27594,
+      "sha256": "6caafd8d7d20d3b0ce36e48d606859fcee18e1ba12d28f5fbc60bf8662c48196"
+    },
+    "orcid-record.json": {
+      "source": "https://pub.orcid.org/v3.0/0000-0002-0117-4358/record",
+      "kind": "identifier_record_with_no_public_works",
+      "bytes": 2610,
+      "sha256": "ed7bfe9875bf0192ae5b11c1e41678572d4a827176c22e70ddf9cffbce56da22"
+    },
+    "springer-elgarem-2015.html.gz": {
+      "source": "https://link.springer.com/chapter/10.1007/978-3-319-17296-5_18",
+      "kind": "unresolved_alias_publisher_chapter",
+      "bytes": 67473,
+      "sha256": "9d7af00f17583e52b6081bfa118b6e26a80758c425a8b3f084e72386229a6f7b"
+    },
+    "toronto-elgarem.html.gz": {
+      "source": "https://defygravitycampaign.utoronto.ca/news-and-stories/martin-shubik-graduate-award-mathematics/",
+      "kind": "competing_alias_identity_context",
+      "bytes": 46556,
+      "sha256": "6946a632a1e50339ab70144bfa591fc04c4c561e5eacb884cade620560cf2a95"
+    },
+    "wmu-dissertation.html.gz": {
+      "source": "https://scholarworks.wmich.edu/dissertations/3591/",
+      "kind": "degree_and_dissertation",
+      "bytes": 6899,
+      "sha256": "14e1a517cb8fc259b7c7586cb479e3f2e35a183456bdf8fe977a64aafb08deb0"
+    }
+  },
+  "limitations": [
+    "No verified Google Scholar account or complete researcher-owned bibliography.",
+    "No direct evidence resolving the ElGarem surname/identity candidate.",
+    "The exact indexed works and CMU selected list do not prove lifetime completeness.",
+    "No records are exported into canonical collection, snapshot, or collaboration graph."
+  ]
+}
