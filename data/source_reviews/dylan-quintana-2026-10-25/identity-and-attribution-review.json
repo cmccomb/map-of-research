@@ -1,0 +1,23 @@
+{
+  "person_id": "person-dylanquintana-ca051f35",
+  "confirmed_identity_chain": [
+    "CMU Mathematical Sciences profile lists Dylan Quintana as an assistant teaching professor and gives a University of Chicago PhD.",
+    "CMU MCS interview identifies the same Dylan Quintana as a 2015 CMU Mathematical Sciences and Materials Science and Engineering graduate, 2021 UChicago mathematics PhD, and current CMU mathematics teaching professor.",
+    "2015 Physical Review B publisher page names Dylan Quintana with Carnegie Mellon affiliation in the materials paper.",
+    "2020 FOCS Crossref deposit names Dylan Quintana with University of Chicago affiliation; CMU's selected publications list names both 2020 coding papers.",
+    "2021 UChicago dissertation record names Dylan Quintana, Mathematics, with Alexander Razborov as advisor and Madhur Tulsiani on the committee."
+  ],
+  "scholar_account_status": "No exact Google Scholar profile ID verified. Existing Math account audit found no matching account; direct author search redirected to sign-in/CAPTCHA. Do not infer an ID from name or article links.",
+  "namesake_exclusion": "Full Circle Health identifies a separate Dylan Quintana MD from Idaho, with College of Idaho chemistry and University of Washington medical training. OpenAlex's Dylan T. Quintana clinical author cluster is not CMU's mathematics professor.",
+  "publication_scope": "Four confirmed peer-reviewed papers (two materials journals in 2015 and 2016, two coding proceedings in 2020) plus a 2021 doctoral dissertation are an observed core. Additional preprints, conference abstracts, a 2014 NIST student report, and duplicate index rows are retained as separate source manifestations.",
+  "version_and_genre_conflicts": [
+    "The 2014 arXiv materials preprint has a related DOI link to the 2015 Physical Review B paper. Its earlier title and shorter byline are retained; it is not counted as a second journal paper.",
+    "arXiv 2011.05467 explicitly calls itself the full version of the SODA 2020 paper. Crossref dates the proceeding January 2020 although OpenAlex labels its row 2019.",
+    "arXiv 2011.05500 has the FOCS paper's title and byline. OpenAlex has two rows for this one preprint; the second is a metadata duplicate.",
+    "OpenAlex has a second 2015 NIST row for the already counted Physical Review B article.",
+    "OpenAlex labels the 2021 dissertation an article and uses concept DOI 10.6082/he9v3-2g538. UChicago identifies a dissertation with version DOI 10.6082/uchicago.3032; DataCite links both to the same repository record.",
+    "NIST's 2016 BLAND publication page spells the author surname Quintanta. The journal issue and Crossref deposit spell it Quintana.",
+    "A 2016 APS abstract appears in OpenAlex and coauthor Ratcliff's CV corroborates a matching talk, but the direct APS abstract PDF returned 403. Its exact publisher byline remains a discovery-only hold."
+  ],
+  "completeness": "Lifetime completeness is unestablished. CMU's selected publications PDF covers 2018–2023 only; the 2023 interview's statement that he had not researched since his dissertation is point-in-time evidence. No verified whole-career researcher bibliography or Scholar account was found. OpenAlex reports 12 author works but returns 11 rows in the exact filtered query."
+}

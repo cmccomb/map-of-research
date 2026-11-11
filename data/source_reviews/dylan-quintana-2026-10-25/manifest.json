@@ -1,0 +1,136 @@
+{
+  "review_id": "dylan-quintana-2026-10-25",
+  "captured_at_utc": "2026-10-25T14:00:55Z",
+  "producer_base_commit": "fec4d7a81a4bdaf3b2f81513b58d2d6d1494466c",
+  "person_id": "person-dylanquintana-ca051f35",
+  "status": "held_source_review",
+  "verified_google_scholar_id": null,
+  "lifetime_complete": false,
+  "release_eligible": false,
+  "map_eligible": false,
+  "collaboration_eligible": false,
+  "counts": {
+    "peer_reviewed_journal_articles": 2,
+    "peer_reviewed_conference_papers": 2,
+    "doctoral_dissertations": 1,
+    "preprint_manifestations": 3,
+    "conference_abstract_manifestations": 5,
+    "student_research_reports": 1,
+    "duplicate_metadata_rows": 2,
+    "openalex_exact_cluster_works_count_claim": 12,
+    "openalex_filtered_work_rows": 11,
+    "crosswalk_manifestations": 16
+  },
+  "files": {
+    "aps-march-2014.html.gz": {
+      "source": "https://meetings-archive.aps.org/mar/2014/m6/8",
+      "bytes": 4417,
+      "sha256": "87000f348dfd04211dd507e112da01acfd89c3a7471dd9660220f00889f5c7ef"
+    },
+    "aps-prb-2015.html.gz": {
+      "source": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.054435",
+      "bytes": 18221,
+      "sha256": "a0abfbad030db18e52d852ebfcc1768231045c9cdbb648fbe7b135039a252a6a"
+    },
+    "arxiv-focs-2020.html.gz": {
+      "source": "https://arxiv.org/abs/2011.05500",
+      "bytes": 9572,
+      "sha256": "fc25c3d9ed2262fc724560e4eba6936533207d80da0002bc9c53c5621fd20fe9"
+    },
+    "arxiv-materials-2014.html.gz": {
+      "source": "https://arxiv.org/abs/1406.7793",
+      "bytes": 8975,
+      "sha256": "3bc0c4b03b020b0aba027cc86076e98528de46b2279f4879a7c2cf5b32ec4ae5"
+    },
+    "arxiv-soda-2020.html.gz": {
+      "source": "https://arxiv.org/abs/2011.05467",
+      "bytes": 9583,
+      "sha256": "801caf059c9883456284d4d4924969294934712df17da63c243e4e72a48c19de"
+    },
+    "candidate-crosswalk-16.csv": {
+      "source": "Derived mapping from raw primary and discovery sources",
+      "bytes": 7328,
+      "sha256": "9f61b82e9d9ddd07e6ab7e3d9ca0c35f1e9d0ac67fd4f957c65e8d6caa9633eb"
+    },
+    "chicago-dissertation.html.gz": {
+      "source": "https://knowledge.uchicago.edu/records/3c4qz-van37",
+      "bytes": 14885,
+      "sha256": "89fd3b4a137254bbc7ebf4514f37d4ff586c08281d61cd29a0680b794d375c30"
+    },
+    "cmu-interview.html.gz": {
+      "source": "https://www.cmu.edu/mcs/news-events/2023/1107-dylan-quintana-math-education",
+      "bytes": 21225,
+      "sha256": "5ed5d8ea3a69f2aaa48e486560e263c4dbfacaa63f9a457e5b2575e58073e5f3"
+    },
+    "cmu-profile.html.gz": {
+      "source": "https://www.cmu.edu/math/people/faculty/quintana.html",
+      "bytes": 6166,
+      "sha256": "27c1ccba6b53c9c34f2b4fdb80675048ef1b9583e1b8e41adc885302493afa8d"
+    },
+    "crossref-focs-2020.json": {
+      "source": "https://api.crossref.org/works/10.1109%2FFOCS46700.2020.00048",
+      "bytes": 8744,
+      "sha256": "7f265b7616fb87eb55ca6017dca585089f45eba1e8ea72dd3d876da08fc2edbd"
+    },
+    "crossref-iucr-2016.json": {
+      "source": "https://api.crossref.org/works/10.1107%2FS1600576716016423",
+      "bytes": 10877,
+      "sha256": "5ee236373b96996095534e93bef322dd8863e56d4a80d0ebc170af2d0f1c2efe"
+    },
+    "crossref-prb-2015.json": {
+      "source": "https://api.crossref.org/works/10.1103%2FPhysRevB.92.054435",
+      "bytes": 9188,
+      "sha256": "3ed9becda1d62b22e086867bc2804647a4f04b39216353013bc10aa0c3446c85"
+    },
+    "crossref-soda-2020.json": {
+      "source": "https://api.crossref.org/works/10.1137%2F1.9781611975994.85",
+      "bytes": 2366,
+      "sha256": "783355d32a37eb2b612d04f031930ba57f9650cdcf93b4ef9fe9be91669232e8"
+    },
+    "datacite-thesis-concept.json": {
+      "source": "https://api.datacite.org/dois/10.6082/he9v3-2g538",
+      "bytes": 11870,
+      "sha256": "93c3bd6e36dfad930e1a8de3a8ed0398c757991075a8eb500e373fc202c133aa"
+    },
+    "datacite-thesis-v1.json": {
+      "source": "https://api.datacite.org/dois/10.6082/uchicago.3032",
+      "bytes": 11795,
+      "sha256": "264e5d6c4f1262fb83a73994e8296cfc7bca100db5fddfe4ef409a90aa2cf651"
+    },
+    "idaho-md-namesake.html.gz": {
+      "source": "https://www.fullcircleidaho.org/health_care_team_mem/dylan-quintana-md/",
+      "bytes": 19653,
+      "sha256": "075ec904444fa7481afca9847891fb39aec9c7d330f49f8d76fa5cc39f8dfca0"
+    },
+    "identity-and-attribution-review.json": {
+      "source": "Derived identity and attribution decisions",
+      "bytes": 3311,
+      "sha256": "bce5f95d95b2299286d24d0dc803e10498543ae825585343066b5a9d85166c99"
+    },
+    "nist-bland-2016.html.gz": {
+      "source": "https://www.nist.gov/publications/bayesian-method-analysis-diffraction-patterns-using-bland",
+      "bytes": 22811,
+      "sha256": "41a97e6becd2233786182625cde6730cbd35a41a2dbcec0f64c77a51307762b0"
+    },
+    "nist-prb-2015.html.gz": {
+      "source": "https://www.nist.gov/publications/multiferroicity-doped-hexagonal-lufeo3",
+      "bytes": 22904,
+      "sha256": "2293a43514cafbd0779458fd668a8939005d043ec0b9063d3fe3438a7348c36a"
+    },
+    "openalex-author-search.json": {
+      "source": "https://api.openalex.org/authors?search=Dylan%20Quintana&per-page=50",
+      "bytes": 17403,
+      "sha256": "95164e52ae91104c4fe8224af838abf4c996003dc763d79a6096fe6c4df619d3"
+    },
+    "openalex-works.json": {
+      "source": "https://api.openalex.org/works?filter=author.id:A5015885996&per-page=200",
+      "bytes": 196218,
+      "sha256": "f3a61f608ba2d6178f16bc876c834b8e07ff14a2453df06bdd5d62f50711131e"
+    },
+    "pdf-evidence-index.json": {
+      "source": "Derived index of five inspected primary-source PDFs",
+      "bytes": 1922,
+      "sha256": "439ad273735f662e1211ad9e696641c14e34c50f0178feb031cd36950b0001d6"
+    }
+  }
+}
