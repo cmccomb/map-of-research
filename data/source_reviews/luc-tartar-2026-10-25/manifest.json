@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "review_only_no_snapshot_no_release",
+  "person_id": "person-lucctartar-8b1dc8e8",
+  "scholar_account_status": "no_verified_account",
+  "lifetime_publication_completeness": "not_established",
+  "profile_url": "https://www.cmu.edu/math/people/faculty/tartar.html",
+  "cna_url": "https://www.math.cmu.edu/CNA/Publications/publications.php",
+  "kilthub_search_url": "https://api.figshare.com/v2/articles/search",
+  "kilthub_search_query": {
+    "search_for": "Luc Tartar",
+    "page_size": 100,
+    "page": 1
+  },
+  "kilthub_search_page_2_query": {
+    "search_for": "Luc Tartar",
+    "page_size": 100,
+    "page": 2
+  },
+  "kilthub_author_id": 5364974,
+  "source_counts": {
+    "cmu_select": 6,
+    "kilthub_repository": 10,
+    "cna_lecture": 5
+  },
+  "files": {
+    "cmu-profile.html": "76670d2a2eb57a871eb73f8f3f1d9fe62ffa158ecfb7a219d448de3230c6e956",
+    "cmu-select-6.csv": "cd68f76448d0a70f45541df49d48922c1c7a2da5095400759ca26fcf6f928911",
+    "kilthub-search-page-1.json": "2954db27b479feaf32e64eaa1666d9f7bc8d71f7e1a09d9365684936f2aa2818",
+    "kilthub-search-page-2.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "kilthub-article-6479909.json": "4ab205bb6d6b626ae3bb2bf61122b6bb24b73890d2ea3b641c5713b67d89487e",
+    "kilthub-article-6479819.json": "a8ed87a0bd57a7ec8ea8bc3c3f1c805fab99aace2bfd7297872297aa8e71551c",
+    "kilthub-article-6479387.json": "5d597d720f2e0473197e5fbb40364c63d8ad748643218521a49e2f625e38ebaa",
+    "kilthub-article-6479384.json": "db8b43ef071c0bdd2b1a7837427ca80eeaba53b675d5d103b6164078568c0dc6",
+    "kilthub-article-6479381.json": "a781b91ca020bd98bae182a2dee5c48b3450ae9712d34a3ac8ff19e6d9a7c7bc",
+    "kilthub-article-6478754.json": "3b4228b066a33f97358917f4ea0f5131c5233840df72b7c68375e306ca20dff4",
+    "kilthub-article-6477587.json": "f75915ca194baef5482569a02341919c6852a165aec0d1ccb901cbafa7cce485",
+    "kilthub-article-6477476.json": "7f3d6c94a04e5d4c65ca6dec84e20d33fba1f9441264c7ea55ace5d42213511f",
+    "kilthub-article-6476966.json": "307d255261aa27332031fcaf16699e9bcff51e8a7f79513a5ff055674f4eb430",
+    "kilthub-article-6476906.json": "42f0027eb4917387f9adf5b964073d436f24e90e55bfcd2fc40f2b8603e73314",
+    "kilthub-10.csv": "58a020f6cf076a7fa0d9dfec31c0c815f819f1c583c26b2584afa178d960ec6f",
+    "cmu-cna.html": "9f2a14da87341d5c50ccaca047e776ff53cfc19c43566c4f0efcc7b7816240b6",
+    "cmu-cna-5.csv": "17732bd39bea3797d785351187b7af0069d8dc5bbe2ca35fc00348947a0e30bf",
+    "source-crosswalk-21.csv": "6a6ff97e02d1a4dc6e63ccbe29a8f7e41ba754f005181e5ac0668a718891b905"
+  },
+  "reviewed_source_rows": 21,
+  "distinct_internal_work_groups": 19
+}
