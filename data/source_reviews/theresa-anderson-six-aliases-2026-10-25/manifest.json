@@ -1,0 +1,102 @@
+{
+  "review_id": "theresa-anderson-six-aliases-2026-10-25",
+  "captured_at_utc": "2026-10-25T14:11:52Z",
+  "producer_base_commit": "fec4d7a81a4bdaf3b2f81513b58d2d6d1494466c",
+  "upstream_source_pr": 340,
+  "person_id": "person-theresaanderson-5ed760a9",
+  "status": "held_source_review",
+  "verified_google_scholar_id": null,
+  "lifetime_complete": false,
+  "release_eligible": false,
+  "map_eligible": false,
+  "collaboration_eligible": false,
+  "counts": {
+    "source_cv_title_variant_pairs": 6,
+    "resolved_single_published_work_aliases": 6,
+    "publisher_doied_works": 5,
+    "journal_url_without_displayed_doi": 1,
+    "arxiv_version_observations": 6
+  },
+  "files": {
+    "alias-resolution-six.json": {
+      "source": "Derived exact alias and publisher review",
+      "bytes": 8786,
+      "sha256": "c7ab4b207ab7e12b07127f845a8535e3dc6ea888c1af88346f31991dda252860"
+    },
+    "arxiv-21.html.gz": {
+      "source": "https://arxiv.org/abs/1703.02713",
+      "bytes": 8618,
+      "sha256": "a7bfd42349f49e6705e21797b3fdb9b7ddc7ca15e8188aa92d461ac424d5b663"
+    },
+    "arxiv-22.html.gz": {
+      "source": "https://arxiv.org/abs/2009.11906",
+      "bytes": 8346,
+      "sha256": "61b3c82de67365cb46599f1355786b22e3a3f8367df4ccee66b7a8b7d3accb81"
+    },
+    "arxiv-23.html.gz": {
+      "source": "https://arxiv.org/abs/2012.05778",
+      "bytes": 8441,
+      "sha256": "2da60d6e169aa0edf9b51358ebb9c811c3ecefce66de85f75d21c3f484289b9b"
+    },
+    "arxiv-24.html.gz": {
+      "source": "https://arxiv.org/abs/1910.11409",
+      "bytes": 8635,
+      "sha256": "f92d0e53a0b49d0b60ade5c08267c211ccaf97a8f81bbc7570be62ee086453ab"
+    },
+    "arxiv-25.html.gz": {
+      "source": "https://arxiv.org/abs/1911.00464",
+      "bytes": 8859,
+      "sha256": "0c257c47d5b34b5919609fc7657511631cb79c3198a59a34098d86b20cb3ec6d"
+    },
+    "arxiv-33.html.gz": {
+      "source": "https://arxiv.org/abs/1606.03461",
+      "bytes": 8322,
+      "sha256": "60127d731c80ea4cffc721aa418cb527594d2dd68dcbfc6045fabb5ace4438fb"
+    },
+    "author-site-cv-raw-six.csv": {
+      "source": "PR #340 six raw author-page/CV crosswalk rows",
+      "bytes": 2218,
+      "sha256": "7d3626024e51629460c9ed6e3e69b10cbb1c787c197fe207d6fcd01b45ab2582"
+    },
+    "cmu-author-research.html.gz": {
+      "source": "https://faculty.math.cmu.edu/anderson/research/",
+      "bytes": 11410,
+      "sha256": "e56eff99e5e14582323f9045dbd6620802280b773fdedaa8bc0da54699ed9936"
+    },
+    "crossref-21.json": {
+      "source": "https://api.crossref.org/works/10.1016%2Fj.jfa.2021.109334",
+      "bytes": 14377,
+      "sha256": "7024874e4947bce2a9d6b3ed7250bbc7d4b06e8c8496fa3371efd2ece525c85b"
+    },
+    "crossref-22.json": {
+      "source": "https://api.crossref.org/works/10.1007%2Fs00025-021-01587-z",
+      "bytes": 9511,
+      "sha256": "3b43ba7bed7b58b3675f4b99d08cb8d6cc8901d71dd95dfadf5a07134a1b2f97"
+    },
+    "crossref-23.json": {
+      "source": "https://api.crossref.org/works/10.1016%2Fj.jmaa.2021.125620",
+      "bytes": 8955,
+      "sha256": "8500b052f3cbf47396b8c368e4d95ecea8559b5ce6a63485ea39b8b724161a5f"
+    },
+    "crossref-24.json": {
+      "source": "https://api.crossref.org/works/10.1007%2Fs13348-020-00308-z",
+      "bytes": 9572,
+      "sha256": "23ad53998ef3633b8a814822be2886cedb0f517e3d08435853c8c1cc2d6d7491"
+    },
+    "crossref-25.json": {
+      "source": "https://api.crossref.org/works/10.1112%2Fblms.12465",
+      "bytes": 5205,
+      "sha256": "5210ce03ca8f31dce1a6254caa221b5751be0aa1335479a087c167015bed297d"
+    },
+    "nyjm-33.html.gz": {
+      "source": "https://nyjm.albany.edu/j/2018/24-1.html",
+      "bytes": 1963,
+      "sha256": "495c71bbd6ac5f8ddd9c922b2b0308fb16552dea991f526b57a3b972e9aa9eab"
+    },
+    "source-capture-index.json": {
+      "source": "Derived checksum and PR #340 provenance index",
+      "bytes": 868,
+      "sha256": "66cdedd123344b61e5785a1ab18f14c29b732e1eeb7850cfc9cd359278ddf866"
+    }
+  }
+}

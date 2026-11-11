@@ -47,6 +47,8 @@ jobs:
           ruff check .
       - name: Validate the canonical registry
         run: map-collect --dry-run --status-file /tmp/map-collection-plan.json
+      - name: Validate held Anderson title aliases
+        run: python scripts/validate_anderson_six_aliases.py
       - name: Require evidenced primary homes for included Scholar profiles
         run: python scripts/validate_primary_homes.py
       - name: Audit installed dependencies
