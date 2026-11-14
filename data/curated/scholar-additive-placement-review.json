@@ -1,80 +1,44 @@
 {
   "schema_version": 1,
-  "prior_revision": "ca27d2c9e649d022bdbfdb375e879532960a47a1",
-  "source_snapshot_sha256": "b64d42de1cb7235a94717e4a1595190abf0d851c59b1202ba7008fcb5fd465d8",
-  "selected_ids_sha256": "3efa7bd6829a463f6d0fc32454badd930de348d411b927ff2d8a3311ea11c41d",
-  "parent_map_sha256": "c4011f1869542ecd484c7ee481bc592af92df2e9297813c2ff2cace65fddb9ef",
-  "candidate_map_content_sha256": "5f744146df4159d465c38133b5241dbdcf5d1c1aa8107e38cb58a944065d4c42",
-  "new_work_ids_sha256": "8125685240594b61c800db7c1c10566fdff029e2ac8da14f1322dcb23576bc43",
+  "prior_revision": "1f05b7635afe1bf6dde807fc1378433b12dd894f",
+  "source_snapshot_sha256": "7e17b571183eb167dd4e00cbc4e9c97bf5569c198edd5f2bea45df121903567f",
+  "selected_ids_sha256": "ff2aaa9c585867b652b46b075ec8f8ca98448e1cc110c449bc9a0b5edd62fbbb",
+  "parent_map_sha256": "ef8c46c47fa51b38246a3e137c9c306386c288426e1e9cf99ce76d8ef43c3d2e",
+  "candidate_map_content_sha256": "276e8426131ab63ac29e98b804b3329adc86aaadc9b7a5dfecdd6e6947927141",
+  "new_work_ids_sha256": "73c3d85f166b40f27f4b3337a57c1ceb79c4e0ede301d5751b76059ba6319eeb",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
-  "reviewed_at": "2026-11-03",
+  "reviewed_at": "2026-11-08",
   "new_points": [
     {
-      "work_id": "work-23e413f6faf543a22c8f7667aa05523708567f0df64005267b5fa46f7f07f546",
+      "work_id": "work-6b41d18a2b86edbb9fbdc404d360f85bce1da8dbab62378b3c49070246e81758",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
+      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
     },
     {
-      "work_id": "work-439b5d39e19f8d6513b06145760bca8e695ae20384cb5c052f91aa8991bf3f79",
+      "work_id": "work-a3b330eb609fd95e4ed53af23c824be82514c5c559ee935e1ca7d3983e1c7ae3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; official proceedings page with bounded blank DOI and full credited byline; spatial placement held pending independent review."
+      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
     },
     {
-      "work_id": "work-474590d8ffd765feef8e658f61cac7ec2a2794be0c01abe5ca0ffc8e316faab8",
+      "work_id": "work-b621aa3abf1782981745addbd417155dcb4463ef3a4e67c665ef715d300284df",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
+      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
     },
     {
-      "work_id": "work-495356c25200556479bb83174db94db09bbb7d158c834694b974ef0009609edb",
+      "work_id": "work-e52ae9e5d384d442140e93308022b91cd8b76f9877dd6ead21b97375b506c5ec",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
+      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
     },
     {
-      "work_id": "work-7a082557032374c8e83a1b123843fcfdf8b770aaaef1afd7b31786f14c8cc453",
+      "work_id": "work-f4698ec436e9124ce358b79187c1b38eacb414d2e4a539736c309b637af11784",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-9167804318bc50f849839d43c0637070015ae73b2badf385b0b742ce5daa995d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-947a0adad6c439a943c1686af4d2b49a83752f78af6ab87b689e1b2e3131b97f",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-9e0a9d42cf8818c0848a6bfd86e8cf21ed18bde36474ff12cd33e2dafc65fddb",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-a82dd1698dee4512409a20bf3720e56c2a9fb23700be505aaec23fdbb6994590",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; official proceedings page with bounded blank DOI and full credited byline; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-d2efc7bf68cd89fe482e3540451c1ea66d937e0e9d7e26df91473eeb723d60fa",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
-    },
-    {
-      "work_id": "work-f00cbc940ce94b3e55eb851e30f4c071122410ad2bdc3da2d833fcdf8617b6ff",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact named owner-linked Bryan Wilder citation; verified publisher DOI and full credited byline; spatial placement held pending independent review."
+      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
     }
   ]
 }

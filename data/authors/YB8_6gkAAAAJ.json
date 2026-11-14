@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "display_name": "Fernando De la Torre Frade",
+  "scholar_id": "YB8_6gkAAAAJ",
+  "fetched_at_utc": "2026-10-31T03:08:20.714Z",
+  "publication_count": 5,
+  "browser_capture": {
+    "method": "user_chrome_owner_link_visible_dom_complete",
+    "profile_url": "https://scholar.google.com/citations?user=YB8_6gkAAAAJ&hl=en",
+    "captured_at_utc": "2026-10-31T03:08:20.714Z",
+    "coverage": "complete_visible_profile",
+    "more_remain": false,
+    "displayed_count": 355,
+    "limit": 355,
+    "lifetime_publication_completeness": "not_independently_established",
+    "profile_verified_email_domain": "cs.cmu.edu",
+    "cache_scope": "reviewed_public_subset",
+    "observed_visible_rows": 355,
+    "private_capture_sha256": "722ee30c8815bc23a3d12db59de11c2716a03a34beae7dea14689fe17efcb174",
+    "private_rendered_html_sha256": "68b7406992c7439e3ad08fdd09eaab9a123e15a7882029333f40801ad59e6923",
+    "private_review_sha256": "9734bffa3cca505a1d9978b63e014d74f6353f2a0b14b5387c5f97a8bf29cf25",
+    "selected_ids_sha256": "1ba92ae097e12f384039d5af527283a46f867278557e802f614a8fd6f11b761a",
+    "withheld_rows": 350,
+    "withheld_hold_rows": 306,
+    "withheld_excluded_rows": 44,
+    "withheld_ids_sha256": "612eb95b2118cd623e25ce561e77488e7e3d1bcc24861c0470c0574edf1c9618",
+    "selected_author_pub_ids": [
+      "YB8_6gkAAAAJ:Br1UauaknNIC",
+      "YB8_6gkAAAAJ:LkGwnXOMwfcC",
+      "YB8_6gkAAAAJ:isC4tDSrTZIC",
+      "YB8_6gkAAAAJ:tzM49s52ZIMC",
+      "YB8_6gkAAAAJ:u-x6o8ySG0sC"
+    ]
+  },
+  "publications": [
+    {
+      "title": "A framework for robust subspace learning",
+      "author": "F De La Torre, MJ Black",
+      "pub_year": "2003",
+      "venue": "International Journal of Computer Vision 54 (1), 117-142",
+      "num_citations": 803,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YB8_6gkAAAAJ&citation_for_view=YB8_6gkAAAAJ:u-x6o8ySG0sC",
+      "author_pub_id": "YB8_6gkAAAAJ:u-x6o8ySG0sC",
+      "capture_row_index": 4,
+      "citation_count_display": "803"
+    },
+    {
+      "title": "Driver gaze tracking and eyes off the road detection system",
+      "author": "F Vicente, Z Huang, X Xiong, F De la Torre, W Zhang, D Levi",
+      "pub_year": "2015",
+      "venue": "IEEE Transactions on Intelligent Transportation Systems 16 (4), 2014-2027",
+      "num_citations": 468,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YB8_6gkAAAAJ&citation_for_view=YB8_6gkAAAAJ:tzM49s52ZIMC",
+      "author_pub_id": "YB8_6gkAAAAJ:tzM49s52ZIMC",
+      "capture_row_index": 10,
+      "citation_count_display": "468"
+    },
+    {
+      "title": "Meshtalk: 3d face animation from speech using cross-modality disentanglement",
+      "author": "A Richard, M Zollhöfer, Y Wen, F De la Torre, Y Sheikh",
+      "pub_year": "2021",
+      "venue": "2021 IEEE/CVF International Conference on Computer Vision (ICCV), 1153-1162",
+      "num_citations": 411,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YB8_6gkAAAAJ&citation_for_view=YB8_6gkAAAAJ:Br1UauaknNIC",
+      "author_pub_id": "YB8_6gkAAAAJ:Br1UauaknNIC",
+      "capture_row_index": 12,
+      "citation_count_display": "411"
+    },
+    {
+      "title": "Optimal feature selection for support vector machines",
+      "author": "MH Nguyen, F de la Torre",
+      "pub_year": "2010",
+      "venue": "Pattern recognition 43 (3), 584-591",
+      "num_citations": 341,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YB8_6gkAAAAJ&citation_for_view=YB8_6gkAAAAJ:LkGwnXOMwfcC",
+      "author_pub_id": "YB8_6gkAAAAJ:LkGwnXOMwfcC",
+      "capture_row_index": 16,
+      "citation_count_display": "341"
+    },
+    {
+      "title": "Joint segmentation and classification of human actions in video",
+      "author": "M Hoai, ZZ Lan, F De la Torre",
+      "pub_year": "2011",
+      "venue": "CVPR 2011, 3265-3272",
+      "num_citations": 335,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=YB8_6gkAAAAJ&citation_for_view=YB8_6gkAAAAJ:isC4tDSrTZIC",
+      "author_pub_id": "YB8_6gkAAAAJ:isC4tDSrTZIC",
+      "capture_row_index": 18,
+      "citation_count_display": "335"
+    }
+  ]
+}
