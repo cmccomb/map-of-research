@@ -3087,6 +3087,86 @@
       "basis": "Reviewed exact publisher/proceedings source supplies full credited byline and venue; correct only captured display fields. Saved owner-linked citation identity, title and year guarded; known DOI/type transported in reviewed context.",
       "evidence_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5627126/",
       "verified_at": "2026-11-03"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:u-x6o8ySG0sC",
+      "expected": {
+        "title": "A framework for robust subspace learning",
+        "year": 2003,
+        "venue": "International Journal of Computer Vision 54 (1), 117-142",
+        "authors": "F De La Torre, MJ Black"
+      },
+      "corrected": {
+        "authors": "Fernando De la Torre, Michael J. Black"
+      },
+      "basis": "Official exact DOI deposit supplies full credited byline. Guard captured title, year, venue and author display; DOI and type transported in reviewed context.",
+      "evidence_url": "https://api.crossref.org/works/10.1023/a%3A1023709501986",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:tzM49s52ZIMC",
+      "expected": {
+        "title": "Driver gaze tracking and eyes off the road detection system",
+        "year": 2015,
+        "venue": "IEEE Transactions on Intelligent Transportation Systems 16 (4), 2014-2027",
+        "authors": "F Vicente, Z Huang, X Xiong, F De la Torre, W Zhang, D Levi"
+      },
+      "corrected": {
+        "authors": "Francisco Vicente, Zehua Huang, Xuehan Xiong, Fernando De la Torre, Wende Zhang, Dan Levi"
+      },
+      "basis": "Official exact DOI deposit supplies full credited byline. Guard captured title, year, venue and author display; DOI and type transported in reviewed context.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/tits.2015.2396031",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:Br1UauaknNIC",
+      "expected": {
+        "title": "Meshtalk: 3d face animation from speech using cross-modality disentanglement",
+        "year": 2021,
+        "venue": "2021 IEEE/CVF International Conference on Computer Vision (ICCV), 1153-1162",
+        "authors": "A Richard, M Zollhöfer, Y Wen, F De la Torre, Y Sheikh"
+      },
+      "corrected": {
+        "authors": "Alexander Richard, Michael Zollhofer, Yandong Wen, Fernando de la Torre, Yaser Sheikh"
+      },
+      "basis": "Official exact DOI deposit supplies full credited byline. Guard captured title, year, venue and author display; DOI and type transported in reviewed context.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/iccv48922.2021.00121",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:LkGwnXOMwfcC",
+      "expected": {
+        "title": "Optimal feature selection for support vector machines",
+        "year": 2010,
+        "venue": "Pattern recognition 43 (3), 584-591",
+        "authors": "MH Nguyen, F de la Torre"
+      },
+      "corrected": {
+        "authors": "Minh Hoai Nguyen, Fernando de la Torre"
+      },
+      "basis": "Official exact DOI deposit supplies full credited byline. Guard captured title, year, venue and author display; DOI and type transported in reviewed context.",
+      "evidence_url": "https://api.crossref.org/works/10.1016/j.patcog.2009.09.003",
+      "verified_at": "2026-11-08"
+    },
+    {
+      "scholar_id": "YB8_6gkAAAAJ",
+      "author_pub_id": "YB8_6gkAAAAJ:isC4tDSrTZIC",
+      "expected": {
+        "title": "Joint segmentation and classification of human actions in video",
+        "year": 2011,
+        "venue": "CVPR 2011, 3265-3272",
+        "authors": "M Hoai, ZZ Lan, F De la Torre"
+      },
+      "corrected": {
+        "authors": "Minh Hoai, Zhen-Zhong Lan, Fernando De la Torre"
+      },
+      "basis": "Official exact DOI deposit supplies full credited byline. Guard captured title, year, venue and author display; DOI and type transported in reviewed context.",
+      "evidence_url": "https://api.crossref.org/works/10.1109/cvpr.2011.5995470",
+      "verified_at": "2026-11-08"
     }
   ]
 }
