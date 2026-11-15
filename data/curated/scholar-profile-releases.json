@@ -1894,6 +1894,25 @@
         "withheld_excluded_rows": 0,
         "withheld_ids_sha256": "fcae715d3dfe2eefc314b845286cf74a016e4259cf7769f3c0691c5ebd0c8ea1"
       }
+    },
+    {
+      "person_id": "person-justinecassell-9da8e0be",
+      "scholar_id": "wkC9xHMAAAAJ",
+      "state": "released",
+      "expected_source_rows": 50,
+      "cache_sha256": "5c9858acdc7f7006062d35c3cf07f6db0c9a33edeaa58fe6169ab27280c59d01",
+      "reason": "Fifty exact owner-linked Justine Cassell works selected from a complete 327-row capture. Thirty-three carry verified DOI/type and 17 retain bounded DOI/type blanks as generic non-collaboration publications. Five concrete duplicate/version/malformed/canonical-continuity rows and 272 other candidates remain private. Map placement pending.",
+      "reviewed_at": "2026-11-15",
+      "public_subset": {
+        "observed_visible_rows": 327,
+        "private_capture_sha256": "8e06176af7760e00b1e5b9653f7e5da73476bd43352062692f9d76dcf8cb800d",
+        "private_review_sha256": "4c8024fc5ee0ae2dafed9b5121028305317f93d3815687f95decf379aa5aeb4a",
+        "selected_ids_sha256": "df52ef9252d67db19674b5cefd783ac0c4fbe9e94d309b65b2ae1d724e994162",
+        "withheld_rows": 277,
+        "withheld_hold_rows": 277,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "e2ad5d2c8341f0526f0f78599726da086bd91576c6913566f3390a2d7d31d7e3"
+      }
     }
   ]
 }

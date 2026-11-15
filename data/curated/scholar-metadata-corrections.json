@@ -3267,6 +3267,23 @@
       "basis": "Official publisher/Crossref evidence supplies the full credited byline and, where Scholar is blank, the publication year.",
       "evidence_url": "https://doi.org/10.1145/3524487",
       "verified_at": "2026-11-15"
+    },
+    {
+      "scholar_id": "wkC9xHMAAAAJ",
+      "author_pub_id": "wkC9xHMAAAAJ:aqlVkmm33-oC",
+      "expected": {
+        "title": "Recovering the temporal structure of natural gesture",
+        "year": 1996,
+        "venue": "Proceedings of the Second International Conference on Automatic Face and …",
+        "authors": "AD Wilson, AF Bobick, J Cassell"
+      },
+      "corrected": {
+        "authors": "Andrew D. Wilson, Aaron F. Bobick, Justine Cassell",
+        "venue": "Proceedings of the Second International Conference on Automatic Face and Gesture Recognition"
+      },
+      "basis": "Microsoft Research supplies the full credited byline and complete IEEE conference venue for the exact title/year; DOI transported in reviewed context.",
+      "evidence_url": "https://www.microsoft.com/en-us/research/publication/recovering-temporal-structure-natural-gesture/",
+      "verified_at": "2026-11-15"
     }
   ]
 }
