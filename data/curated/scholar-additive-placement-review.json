@@ -1,44 +1,308 @@
 {
   "schema_version": 1,
-  "prior_revision": "1f05b7635afe1bf6dde807fc1378433b12dd894f",
-  "source_snapshot_sha256": "7e17b571183eb167dd4e00cbc4e9c97bf5569c198edd5f2bea45df121903567f",
-  "selected_ids_sha256": "ff2aaa9c585867b652b46b075ec8f8ca98448e1cc110c449bc9a0b5edd62fbbb",
-  "parent_map_sha256": "ef8c46c47fa51b38246a3e137c9c306386c288426e1e9cf99ce76d8ef43c3d2e",
-  "candidate_map_content_sha256": "276e8426131ab63ac29e98b804b3329adc86aaadc9b7a5dfecdd6e6947927141",
-  "new_work_ids_sha256": "73c3d85f166b40f27f4b3337a57c1ceb79c4e0ede301d5751b76059ba6319eeb",
+  "prior_revision": "1336f52e856047032dc1053c1ae4dbdbd26b05f8",
+  "source_snapshot_sha256": "3107b39aad882b0212937d1e6d59d008848b0ed8b5874e2f409c4a2bae1724f1",
+  "selected_ids_sha256": "68d3329daf27a7dddffc489aec910c40e8e9f8906c17418e6062b9244d941d1b",
+  "parent_map_sha256": "9064f6833197d14346f54e608096557b20e0201fb8186a57045b954a34480997",
+  "candidate_map_content_sha256": "ee08a3f77b2a8cee4e8e0b0a367aa4c0e713b8695dbbab7bdf31547d7783f28b",
+  "new_work_ids_sha256": "2db90473f710a807c5bcb76db2d449a527b1dadeb2f8ff7e89f3c2fc8d735390",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
-  "reviewed_at": "2026-11-08",
+  "reviewed_at": "2026-11-15",
   "new_points": [
     {
-      "work_id": "work-6b41d18a2b86edbb9fbdc404d360f85bce1da8dbab62378b3c49070246e81758",
+      "work_id": "work-0bd3ba577f215197bd01538ad77048c6e21237efad7f0d6cb043c4b364de8004",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-a3b330eb609fd95e4ed53af23c824be82514c5c559ee935e1ca7d3983e1c7ae3",
+      "work_id": "work-0c115a5efcffde34d646654b8a5d80b09781ab18e51d9317940836bb84820a74",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b621aa3abf1782981745addbd417155dcb4463ef3a4e67c665ef715d300284df",
+      "work_id": "work-17b9536554bbc31cc72a561fcd08323d531ebb67726a1164465a7f356fc3d8ee",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-e52ae9e5d384d442140e93308022b91cd8b76f9877dd6ead21b97375b506c5ec",
+      "work_id": "work-1cf56e4bc5c36f6455afff4f8b514edd4030d3ba4871592f2c4081c5fb78a618",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-f4698ec436e9124ce358b79187c1b38eacb414d2e4a539736c309b637af11784",
+      "work_id": "work-28e7693a056c0cea65c5d218c5419eb97173a5945d7da066101afe7d6d4e06dc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked saved Fernando De la Torre Frade citation, deposited DOI/type/year/full byline; spatial placement pending independent review."
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-292d4cd4a3a8a21617ba919cd5ee3cc29a03591d42f7119b1b4c10e91fb8de32",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-29f975f4a2660b95f78afa4fd7754d777522659386e1d857728ff6d1cc6fd02b",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-2dae1ed6c79d9ee4d2608496acf24679b775b10c5644f69dc3ef624f95c601d7",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-322f6ad06f0ebfb8f9a8b3e44cbae1fb70543a052480c4c3232dce8a3eff3c7d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-36a0ed3cfa08de4d0cbbf6ece7020fd62fbb6780cf73130004428269a9709208",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-4e6f289dfb65f42fd28a8ab9902dcd5f433a5e222a64b72febf9391c172b1959",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-4f83609388d35226966dad36f1ab95a78ba5749d05c48692664c7701fb253043",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-505e6461a03143a4a5a017b28b262f6b240b156d9148cb8bd85df577b3196199",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-563a75971aaa4be4fd697ad88d0f081cb66a2850d23f68bd608f55830a12dc1d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-5648f5fdccced0c0c9d06b4c84bfa26a33701632b6e384d523f8be512f51d905",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-5d0583dc4ebec29a3e9a323f4740118e710040d3b8703e473c103f9e63ade404",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-5d1f6f98e51ea77efb35d3758641c5c30024ae5d44bba45703549a96cd2b1763",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-5ea1a51ae74e2f6ac1faa788f6a8dd8e6b6aec56438ba6450afcb22387bc7db4",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-64ea85c3c6261ce36be769fda1fa356b473ddf3ab04e835f0a329cde3755338c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-66bcba096c2830a8073ec4e365b231de0227ddc0f02244b7d63e7858e8f1612f",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-6ceaaf8a705f151d45b6cd4a2ba4e46673a7831481f935aca2292afb186dfc06",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-79d40a938b1d44a4cd0fcb3e20be4c8b62bd8c5994b20097abec860c47775c4c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-93bab7702df7f554e3a69ef5fe421f3d9ff0d4ca5abbb4185d4fe9f841060ede",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-9c9545cb4942ab3bd7370c28bd3dd4c64a50f786acea0af4ce280852f2c84408",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-a3c1804644855b0ecb0d13e7c958e802b9b12968d2a532fa2b5e34f5960e9425",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-a96675bb8b27b4b18f94fc304b20fe18fb68d17c004420084de4d05b35b3adac",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-b1d4603d2a90b677359af53cdc5508f3d2513ec1d0ef6502da21a75e43b36b3e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-b5170d718347522b329de78f2ff0713bf7ac8bc51603bf40b54170158205dd33",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-b8b7b8b30a02623743121f75e968f3506e355a4ee51481c88e38e617917838c5",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-bda3486d52fb48b78181936f0aedb0f10c18b34d00befe18f4908a1cfba6cc13",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-c2cebe40d64c8e283f9531dc52fb4d6939fef760fe915cc9a8741bc2b5bc46b4",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-c50bfbe0164cb864a4170a348ed2d31a131de51a7e4a88ffaa4b1f867fbd266a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-cd7e534620966bfa164c34b18780b9839886e1c84ce5cacdcb0270b5dbff7648",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-d13a7139647054a9fff6d99d7f41333404ac6283cbad53af563587ebbd63af89",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-d370b028f928cac948156f2e35d8158eb123aa9028a1d5f799d55ada0f79bbb7",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-d5f1576430a0c549f313b138ea40cc44c47d27921a43d411927d383ddb3a8c6a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-d81d455cbf20d5932cad8b6e4a59c3827a48816ca7b062e71ae84d176b5f2f88",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-d89cdd7079f67f622813d2095df7baf19fe9a1d4299515c14e35ce1f834914a2",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-d9ff91f7fbbd446b133a7f93d37a67928156c8eee21c11aa1f4baa1fbc876118",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-da0c9c6d5449b221830ab6566b9a95ae1e28e362d30f358890be6a7e0dbbe683",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-dcd9d67511faecaf20616d8707a2787f5d18ec0210e96f2a89d12c62d4cb2c3a",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-e18c131f73afe385e7f24b71ef86f52336346ef9578f13bedb0f77225d521a4d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-e419833da466fbea945a6491fb0673857251db5f8cb43f656ad3a9ccee4bfacd",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-e84921389b083df26c26f7896b416f001797d9c72bbde370cc7ba553d6d5f861",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-ed687fd3a8abdebc74d9bec55e31d641a6bd6fddf94ca06644acde45724fecd0",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-ee6138860810af9a3d0cf16c0f42988d007805c8865088416cb7ecb5e71c9a39",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-f0a7bce6a91787ccda55376018078dd410cfbcb397625b050aad7b4138ac9ce2",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-f8196f4dfc38726fbfbd61316a21d00ad521266115480e2c9f4e78dbf8d6149c",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
+    },
+    {
+      "work_id": "work-fa83f6ca05161e54ec36e93957888d4e1a402440727ff7f20bba9c415ab73963",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked saved Michael Hilton citation with verified DOI/type where available; spatial placement pending review."
     }
   ]
 }
