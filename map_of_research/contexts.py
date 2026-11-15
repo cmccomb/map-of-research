@@ -38,6 +38,7 @@ CONTEXT_TYPES = (
 )
 PATENT_PUBLICATION_NUMBER = re.compile(r"^[A-Z]{2}\d{5,}[A-Z]\d?$")
 DOI_PATTERN = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
+WORK_ID_PATTERN = re.compile(r"work-[0-9a-f]{64}")
 
 
 @dataclass(frozen=True)
@@ -53,6 +54,7 @@ class ReviewedContext:
     expected_year: int | None = None
     verified_doi: str = ""
     collaboration_eligible: bool | None = None
+    canonical_work_id: str = ""
 
 
 def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
@@ -106,6 +108,14 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             else ""
         )
         collaboration_eligible = entry.get("collaboration_eligible")
+        canonical_work_id = str(entry.get("canonical_work_id") or "").strip()
+        if canonical_work_id and (
+            publication_type not in (AUTHORED_PUBLICATION_TYPES | {"publication"})
+            or not WORK_ID_PATTERN.fullmatch(canonical_work_id)
+        ):
+            raise ValueError(
+                "Canonical work binding needs a publication context and exact work ID"
+            )
         if publication_type == "publication":
             if (
                 not expected_title
@@ -185,5 +195,6 @@ def load_contexts(path: Path) -> dict[tuple[str, str], ReviewedContext]:
             expected_year=expected_year,
             verified_doi=verified_doi,
             collaboration_eligible=collaboration_eligible,
+            canonical_work_id=canonical_work_id,
         )
     return contexts

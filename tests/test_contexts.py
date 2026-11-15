@@ -12,7 +12,7 @@ from map_of_research.contexts import (
     ReviewedContext,
     load_contexts,
 )
-from map_of_research.dataset import build_dataset_tables
+from map_of_research.dataset import _work_identity, build_dataset_tables
 from map_of_research.doi_aliases import ReviewedDoiAlias
 from map_of_research.exclusions import ReviewedExclusion
 from map_of_research.registry import load_registry
@@ -352,7 +352,11 @@ def test_scholar_profile_generic_context_holds_only_reviewed_new_row(
         work = held["works"].iloc[0]
         assert work["doi"] == ""
         assert not bool(work["collaboration_eligible"])
-    for regional_host in ("scholar.google.ca", "scholar.google.co.jp"):
+    for regional_host in (
+        "scholar.google.ca",
+        "scholar.google.co.jp",
+        "scholar.google.co.in",
+    ):
         regional_url = str(source_url).replace("scholar.google.com", regional_host)
         _manifest(
             path,
@@ -1140,3 +1144,33 @@ def test_conflicting_reviewed_types_for_one_work_fail_closed(tmp_path: Path) -> 
             load_registry(people, memberships, departments),
             contexts=contexts,
         )
+
+
+def test_authored_context_can_bind_exact_canonical_work(tmp_path: Path) -> None:
+    work_id = "work-" + "a" * 64
+    path = _manifest(
+        tmp_path / "contexts.json",
+        [_authored_entry(canonical_work_id=work_id)],
+    )
+    context = load_contexts(path)[("oneAAAAJ", "oneAAAAJ:chapter")]
+    assert context.canonical_work_id == work_id
+    assert _work_identity(object(), context=context) == (
+        work_id,
+        "reviewed_canonical_binding",
+        "10.1234/chapter.2026",
+    )
+
+
+@pytest.mark.parametrize(
+    "entry",
+    [
+        _authored_entry(canonical_work_id="work-not-a-digest"),
+        _entry(canonical_work_id="work-" + "b" * 64),
+    ],
+)
+def test_canonical_work_binding_fails_closed(
+    tmp_path: Path, entry: dict[str, object]
+) -> None:
+    path = _manifest(tmp_path / "contexts.json", [entry])
+    with pytest.raises(ValueError, match="Canonical work binding"):
+        load_contexts(path)
