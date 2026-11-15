@@ -645,19 +645,33 @@
       "withheld_rows": 56,
       "withheld_hold_rows": 56,
       "withheld_excluded_rows": 0
+    },
+    {
+      "person_id": "person-justinecassell-9da8e0be",
+      "scholar_id": "wkC9xHMAAAAJ",
+      "cache_sha256": "5c9858acdc7f7006062d35c3cf07f6db0c9a33edeaa58fe6169ab27280c59d01",
+      "private_capture_sha256": "8e06176af7760e00b1e5b9653f7e5da73476bd43352062692f9d76dcf8cb800d",
+      "private_review_sha256": "4c8024fc5ee0ae2dafed9b5121028305317f93d3815687f95decf379aa5aeb4a",
+      "selected_ids_sha256": "df52ef9252d67db19674b5cefd783ac0c4fbe9e94d309b65b2ae1d724e994162",
+      "withheld_ids_sha256": "e2ad5d2c8341f0526f0f78599726da086bd91576c6913566f3390a2d7d31d7e3",
+      "observed_visible_rows": 327,
+      "selected_rows": 50,
+      "withheld_rows": 277,
+      "withheld_hold_rows": 277,
+      "withheld_excluded_rows": 0
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "40502067751b19c8358510718ee43c92fadc543e670b446ad0f1cda7c7afc78d",
-  "source_selection_manifest_sha256": "f68c5578b14d33584832de154b1b63af3bcf521c3d60f8d5445a7c574e122f9a",
-  "source_snapshot_sha256": "3107b39aad882b0212937d1e6d59d008848b0ed8b5874e2f409c4a2bae1724f1",
+  "selected_ids_sha256": "94f24e08bb11f2440d443d4d1594507106dc12fce744968c9a53cbeade1c0253",
+  "source_selection_manifest_sha256": "68c986e956139d53fb5b1dd310d19b93cde8a16115db8a023f516843717158bf",
+  "source_snapshot_sha256": "4e92f92dfc7dbacafd83f04276bbecbdc7e56bb76544c4d4652ea1e6f7dc9d8c",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 8419,
-    "selected_rows": 2218,
-    "withheld_rows": 6201,
-    "withheld_hold_rows": 5808,
+    "observed_visible_rows": 8746,
+    "selected_rows": 2268,
+    "withheld_rows": 6478,
+    "withheld_hold_rows": 6085,
     "withheld_excluded_rows": 393
   },
-  "withheld_ids_sha256": "38e09cd776f1aca3f9028eead1f163003b872b4acfb19cf932e9c31a72b9177b"
+  "withheld_ids_sha256": "886f78b991b75676cbabd7eed59f85c81af7a924197e12338cac157cf84bc632"
 }
