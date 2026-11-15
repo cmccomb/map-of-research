@@ -183,7 +183,15 @@ def test_authored_type_doi_and_collaboration_need_exact_review(tmp_path: Path) -
     assert context.publication_type == "book_chapter"
     assert context.verified_doi == "10.1234/chapter.2026"
     assert context.collaboration_eligible is False
-    for kind in ("conference_paper", "journal_article", "book_chapter", "preprint"):
+    for kind in (
+        "conference_paper",
+        "journal_article",
+        "book_chapter",
+        "preprint",
+        "doctoral_dissertation",
+        "masters_thesis",
+        "conference_proceedings",
+    ):
         _manifest(path, [_authored_entry(publication_type=kind)])
         context = load_contexts(path)[("oneAAAAJ", "oneAAAAJ:chapter")]
         assert context.publication_type == kind
@@ -474,7 +482,16 @@ def test_scholar_profile_generic_context_holds_only_reviewed_new_row(
 
 
 @pytest.mark.parametrize(
-    "kind", ["conference_paper", "journal_article", "book_chapter", "preprint"]
+    "kind",
+    [
+        "conference_paper",
+        "journal_article",
+        "book_chapter",
+        "preprint",
+        "doctoral_dissertation",
+        "masters_thesis",
+        "conference_proceedings",
+    ],
 )
 def test_authored_type_doi_and_eligibility_are_explicit(
     tmp_path: Path, kind: str

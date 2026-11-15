@@ -1875,6 +1875,25 @@
         "withheld_excluded_rows": 44,
         "withheld_ids_sha256": "612eb95b2118cd623e25ce561e77488e7e3d1bcc24861c0470c0574edf1c9618"
       }
+    },
+    {
+      "person_id": "person-michaelhilton-b7dd8738",
+      "scholar_id": "g4Au-T0AAAAJ",
+      "state": "released",
+      "expected_source_rows": 49,
+      "cache_sha256": "a0e9debcc5e6a3591f078b020748fe8704083e55d28c2e268885f079454cc5b0",
+      "reason": "Forty-nine exact-owner Michael Hilton Scholar rows selected from a complete 105-row capture. Forty carry verified DOI/type/year/Hilton byline; nine are DOI-empty with source-backed types. Eighteen concrete attribution/duplicate/nonwork/canonical-continuity rows and 38 other candidates remain private. All new works remain nonspatial pending placement.",
+      "reviewed_at": "2026-11-15",
+      "public_subset": {
+        "observed_visible_rows": 105,
+        "private_capture_sha256": "ceb6b1fc99f4ff46ede218821518cd911da6aaed29017eba94f9233e1f2e1b39",
+        "private_review_sha256": "1ff4276215f76db98c20913fd7c962de4bcfda32e3570b9b9127b11e69da09a9",
+        "selected_ids_sha256": "ae63b512da24bbb5ef00ec66a49e0b71d767952f658ef03785abd63143eb75e8",
+        "withheld_rows": 56,
+        "withheld_hold_rows": 56,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "fcae715d3dfe2eefc314b845286cf74a016e4259cf7769f3c0691c5ebd0c8ea1"
+      }
     }
   ]
 }
