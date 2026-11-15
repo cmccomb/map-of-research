@@ -659,19 +659,33 @@
       "withheld_rows": 277,
       "withheld_hold_rows": 277,
       "withheld_excluded_rows": 0
+    },
+    {
+      "person_id": "person-rohanpadhye-eb83a3b1",
+      "scholar_id": "XI03UxYAAAAJ",
+      "cache_sha256": "a5c1c5283726026bb0215d94d156d499438ac62f35c843250c2156fb6f060234",
+      "private_capture_sha256": "de95f454a7265980b80c94d0a3a78ae4d07546904b865003023dbf89a7912532",
+      "private_review_sha256": "1894747fca76b6ed3ede03b166d16c9a9e38a55fadf4061be0aec1d6eb6ef239",
+      "selected_ids_sha256": "f27e0e73ed195aeb4a4d6238606891dbadc01d1c3d6a4a3adb30422c3b5db380",
+      "withheld_ids_sha256": "5df02560798217cf1e22e12be655fa156f634a8c74b952418d14fc15486f7bf6",
+      "observed_visible_rows": 54,
+      "selected_rows": 46,
+      "withheld_rows": 8,
+      "withheld_hold_rows": 8,
+      "withheld_excluded_rows": 0
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "94f24e08bb11f2440d443d4d1594507106dc12fce744968c9a53cbeade1c0253",
-  "source_selection_manifest_sha256": "68c986e956139d53fb5b1dd310d19b93cde8a16115db8a023f516843717158bf",
-  "source_snapshot_sha256": "4e92f92dfc7dbacafd83f04276bbecbdc7e56bb76544c4d4652ea1e6f7dc9d8c",
+  "selected_ids_sha256": "4a0f46ea9b5a79df46c4803fc3df3deb95dff52301a6471be1be0c47c2144617",
+  "source_selection_manifest_sha256": "35cee6491cc42b659664a99e17c39d9d2b2cdc02f4d75b5f0eb32fcebb01d029",
+  "source_snapshot_sha256": "9287d26c063996e565f35640100a5658ebc2627e5bffcdbe353267787c685b5d",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 8746,
-    "selected_rows": 2268,
-    "withheld_rows": 6478,
-    "withheld_hold_rows": 6085,
+    "observed_visible_rows": 8800,
+    "selected_rows": 2314,
+    "withheld_rows": 6486,
+    "withheld_hold_rows": 6093,
     "withheld_excluded_rows": 393
   },
-  "withheld_ids_sha256": "886f78b991b75676cbabd7eed59f85c81af7a924197e12338cac157cf84bc632"
+  "withheld_ids_sha256": "88285ec1b1015ac64d89876a2b683420b81e8a177d85786e788d8dc922ee09db"
 }
