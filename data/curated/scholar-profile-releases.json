@@ -1913,6 +1913,25 @@
         "withheld_excluded_rows": 0,
         "withheld_ids_sha256": "e2ad5d2c8341f0526f0f78599726da086bd91576c6913566f3390a2d7d31d7e3"
       }
+    },
+    {
+      "person_id": "person-rohanpadhye-eb83a3b1",
+      "scholar_id": "XI03UxYAAAAJ",
+      "state": "released",
+      "expected_source_rows": 46,
+      "cache_sha256": "a5c1c5283726026bb0215d94d156d499438ac62f35c843250c2156fb6f060234",
+      "reason": "Forty-six exact-owner Rohan Padhye Scholar rows selected from a complete 54-row capture. Twenty-seven carry verified DOI/type and 19 retain bounded blanks. Two reviewed observations bind to existing eligible canonical works without duplication; eight concrete version/nonwork holds remain private. No padding; new placement pending.",
+      "reviewed_at": "2026-11-15",
+      "public_subset": {
+        "observed_visible_rows": 54,
+        "private_capture_sha256": "de95f454a7265980b80c94d0a3a78ae4d07546904b865003023dbf89a7912532",
+        "private_review_sha256": "1894747fca76b6ed3ede03b166d16c9a9e38a55fadf4061be0aec1d6eb6ef239",
+        "selected_ids_sha256": "f27e0e73ed195aeb4a4d6238606891dbadc01d1c3d6a4a3adb30422c3b5db380",
+        "withheld_rows": 8,
+        "withheld_hold_rows": 8,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "5df02560798217cf1e22e12be655fa156f634a8c74b952418d14fc15486f7bf6"
+      }
     }
   ]
 }

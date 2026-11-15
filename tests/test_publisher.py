@@ -20,6 +20,7 @@ from map_of_research.composite_region import (
     SOURCE_SHA256 as SULLIVAN_SOURCE_SHA256,
 )
 from map_of_research.composite_region import load_reviewed_sullivan_embeddings
+from map_of_research.contexts import ReviewedContext
 from map_of_research.presentation_drift import (
     PresentationDriftError,
     compare_presentation,
@@ -4305,3 +4306,88 @@ def test_main_persists_ambiguous_hub_write_reconciliation_receipt(
     assert status["atomic_release_reconciliation"] == receipt
     assert status["atomic_release_intent"]["intent_status"] == "before_write"
     assert "artifact_commit" not in status
+
+
+def test_reviewed_canonical_binding_requires_matching_eligible_parent() -> None:
+    work_id = "work-" + "a" * 64
+    key = ("ownerAAAAJ", "ownerAAAAJ:row")
+    context = ReviewedContext(
+        publication_type="conference_paper",
+        document_id="",
+        reason="Exact reviewed reuse.",
+        evidence_url="https://example.test/evidence",
+        verified_at="2026-11-15",
+        expected_title="Existing Paper",
+        expected_year=2026,
+        verified_doi="10.1234/existing",
+        collaboration_eligible=True,
+        canonical_work_id=work_id,
+    )
+    profiles = pandas.DataFrame(
+        [
+            {
+                "scholar_id": key[0],
+                "author_pub_id": key[1],
+                "title": "Existing Paper",
+                "work_id": work_id,
+                "work_match_method": "reviewed_canonical_binding",
+            }
+        ]
+    )
+    publisher._validate_reviewed_canonical_bindings(
+        profiles,
+        {key: context},
+        [
+            {
+                "work_id": work_id,
+                "title": "Existing Paper",
+                "doi": "",
+                "map_eligible": True,
+            }
+        ],
+    )
+    with pytest.raises(ValueError, match="eligible parent work"):
+        publisher._validate_reviewed_canonical_bindings(
+            profiles,
+            {key: context},
+            [
+                {
+                    "work_id": work_id,
+                    "title": "Different Paper",
+                    "doi": "",
+                    "map_eligible": True,
+                }
+            ],
+        )
+    with pytest.raises(ValueError, match="duplicate work IDs"):
+        publisher._validate_reviewed_canonical_bindings(
+            profiles,
+            {key: context},
+            [
+                {"work_id": work_id, "title": "Existing Paper"},
+                {"work_id": work_id, "title": "Existing Paper"},
+            ],
+        )
+    with pytest.raises(ValueError, match="one selected observation"):
+        publisher._validate_reviewed_canonical_bindings(
+            pandas.concat([profiles, profiles], ignore_index=True),
+            {key: context},
+            [{"work_id": work_id, "title": "Existing Paper"}],
+        )
+    with pytest.raises(ValueError, match="DOI conflicts"):
+        publisher._validate_reviewed_canonical_bindings(
+            profiles,
+            {key: context},
+            [
+                {
+                    "work_id": work_id,
+                    "title": "Existing Paper",
+                    "doi": "10.1234/different",
+                    "map_eligible": True,
+                }
+            ],
+        )
+    publisher._validate_reviewed_canonical_bindings(
+        pandas.DataFrame({"value": [1]}), {key: context}, []
+    )
+    publisher._validate_reviewed_canonical_bindings(profiles, {}, [])

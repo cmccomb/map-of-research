@@ -108,6 +108,12 @@ def _work_identity(
     curated_title_year_native_ids: Mapping[tuple[str, int], set[str]] | None = None,
     context: ReviewedContext | None = None,
 ) -> tuple[str, str, str]:
+    if context is not None and context.canonical_work_id:
+        return (
+            context.canonical_work_id,
+            "reviewed_canonical_binding",
+            context.verified_doi,
+        )
     if context is not None and context.publication_type == "patent":
         return (
             _hash_id("work", f"patent-document:{context.document_id}"),
@@ -181,6 +187,7 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
                 "scholar.google.com",
                 "scholar.google.ca",
                 "scholar.google.co.jp",
+                "scholar.google.co.in",
             }
             or parsed.username is not None
             or parsed.password is not None

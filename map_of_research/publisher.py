@@ -112,7 +112,7 @@ from .coverage import (
     DEFAULT_PRIOR_ID_CROSSWALK_PATH,
     validate_coverage,
 )
-from .dataset import build_dataset_tables
+from .dataset import build_dataset_tables, normalize_title
 from .doi_aliases import (
     DEFAULT_DOI_ALIASES_PATH,
     ReviewedDoiAlias,
@@ -601,6 +601,64 @@ def _existing_work_state(
         return []
     except Exception as error:
         raise RuntimeError("Could not read published works for order reuse") from error
+
+
+def _validate_reviewed_canonical_bindings(
+    profiles: Any,
+    contexts: Mapping[tuple[str, str], Any],
+    prior_work_state: Sequence[Mapping[str, Any]],
+) -> None:
+    """Bind an exact new observation only to a matching eligible parent work."""
+
+    required_columns = {
+        "scholar_id",
+        "author_pub_id",
+        "title",
+        "work_id",
+        "work_match_method",
+    }
+    if not required_columns <= set(profiles.columns):
+        return
+    selected_keys = set(
+        zip(
+            profiles["scholar_id"].astype(str),
+            profiles["author_pub_id"].astype(str),
+            strict=True,
+        )
+    )
+    bindings = {
+        key: context
+        for key, context in contexts.items()
+        if context.canonical_work_id and key in selected_keys
+    }
+    if not bindings:
+        return
+    prior_by_id = {str(row.get("work_id") or ""): row for row in prior_work_state}
+    if len(prior_by_id) != len(prior_work_state):
+        raise ValueError("Canonical binding parent has duplicate work IDs")
+    for (scholar_id, author_pub_id), context in bindings.items():
+        rows = profiles.loc[
+            (profiles["scholar_id"].astype(str) == scholar_id)
+            & (profiles["author_pub_id"].astype(str) == author_pub_id)
+        ]
+        if len(rows) != 1:
+            raise ValueError("Canonical binding must match one selected observation")
+        row = rows.iloc[0]
+        prior = prior_by_id.get(context.canonical_work_id)
+        if (
+            prior is None
+            or not bool(prior.get("map_eligible"))
+            or normalize_title(str(row["title"]))
+            != normalize_title(str(prior.get("title") or ""))
+            or str(row["work_id"]) != context.canonical_work_id
+            or str(row["work_match_method"]) != "reviewed_canonical_binding"
+        ):
+            raise ValueError(
+                "Canonical binding needs an exact-title eligible parent work"
+            )
+        prior_doi = str(prior.get("doi") or "").casefold()
+        if prior_doi and context.verified_doi and prior_doi != context.verified_doi:
+            raise ValueError("Canonical binding DOI conflicts with parent work")
 
 
 def _reviewed_new_generic_placement_work_ids(
@@ -2425,8 +2483,13 @@ def publish_snapshot(
     )
     prior_work_state = (
         _existing_work_state(hf_token=hf_token, revision=prior_revision)
-        if existing_layouts or additive_placement_review_path is not None
+        if existing_layouts
+        or additive_placement_review_path is not None
+        or any(context.canonical_work_id for context in contexts.values())
         else []
+    )
+    _validate_reviewed_canonical_bindings(
+        tables["profile_publications"], contexts, prior_work_state
     )
     layout_reused = False
     if existing_layouts:
