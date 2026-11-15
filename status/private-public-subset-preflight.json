@@ -631,19 +631,33 @@
       "withheld_rows": 350,
       "withheld_hold_rows": 306,
       "withheld_excluded_rows": 44
+    },
+    {
+      "person_id": "person-michaelhilton-b7dd8738",
+      "scholar_id": "g4Au-T0AAAAJ",
+      "cache_sha256": "a0e9debcc5e6a3591f078b020748fe8704083e55d28c2e268885f079454cc5b0",
+      "private_capture_sha256": "ceb6b1fc99f4ff46ede218821518cd911da6aaed29017eba94f9233e1f2e1b39",
+      "private_review_sha256": "1ff4276215f76db98c20913fd7c962de4bcfda32e3570b9b9127b11e69da09a9",
+      "selected_ids_sha256": "ae63b512da24bbb5ef00ec66a49e0b71d767952f658ef03785abd63143eb75e8",
+      "withheld_ids_sha256": "fcae715d3dfe2eefc314b845286cf74a016e4259cf7769f3c0691c5ebd0c8ea1",
+      "observed_visible_rows": 105,
+      "selected_rows": 49,
+      "withheld_rows": 56,
+      "withheld_hold_rows": 56,
+      "withheld_excluded_rows": 0
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "08c7d58a7c9a2913d6e77a85cc3d1b4004531419b0c5381d69a2abfdbec01b43",
-  "source_selection_manifest_sha256": "5151cb9ae425a20eb502544f49c11626073eaf66a4395f4c8cf0f4c8c8b4bfb4",
-  "source_snapshot_sha256": "7e17b571183eb167dd4e00cbc4e9c97bf5569c198edd5f2bea45df121903567f",
+  "selected_ids_sha256": "40502067751b19c8358510718ee43c92fadc543e670b446ad0f1cda7c7afc78d",
+  "source_selection_manifest_sha256": "f68c5578b14d33584832de154b1b63af3bcf521c3d60f8d5445a7c574e122f9a",
+  "source_snapshot_sha256": "3107b39aad882b0212937d1e6d59d008848b0ed8b5874e2f409c4a2bae1724f1",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 8314,
-    "selected_rows": 2169,
-    "withheld_rows": 6145,
-    "withheld_hold_rows": 5752,
+    "observed_visible_rows": 8419,
+    "selected_rows": 2218,
+    "withheld_rows": 6201,
+    "withheld_hold_rows": 5808,
     "withheld_excluded_rows": 393
   },
-  "withheld_ids_sha256": "deb7f2a8d7599e8c5ef8ae47f35f3453bcff1ad0d094f48ee5cebc074334355d"
+  "withheld_ids_sha256": "38e09cd776f1aca3f9028eead1f163003b872b4acfb19cf932e9c31a72b9177b"
 }
