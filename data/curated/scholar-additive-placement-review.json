@@ -1,314 +1,278 @@
 {
   "schema_version": 1,
-  "prior_revision": "39f2a1408767c961655684ccd33a37613c71c7ca",
-  "source_snapshot_sha256": "4e92f92dfc7dbacafd83f04276bbecbdc7e56bb76544c4d4652ea1e6f7dc9d8c",
-  "selected_ids_sha256": "2a5c46cfaf0011ed236be82a7f85a53bdfb30f89cd75fb4679921ac120755a2d",
-  "parent_map_sha256": "5e15e533f01c7fa725513907026752a91f86ec6b9859433057c0023a5c69faf9",
-  "candidate_map_content_sha256": "93312651967f863c1c4a4743a2540395bc22bd518eced49e802101fae7077507",
-  "new_work_ids_sha256": "d678b876120e2b765cbb6641fd8fad0d24aa2422c5411b2ed40e854667fa3b77",
+  "prior_revision": "22a99fc1335f578c14280cc18937489ac8c16f5e",
+  "source_snapshot_sha256": "9287d26c063996e565f35640100a5658ebc2627e5bffcdbe353267787c685b5d",
+  "selected_ids_sha256": "240af3a91270b5797e6a001604047fd2ea603e6034da58578d7d2b113d8810d9",
+  "parent_map_sha256": "96660d686113498816f6709d0149d3660f7087c80eeb4d7fbbec9a44021361b2",
+  "candidate_map_content_sha256": "52405b485102c7caad52a74654a4ab1cd7df7e26ba53500b69792b6e197cc9c2",
+  "new_work_ids_sha256": "f8d640bb487325d487baaca9e7592ace8cc262e07fdcd817d42667a9cb5d64c8",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-15",
   "new_points": [
     {
-      "work_id": "work-0c6273c9a2721479ac902f4e7c7607bc66b0dac036d3d576e50d075983496ba3",
+      "work_id": "work-083edf43e37a1ce4593d0aae59ca720823bc2f38bb8828e349a1581ec7bb6df8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-0dea117f90b257cd20c075981d59814cd73970ecbdd84b086289a6691d6a7a7e",
+      "work_id": "work-14caf849d21087e053314fe50ed6ae9e5afef095a378548258c6d61b9f819826",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-10c825318cee889c4029e80a21089627116e44f588da10a653b0def8ca9f7b6c",
+      "work_id": "work-1c0da95f04f47ff99542075debce832159a8163893027abc806710ca3d258a5c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-14913e0181eaf8100d39f4375eddbdd34cc0e580943815fa724027cf8b34e8d0",
+      "work_id": "work-1d79a0809f326102e1920d20b6f2aab6f983eb9454b6cab90797af297dca39c9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-174aea1d8fbe04e735764e358b11eef44b53f383df2c9bd4d1f9cb6318cc238d",
+      "work_id": "work-2040e67ae6905ea1978a3f165a576faa87d6a213d17d9dcae6c128827b2ce256",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-1786d38a1e2482b55b6b0896913ae47587f0648139b35dff8d3d012c1e5c5543",
+      "work_id": "work-20d8f4cc185bf4ea0b43abc9cbd7e56366a4d39e378b8ed11acebd384f205011",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-182695898ae53fbe974146c5ea573e592edfc96f965a4605f2560a5fb6e61e6d",
+      "work_id": "work-258725e30e7aa954e3ada32ab60934bef389db470189a43a79129d4f8eb8e9bd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-18949af3700e9ed4e254ec46893ddc1d15b16cc97f3e9e12c421a56e33273bb8",
+      "work_id": "work-286633eb1767e47a2ce245e87a810603d86be55f18f4bad1da123a3326da5052",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-1be3d662730076c8bebde112cd248b60d2df723b25da38a1fb736df6f2ce556e",
+      "work_id": "work-2a642199014c7df2611968a399e494e91cd8f3bd930899d6fa839f6013a472b5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-28d1597a295b40b366e314f2ba59cd764f343a7097281fc235c53694974bcd8c",
+      "work_id": "work-2d37b4835e5fb151ba2bdc51c5461376b90e9cd5bc71a38f975cb0ef216d1ddc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-2c14d469f5a494a59bd2572ad9cb1b0b8336f4261df0cd92b31d4d0c8807f8ac",
+      "work_id": "work-37b5f262e73d49daa680cd0a27f21ce0cb0f96face0b5ef3cbd888bd5e7e4ece",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-30af9371eb969e79223c1245113fa76777915fe8a8a82dccde82376a443c63aa",
+      "work_id": "work-40f24129a83f04842f40b48190aaf2abba8fdd8e4763472e55d9280b085c1d30",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-35eb91ff16d016caa2fa36fbcbf6099e0e063b872f7ebc08449241796dc14ccb",
+      "work_id": "work-430011471395ba0573e5ab22e6b805e0b3dc3009a38a1644b7ce5eb955ad7aa0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-3c0be5c7db811a34f196e827ccf4570c8808483d94e167c03d15707842cd119e",
+      "work_id": "work-54ed3e5d3de814b9b2f75c205b15ff800b9e75e747229331d96417f5edb80cf3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-458f76d94b8039fbbad7c18b6da5eee933e4dd654915b4cf91ba83097467c38f",
+      "work_id": "work-5b52f5d60030ec23bd86326b6b86d3eaae79d777fd693d84a897f77a58f39dae",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-4ed62909a2900c88ab62ec050bb833aeb7c14d1292b3bfbca280303500f18b67",
+      "work_id": "work-5ea4463ee1bc9e57b15fd6cf88f5005849f2dd1b01ec5556b5d0a0dec73cb484",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-50826a14d811cde985543b20a9ac0c0c1827f994d63d8f42c9479b789049ecee",
+      "work_id": "work-61410add36e18dfd229f709580138e8611ed4fcf5577efb7b9a36e56bfc97cc8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-61bd84208f68b9031a5adc7f768728b04b506134f31855b33011be4a0f14aace",
+      "work_id": "work-67a88d923d14f3db3250b5cfa66f7f705dd2e2e128a17a63289440e7462f38ed",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-63c0a09c6de5d67f482cb5efb8cb4863922d9d436413b5e2a38241be7d33ad03",
+      "work_id": "work-68aa0e734693fa3eceb10d126cdc4917116dedea14bedb5e10be85af50167f23",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-7768d61fb7dc6dc66fb6ae3499704b42d63b489d57e89f7bfe32285fe48692d6",
+      "work_id": "work-6ea10b995048be20ba0f88076d6bbeb95a050fb76c32a4c0efc9008ad1d05609",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-78e2d812d68e5688ae1ec2e7438f74c41f15ffeaf78847734929a6abca5042c3",
+      "work_id": "work-6ef9486d9042d479acc704636b198001af8d1ea0b56f0ca6b5383aebd7e116c5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-7b0f14e5b6e21f4385bb4c707122dde21375f5d1aede15f496217274761d079e",
+      "work_id": "work-77cc3ba9ad48231a11f7933bd4233e8020f864c6b87fcdb3cf1be14c87d1c2a7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-89e3e35ca958cbc34f7621cc22e4cd691bca50795c586bd0df6d2756b7833257",
+      "work_id": "work-789baab87b3eb223dbfe2b4a8a58765d6761c1f553dffc5a63db653732860952",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-8daa4551a7e35c2f99b712ce9be16f8b801fe20f3aaebe6492041649edb3bc54",
+      "work_id": "work-7b29c2bd5aa7a70dc4117792146b641ab997912474198413df9dd409551ee287",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-8f9e955aefabc1c4d6f06049ef085c7ff0b6e9b90132323f0a71efbd5d7c3326",
+      "work_id": "work-8090e1e96497d1869bb260b30276806a56dcb627b1dce31927092bca2e754322",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-9e8c92df3a5fe35c534bda7b81b9edc443e39f756f75aa864560484e455c146d",
+      "work_id": "work-80c1a2860dfad6aa27855fed7fdb44159a51d4423c883a9a5299158c31231803",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-acea1c5a844f6f8c7b006f8ac3a4d3c820f830470e0265629830a23086f6d197",
+      "work_id": "work-8ff5b0849f7f2bfca63c7eededc529139b3be1838743ec580c15b60bf8d48cec",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-af53d7f1119a64a330a0e76ed88296481fd96444a1c72880c0e2b7c7ba07a9ec",
+      "work_id": "work-92e05481050b7fb0b653d5c102a84208638ad3464e5fb4c952879533376c9d47",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b539e3f848c28c8c699e93931945c61ceb5c55f5e002442f3b8b9565ed0fcb8b",
+      "work_id": "work-a1398aef5f231d5c6057941562dc60c3e0b3f9a44434d1a3d66db0c7d6bce209",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b5d72486610e8cd80e65509e909ddd7606378cfd5d9b13fb55ff941d98b96118",
+      "work_id": "work-a466865145575c6778b27f80fc69b75fcbc5a6827bbc5eeec9bb53038ddc37b1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b9a998949a400741523d4cde95a0eb9d99b87902e12bd4f2a5c4b2dadd3233b3",
+      "work_id": "work-a475f0981d15837088768032c7175b32d3aac6db55bcd7f44d540005001fbf06",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-c90059b1f395d078f87a519da89b5df7672aff3de0231fa3bd1617bb4baf35a0",
+      "work_id": "work-aa495d9d5302d52e49a9f57db6bbf8ca52d7a5811fdc33a8752287309c1f6a14",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-c93eb1eab01615f63aff90e29f804a0354d55cc8bee87056b760282492b96884",
+      "work_id": "work-acd80604f4fe49fcade7151fa3d4306b8e91aceeac5c89b3d9724b116fa9a197",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-cab4969beba10ce948a74f26d64b23c026127b23d99ae2504c7d92ebf4aef699",
+      "work_id": "work-acdfcffb5c30d2ab78abbe8e1cbfecadb213f6bed0d10a6fc96feb34db65ed8d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-cedc7cad3093c949178d8f50b0c6712dc866099cf280b327bdedd9cd41d8a15e",
+      "work_id": "work-af2fc6cbceba9d989bf423b6b14afb6a709b6c47012b3c77399334a56a9cad17",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-cf8d8d7f419d541e688d52005420ff28058c78e4eb945980972f356fe0f4aadf",
+      "work_id": "work-b01de71600edad1896059393d7b48cf48b11cde240f753615af7f49a59fbf1a0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-d8720d23af8c984614282c28ee14ff6668417aa6959b47712304df09006f652b",
+      "work_id": "work-b3a06e8b8543d1617da6b9261b6a7e07e0313608359fb6c16eafabd080f0eb6d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-db530e3ab283742fb2d9c8c5dc6b6b8c384212d94285ba2ba36323b3bf328c80",
+      "work_id": "work-b6a3bf316ff746ed66f07536be05bbd6da9b6ed641f2ac3b009dad0ee56d3d5d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-df35f3811babecbd27c33d21463946e6570783aa0fd4b88dd70bf4e0af74702f",
+      "work_id": "work-c6dcec7f7e77dcfe08d61a40246202f2aa90d06e038e927b7aa0d2b88822573b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-e082d3a6dd67a7a0def21863a691ba347e72a8f6d9c1e74c9735578e9d93868e",
+      "work_id": "work-cf51a2d28053cfd5468fc1313096610bf5b02a753f952ac84082c9dd0ced3aad",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-e6898ada87333c10b11f291aacd90de2dd26a119293bd57ba590d79e77efed3e",
+      "work_id": "work-e1483d8c38fba9638f8e3b819457841e8f5aca2972c9954858046c43fb74b263",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-e8e20e995d46438557adb64b99237262633236ef556a0f3d9f4ced66c94d880b",
+      "work_id": "work-e418fd6bac876686fc524ed0621805be2d9b5144eca3d03fd1510f07dd93c4ad",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-eadeaaa53eae6ad5d708bbcaca48e9fa7b67cae17243dbe66792ff71b5a56cf6",
+      "work_id": "work-f1d3dfe84fe209bb71ab43c15286f96b9a58575fc1155baa780c3b1b3a9450ea",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-eb07c0fef0406e9f4c0261ba5ae4ad06e3201f12232ca2d286b32cf256762eab",
+      "work_id": "work-f61012dfafd5e5c915032b578eb8b6771fa846960f206818381455f639ced2ce",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-f3950a2fb6747c5449de6d80fb98a636ecaf69b1767ecb21966c03ee823c608d",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-f4bb31f22fdfd918d766ba7dce295e42d6d0379efd87dbaca9805113407b9811",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-f6afceac6a85ade50cb65c3c5bff5acf7138b88e0a88a1fc134e4d0f9951d2dc",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-f8bfbde127807f5d4030a0845cd9085da1a85320cdd5bded46e56bf3bb2a44ef",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-fa59f2fb3b0aec5400b11dd6e9facea58e06256b1f49c7ec0508159e7214e6ef",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-fff1ad33049b5c95b1e8e15f0702d11c0c01c6a9813a76376ca1dbf9c1825f0b",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Justine Cassell citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
     }
   ]
 }
