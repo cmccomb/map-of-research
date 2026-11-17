@@ -2010,6 +2010,25 @@
         "withheld_ids_sha256": "92bbb7337d86f5b6a622f8999d27f324a4927343dd5796edfcf0bcbaff56b6b4",
         "private_rendered_html_sha256": "4d75d543d5c627de4a5c74002633453c9edc8a28a6476e2638c04df8d7156394"
       }
+    },
+    {
+      "person_id": "person-williamwcohen-c58db582",
+      "scholar_id": "8ys-38kAAAAJ",
+      "state": "released",
+      "expected_source_rows": 50,
+      "cache_sha256": "65fa65bc3bc18588dbab44030b9b3279547de3d6f1d77256df76067b1e05d46b",
+      "reason": "Fifty rows from the complete exact owner-linked William W. Cohen profile are selected. Three concrete duplicate, false-byline, or nonwork rows are held; 491 source-backed rows remain candidate-only deferred rather than adverse authorship findings.",
+      "reviewed_at": "2026-11-17",
+      "public_subset": {
+        "observed_visible_rows": 544,
+        "private_capture_sha256": "2685aedefac293ff80489ff32fe2b08f95fd3b9553ae11c24259a747ff23af82",
+        "private_review_sha256": "9ec32896d85779e0b310dbb1b01c850eb632a13303cfc331357fa544151ce1ee",
+        "selected_ids_sha256": "5f0a3b1f529a8877af991f19abbde185f558cd9696745e039132cf0105fd5586",
+        "withheld_rows": 494,
+        "withheld_hold_rows": 494,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "461d55d1a2c8b0a103430582bd54e4482ef27fc63ad64044b73914878b5395e6"
+      }
     }
   ]
 }
