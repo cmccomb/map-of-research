@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "prior_revision": "8860ff772612311c6248c5d53b57d6ea3e66cfe0",
-  "source_snapshot_sha256": "babab7b47d202779556ec2dfb65f1e8fd376655685c726b18540692ba2f18312",
-  "selected_ids_sha256": "db9439d40a2b60e1aa6c1c19ea92ac587effd0278d44ac3fd6a9b2091de1c260",
+  "source_snapshot_sha256": "f104332329d3c1ad443a6f9dad09f1e59c352bc9421b910457f4e887520350c5",
+  "selected_ids_sha256": "2b6a8fc497838da4ae5eb668e43958465a00d9d80a6b8522849298e62508a1b8",
   "parent_map_sha256": "4b7cae5c3b8cd13db21be2fa7501121aec9d79c54a609b1173b07d7efd994e99",
-  "candidate_map_content_sha256": "9a2c321e08da5c7d005426d7dcade355d5d2746b58754692af5f2aefb6615cf1",
-  "new_work_ids_sha256": "65d7441bb663a956bbfffe02a3ad4b903de511f2c0f9d8112d3d07171aaacafd",
+  "candidate_map_content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "new_work_ids_sha256": "b6136abb1af9929f304894b05713751ecfd510abd79c15d64cc2932b1aea0c02",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-17",
@@ -30,12 +30,6 @@
     },
     {
       "work_id": "work-039f22eada5220ec849ef598fa504183ffe5068efe0b06024d47a214d4dbbc45",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
-    },
-    {
-      "work_id": "work-0603943c43e04b6173c3bf198d200b468fb9813892d31012ee3d6934a91fa065",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
@@ -179,12 +173,6 @@
       "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-85e884933c8952164ec7ab71cb8bc17ff5d520d82f72334cf35fdd9a19038038",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
-    },
-    {
       "work_id": "work-88a4f1abaebe826904e1815f5c3aec6a797990f5b34498173d726759ebf4461b",
       "decision": "hold_pending_placement",
       "coordinates": null,
@@ -233,6 +221,12 @@
       "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
     },
     {
+      "work_id": "work-c166a741afd821d0e5dd65d54cb130fb2ecc70ea6ac32c6bf9f9a99da5b34b12",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
+    },
+    {
       "work_id": "work-c16b945ecb1eedfe1de088b827c25d4aee66b6e70e8e8ca898151d835a14483f",
       "decision": "hold_pending_placement",
       "coordinates": null,
@@ -270,6 +264,12 @@
     },
     {
       "work_id": "work-dd044a5e36ecda42f3cd58a479b8f9be3a9de9b24e1d32c4dc2d80c78992b2df",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-e258b7cc085e770efc39bd257ec7a35d86f594ce7813568c36e026616ede3e05",
       "decision": "hold_pending_placement",
       "coordinates": null,
       "rationale": "Exact owner-linked William W. Cohen work; spatial placement remains pending while the current research map is retained."

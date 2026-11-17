@@ -105,28 +105,6 @@
       "citation_count_display": "1100"
     },
     {
-      "title": "Context-sensitive learning methods for text categorization",
-      "author": "WW Cohen, Y Singer",
-      "pub_year": "1999",
-      "venue": "ACM Transactions on Information Systems (TOIS) 17 (2), 141-173",
-      "num_citations": 977,
-      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8ys-38kAAAAJ&citation_for_view=8ys-38kAAAAJ:35N4QoGY0k4C",
-      "author_pub_id": "8ys-38kAAAAJ:35N4QoGY0k4C",
-      "capture_row_index": 11,
-      "citation_count_display": "977"
-    },
-    {
-      "title": "Random walk inference and learning in a large scale knowledge base",
-      "author": "N Lao, T Mitchell, W Cohen",
-      "pub_year": "2011",
-      "venue": "Proceedings of the 2011 conference on empirical methods in natural language …",
-      "num_citations": 926,
-      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8ys-38kAAAAJ&citation_for_view=8ys-38kAAAAJ:UeHWp8X0CEIC",
-      "author_pub_id": "8ys-38kAAAAJ:UeHWp8X0CEIC",
-      "capture_row_index": 12,
-      "citation_count_display": "926"
-    },
-    {
       "title": "Semi-markov conditional random fields for information extraction",
       "author": "S Sarawagi, WW Cohen",
       "pub_year": "2004",
@@ -554,6 +532,28 @@
       "author_pub_id": "8ys-38kAAAAJ:dfsIfKJdRG4C",
       "capture_row_index": 59,
       "citation_count_display": "226"
+    },
+    {
+      "title": "Personalized recommendations using knowledge graphs: A probabilistic logic programming approach",
+      "author": "R Catherine, W Cohen",
+      "pub_year": "2016",
+      "venue": "Proceedings of the 10th ACM conference on recommender systems, 325-332",
+      "num_citations": 207,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8ys-38kAAAAJ&cstart=20&pagesize=80&citation_for_view=8ys-38kAAAAJ:vtskfw0NoLIC",
+      "author_pub_id": "8ys-38kAAAAJ:vtskfw0NoLIC",
+      "capture_row_index": 61,
+      "citation_count_display": "207"
+    },
+    {
+      "title": "Semi-supervised QA with generative domain-adaptive nets",
+      "author": "Z Yang, J Hu, R Salakhutdinov, W Cohen",
+      "pub_year": "2017",
+      "venue": "Proceedings of the 55th Annual Meeting of the Association for Computational …",
+      "num_citations": 197,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8ys-38kAAAAJ&cstart=20&pagesize=80&citation_for_view=8ys-38kAAAAJ:WhXzBXCJJjMC",
+      "author_pub_id": "8ys-38kAAAAJ:WhXzBXCJJjMC",
+      "capture_row_index": 62,
+      "citation_count_display": "197"
     }
   ],
   "browser_capture": {
@@ -570,7 +570,6 @@
     "selected_author_pub_ids": [
       "8ys-38kAAAAJ:0KrOiVmbFBYC",
       "8ys-38kAAAAJ:2P1L_qKh6hAC",
-      "8ys-38kAAAAJ:35N4QoGY0k4C",
       "8ys-38kAAAAJ:3s1wT3WcHBgC",
       "8ys-38kAAAAJ:47CO7rCGma4C",
       "8ys-38kAAAAJ:4OULZ7Gr8RgC",
@@ -588,9 +587,9 @@
       "8ys-38kAAAAJ:RYcK_YlVTxYC",
       "8ys-38kAAAAJ:SeFeTyx0c_EC",
       "8ys-38kAAAAJ:T4xR6ACgc60C",
-      "8ys-38kAAAAJ:UeHWp8X0CEIC",
       "8ys-38kAAAAJ:W26WQ4UGDhEC",
       "8ys-38kAAAAJ:WHdLCjDvYFkC",
+      "8ys-38kAAAAJ:WhXzBXCJJjMC",
       "8ys-38kAAAAJ:ZHo1McVdvXMC",
       "8ys-38kAAAAJ:_xSYboBqXhAC",
       "8ys-38kAAAAJ:a0OBvERweLwC",
@@ -613,6 +612,7 @@
       "8ys-38kAAAAJ:tuHXwOkdijsC",
       "8ys-38kAAAAJ:u_35RYKgDlwC",
       "8ys-38kAAAAJ:vV6vV6tmYwMC",
+      "8ys-38kAAAAJ:vtskfw0NoLIC",
       "8ys-38kAAAAJ:wP5e0sba15sC",
       "8ys-38kAAAAJ:xoCRtiy2jdkC",
       "8ys-38kAAAAJ:y2egTTA-ddEC",
@@ -621,11 +621,11 @@
     ],
     "observed_visible_rows": 544,
     "private_capture_sha256": "2685aedefac293ff80489ff32fe2b08f95fd3b9553ae11c24259a747ff23af82",
-    "private_review_sha256": "9ec32896d85779e0b310dbb1b01c850eb632a13303cfc331357fa544151ce1ee",
-    "selected_ids_sha256": "5f0a3b1f529a8877af991f19abbde185f558cd9696745e039132cf0105fd5586",
+    "private_review_sha256": "99696d0b1661c6ed6d1010857a16733cdf7ac962d28dbeb6714dd18eb98547bc",
+    "selected_ids_sha256": "b7b846714f31f77f79094e3ca566f8cb43a5d039b0260125c1376f755af1d12f",
     "withheld_rows": 494,
     "withheld_hold_rows": 494,
     "withheld_excluded_rows": 0,
-    "withheld_ids_sha256": "461d55d1a2c8b0a103430582bd54e4482ef27fc63ad64044b73914878b5395e6"
+    "withheld_ids_sha256": "0970b18525d0cf34543db2848fc0b779d58c4b05c5798c85d02fc1a5e1674c8b"
   }
 }
