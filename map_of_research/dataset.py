@@ -188,6 +188,7 @@ def _validate_authored_context(row: Any, context: ReviewedContext) -> None:
                 "scholar.google.ca",
                 "scholar.google.co.jp",
                 "scholar.google.co.in",
+                "scholar.google.de",
             }
             or parsed.username is not None
             or parsed.password is not None
