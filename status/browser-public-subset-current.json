@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "149d35813fd623057063559c2441b17c00177a87",
+  "base_source_status_commit": "d66fac616d4cb50cb0e88a5fe12341c1855f3126",
   "registry_producer_commit": "1916b09d9e7d2acf9c2a838d5b820b63abce09db",
   "profiles": [
     {
@@ -3342,16 +3342,106 @@
         "withheld_ids_sha256": "e5112417c187554b53de1298f8696bf787b82b5ee38a2334d583ec6dcbe34aa1"
       },
       "cache_sha256": "cfbc34e60ba30d9795ac338bd11ffaa77329b35b870b4f2480150682e801fec3"
+    },
+    {
+      "slug": "yi-chia-wang",
+      "person_id": "person-yichiawang-9a5deef3",
+      "scholar_id": "9gMgFPQAAAAJ",
+      "expected_source_rows": 48,
+      "selected_author_pub_ids": [
+        "9gMgFPQAAAAJ:08ZZubdj9fEC",
+        "9gMgFPQAAAAJ:1qzjygNMrQYC",
+        "9gMgFPQAAAAJ:2osOgNQ5qMEC",
+        "9gMgFPQAAAAJ:5Ul4iDaHHb8C",
+        "9gMgFPQAAAAJ:738O_yMBCRsC",
+        "9gMgFPQAAAAJ:8AbLer7MMksC",
+        "9gMgFPQAAAAJ:B3FOqHPlNUQC",
+        "9gMgFPQAAAAJ:BrmTIyaxlBUC",
+        "9gMgFPQAAAAJ:D_sINldO8mEC",
+        "9gMgFPQAAAAJ:IjCSPb-OGe4C",
+        "9gMgFPQAAAAJ:J_g5lzvAfSwC",
+        "9gMgFPQAAAAJ:K3LRdlH-MEoC",
+        "9gMgFPQAAAAJ:KxtntwgDAa4C",
+        "9gMgFPQAAAAJ:LPZeul_q3PIC",
+        "9gMgFPQAAAAJ:LkGwnXOMwfcC",
+        "9gMgFPQAAAAJ:OU6Ihb5iCvQC",
+        "9gMgFPQAAAAJ:SP6oXDckpogC",
+        "9gMgFPQAAAAJ:SeFeTyx0c_EC",
+        "9gMgFPQAAAAJ:Tiz5es2fbqcC",
+        "9gMgFPQAAAAJ:Tyk-4Ss8FVUC",
+        "9gMgFPQAAAAJ:UeHWp8X0CEIC",
+        "9gMgFPQAAAAJ:V3AGJWp-ZtQC",
+        "9gMgFPQAAAAJ:W7OEmFMy1HYC",
+        "9gMgFPQAAAAJ:WbkHhVStYXYC",
+        "9gMgFPQAAAAJ:XiSMed-E-HIC",
+        "9gMgFPQAAAAJ:Y0pCki6q_DkC",
+        "9gMgFPQAAAAJ:YOwf2qJgpHMC",
+        "9gMgFPQAAAAJ:YsMSGLbcyi4C",
+        "9gMgFPQAAAAJ:a0OBvERweLwC",
+        "9gMgFPQAAAAJ:abG-DnoFyZgC",
+        "9gMgFPQAAAAJ:d1gkVwhDpl0C",
+        "9gMgFPQAAAAJ:dshw04ExmUIC",
+        "9gMgFPQAAAAJ:eJXPG6dFmWUC",
+        "9gMgFPQAAAAJ:eQOLeE2rZwMC",
+        "9gMgFPQAAAAJ:eflP2zaiRacC",
+        "9gMgFPQAAAAJ:fQNAKQ3IYiAC",
+        "9gMgFPQAAAAJ:kRWSkSYxWN8C",
+        "9gMgFPQAAAAJ:l7t_Zn2s7bgC",
+        "9gMgFPQAAAAJ:mvPsJ3kp5DgC",
+        "9gMgFPQAAAAJ:p2g8aNsByqUC",
+        "9gMgFPQAAAAJ:qjMakFHDy7sC",
+        "9gMgFPQAAAAJ:sSrBHYA8nusC",
+        "9gMgFPQAAAAJ:tOudhMTPpwUC",
+        "9gMgFPQAAAAJ:u-x6o8ySG0sC",
+        "9gMgFPQAAAAJ:u5HHmVD_uO8C",
+        "9gMgFPQAAAAJ:u9iWguZQMMsC",
+        "9gMgFPQAAAAJ:ufrVoPGSRksC",
+        "9gMgFPQAAAAJ:zYLM7Y9cAGgC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 49,
+        "private_capture_sha256": "581e90c961d5594fe4479a7cd99dc59f8a88e2dff7cf6503d0c87c2a0b9b31e9",
+        "private_review_sha256": "5df53f93b6424235889a60c7e180eacbbc1ea3408a67f8952dce3f956183a302",
+        "selected_ids_sha256": "cf680f7107692be8456170e329541926b85489a7326a6e076270a978ef93461b",
+        "withheld_rows": 1,
+        "withheld_hold_rows": 1,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "4ba2a12be0ac952906b5aef4094a0eee4c3afac071a888dbf734e0c64b5505d2",
+        "private_rendered_html_sha256": "8cc34ba139a99aa53992afbac9c1f6ab11c8f96beed4a26ae40f061620dbe65b"
+      },
+      "cache_sha256": "3a8a33205afc7efee36811e5691c25fe0df19d91a3270e703297b7dbd840eb39"
+    },
+    {
+      "slug": "martin-jinye-zhang",
+      "person_id": "person-martinjinyezhang-070f4322",
+      "scholar_id": "zjr6n-QAAAAJ",
+      "expected_source_rows": 2,
+      "selected_author_pub_ids": [
+        "zjr6n-QAAAAJ:9ZlFYXVOiuMC",
+        "zjr6n-QAAAAJ:ZeXyd9-uunAC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 45,
+        "private_capture_sha256": "0ba97330a165646d9b0ecb391ffe0b0d6f55d3d5cf2e262ae8617f9dfb5bc871",
+        "private_review_sha256": "f3b499cdfd355a47f33404af91b6a14775428718b18ee6822feacf5f0aeeaa63",
+        "selected_ids_sha256": "c5e1355485d3aeef50d89fc1838aa2b42a7e29eea4b1bbae7c19980fdc2d5c7b",
+        "withheld_rows": 43,
+        "withheld_hold_rows": 43,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "592774dd585d52ae8bd8cf75e0700cfeb6e9af42a4e909bb319c378db096e713",
+        "private_rendered_html_sha256": "a781637e62a762bf23a597eb9f006d5ea3db7eae50d86bc195a4660d9641e613"
+      },
+      "cache_sha256": "4d1081da9cb315d1c7ea0d39e097854209361ab1caca771d64dc147307430098"
     }
   ],
   "totals": {
-    "observed_visible_rows": 8841,
-    "selected_rows": 2364,
-    "withheld_rows": 6477,
-    "withheld_hold_rows": 6084,
-    "withheld_excluded_rows": 393
+    "observed_visible_rows": 8935,
+    "selected_rows": 2414,
+    "withheld_hold_rows": 6128,
+    "withheld_excluded_rows": 393,
+    "withheld_rows": 6521
   },
-  "selected_ids_sha256": "53931258a1332a2dea2b0e77a5856f3de17e83f807a0d6ed26e3c723fc980594",
-  "withheld_ids_sha256": "3ee9bec3a1cc77ec66f2a2c4528f3a34c0df119f864492c3245adae4ff2407a1",
+  "selected_ids_sha256": "fc812554784ba041e4f909d4457e14862328858c5a7e51ec1146388e38ffe347",
+  "withheld_ids_sha256": "4d5368b37f2bfb0dfe9fb0b70836e125dcea785a30146b3243a217b2be339e78",
   "private_capture_files_or_html_copied": false
 }

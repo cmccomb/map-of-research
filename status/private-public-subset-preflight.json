@@ -687,19 +687,47 @@
       "withheld_hold_rows": 67,
       "withheld_ids_sha256": "e5112417c187554b53de1298f8696bf787b82b5ee38a2334d583ec6dcbe34aa1",
       "withheld_rows": 67
+    },
+    {
+      "person_id": "person-yichiawang-9a5deef3",
+      "scholar_id": "9gMgFPQAAAAJ",
+      "cache_sha256": "3a8a33205afc7efee36811e5691c25fe0df19d91a3270e703297b7dbd840eb39",
+      "private_capture_sha256": "581e90c961d5594fe4479a7cd99dc59f8a88e2dff7cf6503d0c87c2a0b9b31e9",
+      "private_review_sha256": "5df53f93b6424235889a60c7e180eacbbc1ea3408a67f8952dce3f956183a302",
+      "selected_ids_sha256": "cf680f7107692be8456170e329541926b85489a7326a6e076270a978ef93461b",
+      "withheld_ids_sha256": "4ba2a12be0ac952906b5aef4094a0eee4c3afac071a888dbf734e0c64b5505d2",
+      "observed_visible_rows": 49,
+      "selected_rows": 48,
+      "withheld_rows": 1,
+      "withheld_hold_rows": 1,
+      "withheld_excluded_rows": 0
+    },
+    {
+      "person_id": "person-martinjinyezhang-070f4322",
+      "scholar_id": "zjr6n-QAAAAJ",
+      "cache_sha256": "4d1081da9cb315d1c7ea0d39e097854209361ab1caca771d64dc147307430098",
+      "private_capture_sha256": "0ba97330a165646d9b0ecb391ffe0b0d6f55d3d5cf2e262ae8617f9dfb5bc871",
+      "private_review_sha256": "f3b499cdfd355a47f33404af91b6a14775428718b18ee6822feacf5f0aeeaa63",
+      "selected_ids_sha256": "c5e1355485d3aeef50d89fc1838aa2b42a7e29eea4b1bbae7c19980fdc2d5c7b",
+      "withheld_ids_sha256": "592774dd585d52ae8bd8cf75e0700cfeb6e9af42a4e909bb319c378db096e713",
+      "observed_visible_rows": 45,
+      "selected_rows": 2,
+      "withheld_rows": 43,
+      "withheld_hold_rows": 43,
+      "withheld_excluded_rows": 0
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "53931258a1332a2dea2b0e77a5856f3de17e83f807a0d6ed26e3c723fc980594",
-  "source_selection_manifest_sha256": "3a0320d3d5d0df51148836a78c7b113713d470da8045e9982b4436b30ac9301c",
-  "source_snapshot_sha256": "4f683c8cb3277f88f93581189f1369e4e99899431809bf3496027c4f8c636701",
+  "selected_ids_sha256": "fc812554784ba041e4f909d4457e14862328858c5a7e51ec1146388e38ffe347",
+  "source_selection_manifest_sha256": "7b63a1b8427e7a64a175481aae746a13121338a20a36eeb1e5d80c79e7e20291",
+  "source_snapshot_sha256": "e3286d0a0ea6257b433e96c7222b915be9c611d12f546c2867c247474fba7898",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 8841,
-    "selected_rows": 2364,
+    "observed_visible_rows": 8935,
+    "selected_rows": 2414,
+    "withheld_hold_rows": 6128,
     "withheld_excluded_rows": 393,
-    "withheld_hold_rows": 6084,
-    "withheld_rows": 6477
+    "withheld_rows": 6521
   },
-  "withheld_ids_sha256": "3ee9bec3a1cc77ec66f2a2c4528f3a34c0df119f864492c3245adae4ff2407a1"
+  "withheld_ids_sha256": "4d5368b37f2bfb0dfe9fb0b70836e125dcea785a30146b3243a217b2be339e78"
 }

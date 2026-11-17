@@ -1,266 +1,248 @@
 {
   "schema_version": 1,
-  "prior_revision": "8f919a5420daa1197745c49a16a4fc3ad320aedb",
-  "source_snapshot_sha256": "4f683c8cb3277f88f93581189f1369e4e99899431809bf3496027c4f8c636701",
-  "selected_ids_sha256": "f3367ae85777cb0d4859a255b0c17f4a6430120b4206944fa762d3a33ea2a9bb",
-  "parent_map_sha256": "a1e16bb8ec989956f68dfbb2317599685b41edbd9c5bf7ad581463da064614b0",
-  "candidate_map_content_sha256": "857b112d0513f68cd0bcd5b08c7d0289582e4d7d84fb07fc94d37c2b9bee1c7e",
-  "new_work_ids_sha256": "99b1323a315dce251be586994a9a153d842ee1028efa9830853a654646fc8ba1",
+  "prior_revision": "cbaeecfca59f424c5944595084b1c5bcc7db14ed",
+  "source_snapshot_sha256": "e3286d0a0ea6257b433e96c7222b915be9c611d12f546c2867c247474fba7898",
+  "selected_ids_sha256": "9a73fe97b9dd769d9a645193c18a170c98b108e085c17157db12c81323b57284",
+  "parent_map_sha256": "a652a58ab4f88e773ca026d18e2f70d04f4c786e60b2fe26cfdf1806f013dde4",
+  "candidate_map_content_sha256": "2551abdc028b29c0ca98b6e7cb0a876baced0e11b098cf6c684d935262747e5a",
+  "new_work_ids_sha256": "3bb4f74014113785d8ee69e20192637aaa4b3be70683973fdc1ed9b5589c695f",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
-  "reviewed_at": "2026-11-15",
+  "reviewed_at": "2026-11-17",
   "new_points": [
     {
-      "work_id": "work-01d140ad6058e00bed4b7c1a5d552e40a19615d313bc41881ccfd33c93199c95",
+      "work_id": "work-08664c8335bf2387426287e796ba064389f56f1f618e0f02a05850efd9211d51",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-09ae4abf075fd40ca75808afd04fe48df27eff8236d5232f1dfdba76ab5ac6a8",
+      "work_id": "work-12b79b626d1283d056c527082f2ad62bcf48a48c497964c0db1327d1886f205b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-20c02dcdee68ada826634ae6d3d4dd25cf0dd593a39f11a04a73ac64a6b37a5f",
+      "work_id": "work-1551fb584c2618e8c97f8ce36771c71390f43ee8960df05e29afd0a67d6b938c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-2241654679083e4ea4c889dbf9100b652478675f10a7ae44b2b9cd3dd7d0f7ef",
+      "work_id": "work-175cbeb0cd84b1035d0c5d70194c74b002d5929f9c5df59a624710af69a44386",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-2577171a4c874e16d4cc76cb56afe1937b4e5fd7f50382651028d317f5c99d5d",
+      "work_id": "work-17714b0812b33b777cf9a34ec12e0200673ab1766de0137585835e9a66b26f3d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-2588a658fcd3aaba571eda549a09707786b3b01a5db0dec65d6e6bbb21f93c6e",
+      "work_id": "work-1809427a6adaa9dc2780ec5995d7137cec0be179242d3589ed0cc66671701eac",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-27f0086da25a4a55e8614ed8762e2d2517f8abcba88425141631fd9e9cec867f",
+      "work_id": "work-2770ee0951e03850fe8f4361eb2bf78d376673a1c7c5daefdb704c2f3be0e389",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-2999204e8bbd77fbbfccaf39430f5bd0be8236c60ee486be6c6c2417033277d2",
+      "work_id": "work-2c8ad89e2c98fa7203a69965948e966a56aa81ca5467b04a3081cefc6b77cad5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-2ca799964892fe91c269a8c6836a77cd1fbc8a7f4b6e7320cb0088c179313314",
+      "work_id": "work-2fc75089bfc89c3005a09d7186fff5c30fd183da0454f819f9a0dc3536898533",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-30d1a044e0c4ab090ccc17c29ae8da88c2bbe5952c918b97170a7d2292b5f771",
+      "work_id": "work-3016c2278c7a58832b444fc860428f13e4b7253753fe26afed1ac72f8b8a3b79",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-337ca0eea2ac30182ac10a5f49700f367cbc15ecc7ba4f95e6a787d2ebc5aa28",
+      "work_id": "work-38b8356227d0e6bcba922d1dd577be9a6b9a68dc9957950ce17498f98c382592",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-47c3bafa02f4b1a43b1e17379917ae46d1b87d03d7a386123dac4e5b563a5b2b",
+      "work_id": "work-3a18b197e561b7e227c497ed28d2ca7c6bf9f1480b832d3a6c9579c85bf65c8f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-4e5d6a1efcd9a0de1329609a1c294c09158b9e2f0f248f99cace710db63877c6",
+      "work_id": "work-3de7a8f97f0f584866d65ee1473afdc4fed99eea36aaef2f80cb327afa1e6f4b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-5876e3ab4ca93f1a680c57731dac38ca4b807a38548bc1f0276fa60f04550c49",
+      "work_id": "work-438cb9f176002f0cb9ab018a89f21e2326766df6a9ea2fa6d3720639f5b695e2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-5d8baeb37d72a882872b8adc3c38e5e0553d664163bd420e7893d41248ea1329",
+      "work_id": "work-43cbfb68bde1dc77863e669f839ac072169d87f155b06216f52c302eca982faa",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-62a3ee043eb5551eeb99844b1c5214c22533ca0e763838ea71b60f2af2abc815",
+      "work_id": "work-45457586dcb090a53a69adbd8a8124d4cd760d49cdda33293e79562e3e7523b0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-64bf64973111dd79220f6960f7afd62cbd90764211baa339391ab29759bc294f",
+      "work_id": "work-4d2800d77c37f2c0ea5575f184b8356b57e29168b6d71803208c7c4360da0f59",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-6894f2a0c26926f87aca338a12ed0edab30424c508f2795004e80416caabdfd7",
+      "work_id": "work-4d80a69e06195e193c67100394a6a0172ab2540b95402a83402f857e40d6150b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-76d483ad65aa5adbabcd962fe45bd3d46d677439834138c684fa6f2529923662",
+      "work_id": "work-5332cb68f29a7df1cfe59288f3d2d8f9b17ba03a1f852b77eb6d790f54ded522",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-786d80ecafae5ffe19d520070a0d30435078ddacfedf003278b1e21dfa2182b5",
+      "work_id": "work-5c5cbfd364bc8e114acb96b06cb0bb549fc2ebf431bf18b60cc633f9679f25d1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-78b8e1bc37621990636f58f84df07565030e9646fac02b159e7ed3eab93ac3fb",
+      "work_id": "work-6af66fa89767ff73cffd8e947395dde14edaecf324a553bedb7d847d7b4c9d2d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-7a3ee5298b09e52fb6d10d1d9389f609af42d190d481e5e67a149b7899e147d4",
+      "work_id": "work-732d83d2fee2e51320c15ce24f959a0967c1122b617ebd94c639fe75d8f92245",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-82a42f7c99bdece98d8061257ae20bba8f00d598217bb62217bc606d7142b683",
+      "work_id": "work-7aaeb122c0290e5ae09000df2752cee05f50af3dfcc34f9771686fff18b23f91",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-893eaf7dd5b111eaedcd7058fa1b51b30c36d5e777b854516226cd7fd0f0915c",
+      "work_id": "work-83bbf1e41d6d389119d911ed347a6a5f85bfcb4208ef5d53ff45643b0a8c9810",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-8e92ba68118c6ba4d7f069c54b3613e2683492b22b4a9cc9720b12cb4b1d54d7",
+      "work_id": "work-95b5634ccf24413bc2c882323367dd1d68d554f802fef2f3ddbbe49830ecc5c1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-92d0789894ef6ecede094d210b1c3c2697ef248ec803eefb50e9192e789220d8",
+      "work_id": "work-a402f856c2cdad3d6de51d91ea9f0d8f7f7d4c3130cf15e07eb82072e34f673a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-97402934bd1b589693cc58ca2201a7eb259bc1b5a785ee6c1d90dd4a37a6467f",
+      "work_id": "work-afa7544eefbf69859e2222ae6b660a591444d66ac73b4997c48516b9841f428f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-98af18b7343eda37d1f39706b469952d7d1c70dfb6cfc405b348404eec117143",
+      "work_id": "work-b405fb5818e03ae995c10f1d5814d8b8634e8d6838739e647a3afe211de1dbc3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-9f3513a7503582a5a376f2efe8637c30a1c1d66f76adcf6fec289b1ac0934cd4",
+      "work_id": "work-b6218e87bc9f3a6ea063aeddb248364632c434b7f1ce2e2d161ddfd11517269a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-a28e91695db89c6f32c030bf978a529e8615420edaaf5701668348b4d735d72b",
+      "work_id": "work-bad0e4d0c37fe62e70c7fff189c2ee35ad2561263d1e0a6d5cfad87efb68c198",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-a66442c4f25e755215b20c04e5d31a4acd00f11ebb9dbe9d370507fa1aab2cd0",
+      "work_id": "work-c3d0239c5bc8372deada2e35f9b888a12198462dc71bc345607d2e4c2628690c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-ab5b24abccd0da8017568104708eaebd6efa9938d5d7949f70669da6c7b5afec",
+      "work_id": "work-c46f836f950c79d9d34c5b5b1deb638be5c926078d7a97e287a0c2f28f66ddbf",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-abdd1ac71a82239643b0066696077efc25def27a375817f673d2c5f63e80975e",
+      "work_id": "work-c61c11bd8f2551cac782692330eef63281f47e26c326e748b043140da1d4910e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-b68cd2b7585aeaf1536e85d1ff47d2296e62a7d2381208243e31a21c37c17b5b",
+      "work_id": "work-c7ef26c2313ea264911c80623938bc67623e0f2a7812222aa0f336fe7f530035",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-c54f890a15f1c5a2df23743c7abe441d05bd5a0bd33e1e37feb7438d1ac9bbba",
+      "work_id": "work-cb6fc42235c57182a341a06ed34826cba9926de8973e51d1f6e3d47b1c43d3c8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-cef50169ee763e0cc19a9569ad8c57750b9e4a1ba874da22551ca37b6bcaae48",
+      "work_id": "work-d9facfa4d1be63913f3134b6e08c8696a0ad5ca50be44db0ee0cee1aa7975520",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-d208402c3ac9ed50b9fc5fa846f26e878882d472fa1e16e6842576306eca57e7",
+      "work_id": "work-db9494a103d21ef7b761e028d4714312a3ba03d2d492b7edb3b8845f857175e4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-d888e03fe36b4f53f9bf20cf738a78e2584d9e002562181cf7ff6417dfabf38d",
+      "work_id": "work-ea0c68bec1feac478582aa754dcf85079448eb9a89aedf13cad7545240b22acd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     },
     {
-      "work_id": "work-d9f6d82b6cceda2dbecd2bc18d714d412e925144c882556763d34113ddede3b3",
+      "work_id": "work-ea5e3e5e3a0d082581eba4e6917a85fd538cd4ad22cb7817f6dfb3810d4c7ab8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-ef236a8a56667d17ca69fdeacca4cef556511df93436a3920f0ae23ecc822d61",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-ef5c7b672716abc1047b7c7efc99b3c86d59ecaddfd92e3c78d4ac4bd5d32796",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-fff194ffc268aa5d367e9034d9a5980e70172346c1f21d59f9aead3241ae82a9",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
     }
   ]
 }
