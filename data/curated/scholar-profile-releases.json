@@ -1990,6 +1990,26 @@
         "withheld_ids_sha256": "592774dd585d52ae8bd8cf75e0700cfeb6e9af42a4e909bb319c378db096e713",
         "private_rendered_html_sha256": "a781637e62a762bf23a597eb9f006d5ea3db7eae50d86bc195a4660d9641e613"
       }
+    },
+    {
+      "person_id": "person-seanwelleck-09865514",
+      "scholar_id": "Ac6n5pQAAAAJ",
+      "state": "released",
+      "expected_source_rows": 50,
+      "cache_sha256": "e5a3b249dd49f175a5dba1748d682247c95f47f9749379b8ca3dff93e3569b55",
+      "reason": "Fifty rows from the complete exact owner-linked Sean Welleck profile are selected. Three reviewed title/year matches reuse existing canonical works. Row 36 is held as a duplicate arXiv version of selected row 1; the other 48 saved rows are candidate-only deferred, not adverse authorship findings.",
+      "reviewed_at": "2026-11-17",
+      "public_subset": {
+        "observed_visible_rows": 99,
+        "private_capture_sha256": "a3b3476c8527aace9c0dc3c255c5124247a2b5c931d9c7a63a4998d9d1afe5d0",
+        "private_review_sha256": "16c52a594a78631177536ff85bfb7edba72c62a7ccf6d39d7b5e338e643c71b6",
+        "selected_ids_sha256": "fc43f3537ecd86e22770ddcabf9f411352e6206095d747a3f08fc8ef55a94ab3",
+        "withheld_rows": 49,
+        "withheld_hold_rows": 49,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "92bbb7337d86f5b6a622f8999d27f324a4927343dd5796edfcf0bcbaff56b6b4",
+        "private_rendered_html_sha256": "4d75d543d5c627de4a5c74002633453c9edc8a28a6476e2638c04df8d7156394"
+      }
     }
   ]
 }
