@@ -1,278 +1,266 @@
 {
   "schema_version": 1,
-  "prior_revision": "22a99fc1335f578c14280cc18937489ac8c16f5e",
-  "source_snapshot_sha256": "9287d26c063996e565f35640100a5658ebc2627e5bffcdbe353267787c685b5d",
-  "selected_ids_sha256": "240af3a91270b5797e6a001604047fd2ea603e6034da58578d7d2b113d8810d9",
-  "parent_map_sha256": "96660d686113498816f6709d0149d3660f7087c80eeb4d7fbbec9a44021361b2",
-  "candidate_map_content_sha256": "52405b485102c7caad52a74654a4ab1cd7df7e26ba53500b69792b6e197cc9c2",
-  "new_work_ids_sha256": "f8d640bb487325d487baaca9e7592ace8cc262e07fdcd817d42667a9cb5d64c8",
+  "prior_revision": "8f919a5420daa1197745c49a16a4fc3ad320aedb",
+  "source_snapshot_sha256": "4f683c8cb3277f88f93581189f1369e4e99899431809bf3496027c4f8c636701",
+  "selected_ids_sha256": "f3367ae85777cb0d4859a255b0c17f4a6430120b4206944fa762d3a33ea2a9bb",
+  "parent_map_sha256": "a1e16bb8ec989956f68dfbb2317599685b41edbd9c5bf7ad581463da064614b0",
+  "candidate_map_content_sha256": "857b112d0513f68cd0bcd5b08c7d0289582e4d7d84fb07fc94d37c2b9bee1c7e",
+  "new_work_ids_sha256": "99b1323a315dce251be586994a9a153d842ee1028efa9830853a654646fc8ba1",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-15",
   "new_points": [
     {
-      "work_id": "work-083edf43e37a1ce4593d0aae59ca720823bc2f38bb8828e349a1581ec7bb6df8",
+      "work_id": "work-01d140ad6058e00bed4b7c1a5d552e40a19615d313bc41881ccfd33c93199c95",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-14caf849d21087e053314fe50ed6ae9e5afef095a378548258c6d61b9f819826",
+      "work_id": "work-09ae4abf075fd40ca75808afd04fe48df27eff8236d5232f1dfdba76ab5ac6a8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-1c0da95f04f47ff99542075debce832159a8163893027abc806710ca3d258a5c",
+      "work_id": "work-20c02dcdee68ada826634ae6d3d4dd25cf0dd593a39f11a04a73ac64a6b37a5f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-1d79a0809f326102e1920d20b6f2aab6f983eb9454b6cab90797af297dca39c9",
+      "work_id": "work-2241654679083e4ea4c889dbf9100b652478675f10a7ae44b2b9cd3dd7d0f7ef",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-2040e67ae6905ea1978a3f165a576faa87d6a213d17d9dcae6c128827b2ce256",
+      "work_id": "work-2577171a4c874e16d4cc76cb56afe1937b4e5fd7f50382651028d317f5c99d5d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-20d8f4cc185bf4ea0b43abc9cbd7e56366a4d39e378b8ed11acebd384f205011",
+      "work_id": "work-2588a658fcd3aaba571eda549a09707786b3b01a5db0dec65d6e6bbb21f93c6e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-258725e30e7aa954e3ada32ab60934bef389db470189a43a79129d4f8eb8e9bd",
+      "work_id": "work-27f0086da25a4a55e8614ed8762e2d2517f8abcba88425141631fd9e9cec867f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-286633eb1767e47a2ce245e87a810603d86be55f18f4bad1da123a3326da5052",
+      "work_id": "work-2999204e8bbd77fbbfccaf39430f5bd0be8236c60ee486be6c6c2417033277d2",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-2a642199014c7df2611968a399e494e91cd8f3bd930899d6fa839f6013a472b5",
+      "work_id": "work-2ca799964892fe91c269a8c6836a77cd1fbc8a7f4b6e7320cb0088c179313314",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-2d37b4835e5fb151ba2bdc51c5461376b90e9cd5bc71a38f975cb0ef216d1ddc",
+      "work_id": "work-30d1a044e0c4ab090ccc17c29ae8da88c2bbe5952c918b97170a7d2292b5f771",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-37b5f262e73d49daa680cd0a27f21ce0cb0f96face0b5ef3cbd888bd5e7e4ece",
+      "work_id": "work-337ca0eea2ac30182ac10a5f49700f367cbc15ecc7ba4f95e6a787d2ebc5aa28",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-40f24129a83f04842f40b48190aaf2abba8fdd8e4763472e55d9280b085c1d30",
+      "work_id": "work-47c3bafa02f4b1a43b1e17379917ae46d1b87d03d7a386123dac4e5b563a5b2b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-430011471395ba0573e5ab22e6b805e0b3dc3009a38a1644b7ce5eb955ad7aa0",
+      "work_id": "work-4e5d6a1efcd9a0de1329609a1c294c09158b9e2f0f248f99cace710db63877c6",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-54ed3e5d3de814b9b2f75c205b15ff800b9e75e747229331d96417f5edb80cf3",
+      "work_id": "work-5876e3ab4ca93f1a680c57731dac38ca4b807a38548bc1f0276fa60f04550c49",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-5b52f5d60030ec23bd86326b6b86d3eaae79d777fd693d84a897f77a58f39dae",
+      "work_id": "work-5d8baeb37d72a882872b8adc3c38e5e0553d664163bd420e7893d41248ea1329",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-5ea4463ee1bc9e57b15fd6cf88f5005849f2dd1b01ec5556b5d0a0dec73cb484",
+      "work_id": "work-62a3ee043eb5551eeb99844b1c5214c22533ca0e763838ea71b60f2af2abc815",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-61410add36e18dfd229f709580138e8611ed4fcf5577efb7b9a36e56bfc97cc8",
+      "work_id": "work-64bf64973111dd79220f6960f7afd62cbd90764211baa339391ab29759bc294f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-67a88d923d14f3db3250b5cfa66f7f705dd2e2e128a17a63289440e7462f38ed",
+      "work_id": "work-6894f2a0c26926f87aca338a12ed0edab30424c508f2795004e80416caabdfd7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-68aa0e734693fa3eceb10d126cdc4917116dedea14bedb5e10be85af50167f23",
+      "work_id": "work-76d483ad65aa5adbabcd962fe45bd3d46d677439834138c684fa6f2529923662",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-6ea10b995048be20ba0f88076d6bbeb95a050fb76c32a4c0efc9008ad1d05609",
+      "work_id": "work-786d80ecafae5ffe19d520070a0d30435078ddacfedf003278b1e21dfa2182b5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-6ef9486d9042d479acc704636b198001af8d1ea0b56f0ca6b5383aebd7e116c5",
+      "work_id": "work-78b8e1bc37621990636f58f84df07565030e9646fac02b159e7ed3eab93ac3fb",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-77cc3ba9ad48231a11f7933bd4233e8020f864c6b87fcdb3cf1be14c87d1c2a7",
+      "work_id": "work-7a3ee5298b09e52fb6d10d1d9389f609af42d190d481e5e67a149b7899e147d4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-789baab87b3eb223dbfe2b4a8a58765d6761c1f553dffc5a63db653732860952",
+      "work_id": "work-82a42f7c99bdece98d8061257ae20bba8f00d598217bb62217bc606d7142b683",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-7b29c2bd5aa7a70dc4117792146b641ab997912474198413df9dd409551ee287",
+      "work_id": "work-893eaf7dd5b111eaedcd7058fa1b51b30c36d5e777b854516226cd7fd0f0915c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-8090e1e96497d1869bb260b30276806a56dcb627b1dce31927092bca2e754322",
+      "work_id": "work-8e92ba68118c6ba4d7f069c54b3613e2683492b22b4a9cc9720b12cb4b1d54d7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-80c1a2860dfad6aa27855fed7fdb44159a51d4423c883a9a5299158c31231803",
+      "work_id": "work-92d0789894ef6ecede094d210b1c3c2697ef248ec803eefb50e9192e789220d8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-8ff5b0849f7f2bfca63c7eededc529139b3be1838743ec580c15b60bf8d48cec",
+      "work_id": "work-97402934bd1b589693cc58ca2201a7eb259bc1b5a785ee6c1d90dd4a37a6467f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-92e05481050b7fb0b653d5c102a84208638ad3464e5fb4c952879533376c9d47",
+      "work_id": "work-98af18b7343eda37d1f39706b469952d7d1c70dfb6cfc405b348404eec117143",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-a1398aef5f231d5c6057941562dc60c3e0b3f9a44434d1a3d66db0c7d6bce209",
+      "work_id": "work-9f3513a7503582a5a376f2efe8637c30a1c1d66f76adcf6fec289b1ac0934cd4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-a466865145575c6778b27f80fc69b75fcbc5a6827bbc5eeec9bb53038ddc37b1",
+      "work_id": "work-a28e91695db89c6f32c030bf978a529e8615420edaaf5701668348b4d735d72b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-a475f0981d15837088768032c7175b32d3aac6db55bcd7f44d540005001fbf06",
+      "work_id": "work-a66442c4f25e755215b20c04e5d31a4acd00f11ebb9dbe9d370507fa1aab2cd0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-aa495d9d5302d52e49a9f57db6bbf8ca52d7a5811fdc33a8752287309c1f6a14",
+      "work_id": "work-ab5b24abccd0da8017568104708eaebd6efa9938d5d7949f70669da6c7b5afec",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-acd80604f4fe49fcade7151fa3d4306b8e91aceeac5c89b3d9724b116fa9a197",
+      "work_id": "work-abdd1ac71a82239643b0066696077efc25def27a375817f673d2c5f63e80975e",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-acdfcffb5c30d2ab78abbe8e1cbfecadb213f6bed0d10a6fc96feb34db65ed8d",
+      "work_id": "work-b68cd2b7585aeaf1536e85d1ff47d2296e62a7d2381208243e31a21c37c17b5b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-af2fc6cbceba9d989bf423b6b14afb6a709b6c47012b3c77399334a56a9cad17",
+      "work_id": "work-c54f890a15f1c5a2df23743c7abe441d05bd5a0bd33e1e37feb7438d1ac9bbba",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b01de71600edad1896059393d7b48cf48b11cde240f753615af7f49a59fbf1a0",
+      "work_id": "work-cef50169ee763e0cc19a9569ad8c57750b9e4a1ba874da22551ca37b6bcaae48",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b3a06e8b8543d1617da6b9261b6a7e07e0313608359fb6c16eafabd080f0eb6d",
+      "work_id": "work-d208402c3ac9ed50b9fc5fa846f26e878882d472fa1e16e6842576306eca57e7",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-b6a3bf316ff746ed66f07536be05bbd6da9b6ed641f2ac3b009dad0ee56d3d5d",
+      "work_id": "work-d888e03fe36b4f53f9bf20cf738a78e2584d9e002562181cf7ff6417dfabf38d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-c6dcec7f7e77dcfe08d61a40246202f2aa90d06e038e927b7aa0d2b88822573b",
+      "work_id": "work-d9f6d82b6cceda2dbecd2bc18d714d412e925144c882556763d34113ddede3b3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-cf51a2d28053cfd5468fc1313096610bf5b02a753f952ac84082c9dd0ced3aad",
+      "work_id": "work-ef236a8a56667d17ca69fdeacca4cef556511df93436a3920f0ae23ecc822d61",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-e1483d8c38fba9638f8e3b819457841e8f5aca2972c9954858046c43fb74b263",
+      "work_id": "work-ef5c7b672716abc1047b7c7efc99b3c86d59ecaddfd92e3c78d4ac4bd5d32796",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     },
     {
-      "work_id": "work-e418fd6bac876686fc524ed0621805be2d9b5144eca3d03fd1510f07dd93c4ad",
+      "work_id": "work-fff194ffc268aa5d367e9034d9a5980e70172346c1f21d59f9aead3241ae82a9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-f1d3dfe84fe209bb71ab43c15286f96b9a58575fc1155baa780c3b1b3a9450ea",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
-    },
-    {
-      "work_id": "work-f61012dfafd5e5c915032b578eb8b6771fa846960f206818381455f639ced2ce",
-      "decision": "hold_pending_placement",
-      "coordinates": null,
-      "rationale": "Exact owner-linked Rohan Padhye citation with verified DOI/type where available; spatial placement pending review."
+      "rationale": "Exact owner-linked Alexandra Ion or Hoda Heidari citation with reviewed DOI/type where available; spatial placement pending review."
     }
   ]
 }

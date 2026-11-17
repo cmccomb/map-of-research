@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "status": "local_source_candidate_only",
-  "base_source_status_commit": "cc58ec67c2b4b3f53b6da9f2a652dd7b4800b028",
-  "registry_producer_commit": "1b24f2dc2129a4f7c6ca81e9d19175bfee56edf6",
+  "base_source_status_commit": "149d35813fd623057063559c2441b17c00177a87",
+  "registry_producer_commit": "1916b09d9e7d2acf9c2a838d5b820b63abce09db",
   "profiles": [
     {
       "slug": "dan-deblasio",
@@ -1982,35 +1982,6 @@
       "cache_sha256": "866dac64875ff2e44b070ff88691e1dd1cda41eb5d0f73a3ea038cb0e2d548ca"
     },
     {
-      "slug": "hoda-heidari",
-      "person_id": "person-hodaheidari-477d966d",
-      "scholar_id": "GpXyLGwAAAAJ",
-      "expected_source_rows": 9,
-      "selected_author_pub_ids": [
-        "GpXyLGwAAAAJ:0EnyYjriUFMC",
-        "GpXyLGwAAAAJ:2osOgNQ5qMEC",
-        "GpXyLGwAAAAJ:3fE2CSJIrl8C",
-        "GpXyLGwAAAAJ:9yKSN-GCB0IC",
-        "GpXyLGwAAAAJ:Tyk-4Ss8FVUC",
-        "GpXyLGwAAAAJ:UebtZRa9Y70C",
-        "GpXyLGwAAAAJ:W7OEmFMy1HYC",
-        "GpXyLGwAAAAJ:g5m5HwL7SMYC",
-        "GpXyLGwAAAAJ:mVmsd5A6BfQC"
-      ],
-      "public_subset": {
-        "observed_visible_rows": 88,
-        "private_capture_sha256": "53db6857871928b79b814831376da68ae8a082aad1bf4a877483e65ec7f27be7",
-        "private_review_sha256": "0c13a49022ac5857da3759251a25dede08097ef427565ef84466a67e346eb156",
-        "private_rendered_html_sha256": "ae8bd23de09af804100bad261aabd66d53a42404f67deab71162a417a9fabe4a",
-        "selected_ids_sha256": "6fb1468630b5507e50e0d053e02af1bb5107241e92d172bbf3e069be84a9ccbd",
-        "withheld_rows": 79,
-        "withheld_hold_rows": 79,
-        "withheld_excluded_rows": 0,
-        "withheld_ids_sha256": "6d5dd1dc7e21373fbc67ef5196349f510defd0179a9ab3b1aaae7c5faa01924d"
-      },
-      "cache_sha256": "b84ea006dd5cd6f214851f88fea78d9c276bda2c68943e4c82b067457b2fc39c"
-    },
-    {
       "slug": "srinivasan-seshan",
       "person_id": "person-srinivasanseshan-ad84bf6d",
       "scholar_id": "0irVeiQAAAAJ",
@@ -3274,16 +3245,113 @@
         "withheld_ids_sha256": "5df02560798217cf1e22e12be655fa156f634a8c74b952418d14fc15486f7bf6"
       },
       "cache_sha256": "a5c1c5283726026bb0215d94d156d499438ac62f35c843250c2156fb6f060234"
+    },
+    {
+      "slug": "alexandra-ion",
+      "person_id": "person-alexandraion-d1aee7c1",
+      "scholar_id": "pP920LoAAAAJ",
+      "expected_source_rows": 38,
+      "selected_author_pub_ids": [
+        "pP920LoAAAAJ:0EnyYjriUFMC",
+        "pP920LoAAAAJ:2osOgNQ5qMEC",
+        "pP920LoAAAAJ:3fE2CSJIrl8C",
+        "pP920LoAAAAJ:4DMP91E08xMC",
+        "pP920LoAAAAJ:4TOpqqG69KYC",
+        "pP920LoAAAAJ:5nxA0vEk-isC",
+        "pP920LoAAAAJ:8k81kl-MbHgC",
+        "pP920LoAAAAJ:9ZlFYXVOiuMC",
+        "pP920LoAAAAJ:9yKSN-GCB0IC",
+        "pP920LoAAAAJ:IjCSPb-OGe4C",
+        "pP920LoAAAAJ:KlAtU1dfN6UC",
+        "pP920LoAAAAJ:LkGwnXOMwfcC",
+        "pP920LoAAAAJ:M3ejUd6NZC8C",
+        "pP920LoAAAAJ:MXK_kJrjxJIC",
+        "pP920LoAAAAJ:QIV2ME_5wuYC",
+        "pP920LoAAAAJ:Se3iqnhoufwC",
+        "pP920LoAAAAJ:ULOm3_A8WrAC",
+        "pP920LoAAAAJ:UeHWp8X0CEIC",
+        "pP920LoAAAAJ:UebtZRa9Y70C",
+        "pP920LoAAAAJ:W7OEmFMy1HYC",
+        "pP920LoAAAAJ:WF5omc3nYNoC",
+        "pP920LoAAAAJ:Wp0gIr-vW9MC",
+        "pP920LoAAAAJ:YOwf2qJgpHMC",
+        "pP920LoAAAAJ:YsMSGLbcyi4C",
+        "pP920LoAAAAJ:Zph67rFs4hoC",
+        "pP920LoAAAAJ:_FxGoFyzp5QC",
+        "pP920LoAAAAJ:_kc_bZDykSQC",
+        "pP920LoAAAAJ:d1gkVwhDpl0C",
+        "pP920LoAAAAJ:eQOLeE2rZwMC",
+        "pP920LoAAAAJ:hqOjcs7Dif8C",
+        "pP920LoAAAAJ:kNdYIx-mwKoC",
+        "pP920LoAAAAJ:mVmsd5A6BfQC",
+        "pP920LoAAAAJ:qjMakFHDy7sC",
+        "pP920LoAAAAJ:qxL8FJ1GzNcC",
+        "pP920LoAAAAJ:roLk4NBRz8UC",
+        "pP920LoAAAAJ:u-x6o8ySG0sC",
+        "pP920LoAAAAJ:ufrVoPGSRksC",
+        "pP920LoAAAAJ:zYLM7Y9cAGgC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 41,
+        "private_capture_sha256": "1bc7ba1e24554ca2190133427c15d2e39ef7c96558cae7e8147295a56a9fcd43",
+        "private_review_sha256": "ea927d1867e6652b6f727a9388045aa8656dc87384f436af8a5fcc808eb722e2",
+        "selected_ids_sha256": "713781d7c41a45ae486df641cba28bab2b21c2ebe94639981e20fd745d4b84f9",
+        "withheld_rows": 3,
+        "withheld_hold_rows": 3,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "b534c614040e9056db885aa8d8b182ae7a1ab8aa99e7378eb9a4df8650429d7f"
+      },
+      "cache_sha256": "76730e09415f50957a238f82b8f7b011fead5e2a584753fb4267c2de0e65d8ae"
+    },
+    {
+      "slug": "hoda-heidari",
+      "person_id": "person-hodaheidari-477d966d",
+      "scholar_id": "GpXyLGwAAAAJ",
+      "expected_source_rows": 21,
+      "selected_author_pub_ids": [
+        "GpXyLGwAAAAJ:0EnyYjriUFMC",
+        "GpXyLGwAAAAJ:2osOgNQ5qMEC",
+        "GpXyLGwAAAAJ:3fE2CSJIrl8C",
+        "GpXyLGwAAAAJ:9yKSN-GCB0IC",
+        "GpXyLGwAAAAJ:BqipwSGYUEgC",
+        "GpXyLGwAAAAJ:IWHjjKOFINEC",
+        "GpXyLGwAAAAJ:IjCSPb-OGe4C",
+        "GpXyLGwAAAAJ:JV2RwH3_ST0C",
+        "GpXyLGwAAAAJ:J_g5lzvAfSwC",
+        "GpXyLGwAAAAJ:M3NEmzRMIkIC",
+        "GpXyLGwAAAAJ:NaGl4SEjCO4C",
+        "GpXyLGwAAAAJ:Tyk-4Ss8FVUC",
+        "GpXyLGwAAAAJ:UebtZRa9Y70C",
+        "GpXyLGwAAAAJ:W7OEmFMy1HYC",
+        "GpXyLGwAAAAJ:_Qo2XoVZTnwC",
+        "GpXyLGwAAAAJ:_xSYboBqXhAC",
+        "GpXyLGwAAAAJ:e5wmG9Sq2KIC",
+        "GpXyLGwAAAAJ:g5m5HwL7SMYC",
+        "GpXyLGwAAAAJ:isC4tDSrTZIC",
+        "GpXyLGwAAAAJ:mVmsd5A6BfQC",
+        "GpXyLGwAAAAJ:maZDTaKrznsC"
+      ],
+      "public_subset": {
+        "observed_visible_rows": 88,
+        "private_capture_sha256": "53db6857871928b79b814831376da68ae8a082aad1bf4a877483e65ec7f27be7",
+        "private_review_sha256": "ea927d1867e6652b6f727a9388045aa8656dc87384f436af8a5fcc808eb722e2",
+        "selected_ids_sha256": "a323be3b92ba89dc82cf7973a20c2e169089294f089bdf83f76d64b87613117a",
+        "withheld_rows": 67,
+        "withheld_hold_rows": 67,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "e5112417c187554b53de1298f8696bf787b82b5ee38a2334d583ec6dcbe34aa1"
+      },
+      "cache_sha256": "cfbc34e60ba30d9795ac338bd11ffaa77329b35b870b4f2480150682e801fec3"
     }
   ],
   "totals": {
-    "observed_visible_rows": 8800,
-    "selected_rows": 2314,
-    "withheld_rows": 6486,
-    "withheld_hold_rows": 6093,
+    "observed_visible_rows": 8841,
+    "selected_rows": 2364,
+    "withheld_rows": 6477,
+    "withheld_hold_rows": 6084,
     "withheld_excluded_rows": 393
   },
-  "selected_ids_sha256": "4a0f46ea9b5a79df46c4803fc3df3deb95dff52301a6471be1be0c47c2144617",
-  "withheld_ids_sha256": "88285ec1b1015ac64d89876a2b683420b81e8a177d85786e788d8dc922ee09db",
+  "selected_ids_sha256": "53931258a1332a2dea2b0e77a5856f3de17e83f807a0d6ed26e3c723fc980594",
+  "withheld_ids_sha256": "3ee9bec3a1cc77ec66f2a2c4528f3a34c0df119f864492c3245adae4ff2407a1",
   "private_capture_files_or_html_copied": false
 }
