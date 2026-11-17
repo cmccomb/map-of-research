@@ -729,19 +729,33 @@
       "withheld_rows": 49,
       "withheld_hold_rows": 49,
       "withheld_excluded_rows": 0
+    },
+    {
+      "person_id": "person-williamwcohen-c58db582",
+      "scholar_id": "8ys-38kAAAAJ",
+      "cache_sha256": "65fa65bc3bc18588dbab44030b9b3279547de3d6f1d77256df76067b1e05d46b",
+      "private_capture_sha256": "2685aedefac293ff80489ff32fe2b08f95fd3b9553ae11c24259a747ff23af82",
+      "private_review_sha256": "9ec32896d85779e0b310dbb1b01c850eb632a13303cfc331357fa544151ce1ee",
+      "selected_ids_sha256": "5f0a3b1f529a8877af991f19abbde185f558cd9696745e039132cf0105fd5586",
+      "withheld_ids_sha256": "461d55d1a2c8b0a103430582bd54e4482ef27fc63ad64044b73914878b5395e6",
+      "observed_visible_rows": 544,
+      "selected_rows": 50,
+      "withheld_rows": 494,
+      "withheld_hold_rows": 494,
+      "withheld_excluded_rows": 0
     }
   ],
   "schema_version": 1,
-  "selected_ids_sha256": "5fdbf693a9df209cc7dbd94fa19c8ae17225c8676e251f6b01af3011bcb4f4d0",
-  "source_selection_manifest_sha256": "a0616626f8f590b4423cb6fa76fcb685e94c7ce62e1a61eaaeade5827dc32733",
-  "source_snapshot_sha256": "b6400b53678fb92ff7b6f24cca5d15a3f065d6b4363016767fd420790f42591d",
+  "selected_ids_sha256": "50343ce4a456db2f00b20c5e38f9a88989ed2f69e80bbc9281669c81a7e72725",
+  "source_selection_manifest_sha256": "ad38af6822aa5dd5766d685b2f45ecedc0b589bf2d13a413f2b64291e709f483",
+  "source_snapshot_sha256": "babab7b47d202779556ec2dfb65f1e8fd376655685c726b18540692ba2f18312",
   "status": "private_full_capture_review_reconciled_to_public_subset",
   "totals": {
-    "observed_visible_rows": 9034,
-    "selected_rows": 2464,
-    "withheld_hold_rows": 6177,
+    "observed_visible_rows": 9578,
+    "selected_rows": 2514,
+    "withheld_hold_rows": 6671,
     "withheld_excluded_rows": 393,
-    "withheld_rows": 6570
+    "withheld_rows": 7064
   },
-  "withheld_ids_sha256": "da7b933bcb1d7a2c1db7656e944eb8741e4a982ed847f8972dc254ee0f5195bb"
+  "withheld_ids_sha256": "d3d6c31e9ef003b312e65073d541df9ddd3b455bba91b529f005bfc19f2ea00a"
 }
