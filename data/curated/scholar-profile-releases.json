@@ -1950,6 +1950,46 @@
         "withheld_excluded_rows": 0,
         "withheld_ids_sha256": "e5112417c187554b53de1298f8696bf787b82b5ee38a2334d583ec6dcbe34aa1"
       }
+    },
+    {
+      "person_id": "person-yichiawang-9a5deef3",
+      "scholar_id": "9gMgFPQAAAAJ",
+      "state": "released",
+      "expected_source_rows": 48,
+      "cache_sha256": "3a8a33205afc7efee36811e5691c25fe0df19d91a3270e703297b7dbd840eb39",
+      "reason": "Forty-eight rows from the complete exact owner-linked Yi-Chia Wang profile are selected. Row 16 remains deferred because its matching current work is under an attribution hold; reviewed title/year continuity reuses eligible canonical works where present, and other placement remains pending.",
+      "reviewed_at": "2026-11-17",
+      "public_subset": {
+        "observed_visible_rows": 49,
+        "private_capture_sha256": "581e90c961d5594fe4479a7cd99dc59f8a88e2dff7cf6503d0c87c2a0b9b31e9",
+        "private_review_sha256": "5df53f93b6424235889a60c7e180eacbbc1ea3408a67f8952dce3f956183a302",
+        "selected_ids_sha256": "cf680f7107692be8456170e329541926b85489a7326a6e076270a978ef93461b",
+        "withheld_rows": 1,
+        "withheld_hold_rows": 1,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "4ba2a12be0ac952906b5aef4094a0eee4c3afac071a888dbf734e0c64b5505d2",
+        "private_rendered_html_sha256": "8cc34ba139a99aa53992afbac9c1f6ab11c8f96beed4a26ae40f061620dbe65b"
+      }
+    },
+    {
+      "person_id": "person-martinjinyezhang-070f4322",
+      "scholar_id": "zjr6n-QAAAAJ",
+      "state": "released",
+      "expected_source_rows": 2,
+      "cache_sha256": "4d1081da9cb315d1c7ea0d39e097854209361ab1caca771d64dc147307430098",
+      "reason": "Two exact owner-linked Martin Jinye Zhang Nature articles are selected with journal-article type; the first has verified DOI and the second retains a genuinely unknown DOI. The other 43 saved rows are candidate-only deferred; the legacy withheld_hold_rows field does not assert adverse authorship.",
+      "reviewed_at": "2026-11-17",
+      "public_subset": {
+        "observed_visible_rows": 45,
+        "private_capture_sha256": "0ba97330a165646d9b0ecb391ffe0b0d6f55d3d5cf2e262ae8617f9dfb5bc871",
+        "private_review_sha256": "f3b499cdfd355a47f33404af91b6a14775428718b18ee6822feacf5f0aeeaa63",
+        "selected_ids_sha256": "c5e1355485d3aeef50d89fc1838aa2b42a7e29eea4b1bbae7c19980fdc2d5c7b",
+        "withheld_rows": 43,
+        "withheld_hold_rows": 43,
+        "withheld_excluded_rows": 0,
+        "withheld_ids_sha256": "592774dd585d52ae8bd8cf75e0700cfeb6e9af42a4e909bb319c378db096e713",
+        "private_rendered_html_sha256": "a781637e62a762bf23a597eb9f006d5ea3db7eae50d86bc195a4660d9641e613"
+      }
     }
   ]
 }
