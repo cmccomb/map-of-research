@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "display_name": "Martin Jinye Zhang",
+  "scholar_id": "zjr6n-QAAAAJ",
+  "fetched_at_utc": "2026-10-30T06:20:42.372Z",
+  "publication_count": 2,
+  "publications": [
+    {
+      "title": "A single-cell transcriptomic atlas characterizes ageing tissues in the mouse",
+      "author": "N Almanzar, ..., MJ Zhang, L Zhou, J Zou, TTM Consortium",
+      "pub_year": "2020",
+      "venue": "Nature 583 (7817), 590-595",
+      "num_citations": 1434,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zjr6n-QAAAAJ&citation_for_view=zjr6n-QAAAAJ:9ZlFYXVOiuMC",
+      "author_pub_id": "zjr6n-QAAAAJ:9ZlFYXVOiuMC",
+      "capture_row_index": 1,
+      "citation_count_display": "1434"
+    },
+    {
+      "title": "Ageing hallmarks exhibit organ-specific temporal signatures",
+      "author": "N Schaum*, B Lehallier*, O Hahn*, ..., TTM Consortium, ..., SR Quake, ...",
+      "pub_year": "2020",
+      "venue": "Nature 583 (7817), 596-602",
+      "num_citations": 808,
+      "pub_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zjr6n-QAAAAJ&citation_for_view=zjr6n-QAAAAJ:ZeXyd9-uunAC",
+      "author_pub_id": "zjr6n-QAAAAJ:ZeXyd9-uunAC",
+      "capture_row_index": 2,
+      "citation_count_display": "808"
+    }
+  ],
+  "browser_capture": {
+    "method": "user_chrome_owner_link_visible_dom_complete",
+    "profile_url": "https://scholar.google.com/citations?user=zjr6n-QAAAAJ&hl=en",
+    "captured_at_utc": "2026-10-30T06:20:42.372Z",
+    "coverage": "complete_visible_profile",
+    "more_remain": false,
+    "displayed_count": 45,
+    "limit": 45,
+    "lifetime_publication_completeness": "not_independently_established",
+    "profile_verified_email_domain": "andrew.cmu.edu",
+    "cache_scope": "reviewed_public_subset",
+    "selected_author_pub_ids": [
+      "zjr6n-QAAAAJ:9ZlFYXVOiuMC",
+      "zjr6n-QAAAAJ:ZeXyd9-uunAC"
+    ],
+    "observed_visible_rows": 45,
+    "private_capture_sha256": "0ba97330a165646d9b0ecb391ffe0b0d6f55d3d5cf2e262ae8617f9dfb5bc871",
+    "private_review_sha256": "f3b499cdfd355a47f33404af91b6a14775428718b18ee6822feacf5f0aeeaa63",
+    "selected_ids_sha256": "c5e1355485d3aeef50d89fc1838aa2b42a7e29eea4b1bbae7c19980fdc2d5c7b",
+    "withheld_rows": 43,
+    "withheld_hold_rows": 43,
+    "withheld_excluded_rows": 0,
+    "withheld_ids_sha256": "592774dd585d52ae8bd8cf75e0700cfeb6e9af42a4e909bb319c378db096e713",
+    "private_rendered_html_sha256": "a781637e62a762bf23a597eb9f006d5ea3db7eae50d86bc195a4660d9641e613"
+  }
+}
