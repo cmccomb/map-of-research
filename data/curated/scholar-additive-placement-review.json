@@ -1,248 +1,296 @@
 {
   "schema_version": 1,
-  "prior_revision": "cbaeecfca59f424c5944595084b1c5bcc7db14ed",
-  "source_snapshot_sha256": "e3286d0a0ea6257b433e96c7222b915be9c611d12f546c2867c247474fba7898",
-  "selected_ids_sha256": "9a73fe97b9dd769d9a645193c18a170c98b108e085c17157db12c81323b57284",
-  "parent_map_sha256": "a652a58ab4f88e773ca026d18e2f70d04f4c786e60b2fe26cfdf1806f013dde4",
-  "candidate_map_content_sha256": "2551abdc028b29c0ca98b6e7cb0a876baced0e11b098cf6c684d935262747e5a",
-  "new_work_ids_sha256": "3bb4f74014113785d8ee69e20192637aaa4b3be70683973fdc1ed9b5589c695f",
+  "prior_revision": "a6010afe28957dfcb0d5e67a737fd200cf84822e",
+  "source_snapshot_sha256": "b6400b53678fb92ff7b6f24cca5d15a3f065d6b4363016767fd420790f42591d",
+  "selected_ids_sha256": "d7cf43d5f92cf8dc18be03a655ef47035889d06c30fbd22f3045e97e6c2bcf61",
+  "parent_map_sha256": "c2295388b60e2793c6beeffc139ecad9ad7d446296801ce3c80d2bcf63d6d318",
+  "candidate_map_content_sha256": "50fab5d9b391ed69e095859a9ff46dd7d6a8c9baa80c2702a7410b1f81516cd1",
+  "new_work_ids_sha256": "3e7d61ea21a61610dbda95782f17584008f67e3b8a22b65fddde68e33bcab710",
   "reported_coauthor_source_sha256": "62ec2ab428b9042eae6833deafac8e2485594f6a2fcc91be2c6d2761e1eb3ebb",
   "decision": "freeze_retained_review_new",
   "reviewed_at": "2026-11-17",
   "new_points": [
     {
-      "work_id": "work-08664c8335bf2387426287e796ba064389f56f1f618e0f02a05850efd9211d51",
+      "work_id": "work-046f31bb3488815df8d388787f6719ce9c2b72a4e3570d9d22b1859b858d7100",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-12b79b626d1283d056c527082f2ad62bcf48a48c497964c0db1327d1886f205b",
+      "work_id": "work-047c49907b28fd0272f4ee1bcae2942763c1ff79c4564c43a71a5570e5345c02",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-1551fb584c2618e8c97f8ce36771c71390f43ee8960df05e29afd0a67d6b938c",
+      "work_id": "work-06a46bc27562d030ede5faaec79376c5b963e6e0264ee83e8cf2b6b8191775d1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-175cbeb0cd84b1035d0c5d70194c74b002d5929f9c5df59a624710af69a44386",
+      "work_id": "work-11c63572f615fca57f668daf9e772cb909fc29f8b8fb73348aeed31461a7cce8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-17714b0812b33b777cf9a34ec12e0200673ab1766de0137585835e9a66b26f3d",
+      "work_id": "work-140960062d0fedab2bc75d9f3fe843abaa790d743b12880d9600cad956708bf0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-1809427a6adaa9dc2780ec5995d7137cec0be179242d3589ed0cc66671701eac",
+      "work_id": "work-14d7f77c642832bcd3deeaa7d75f73e23179c8c8c718912a4d78cc8a76153d25",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-2770ee0951e03850fe8f4361eb2bf78d376673a1c7c5daefdb704c2f3be0e389",
+      "work_id": "work-1773d2eabb21dca6cc972146176180f0a9db5b9ac6076ed8d5be947286f40932",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-2c8ad89e2c98fa7203a69965948e966a56aa81ca5467b04a3081cefc6b77cad5",
+      "work_id": "work-200d8ca55999a031db99fd18c6bdc338dbd37797e99e24b44d23bf4035e63b04",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-2fc75089bfc89c3005a09d7186fff5c30fd183da0454f819f9a0dc3536898533",
+      "work_id": "work-218f20d0853e5a47f355be82f895e9f0a4d43f932950d0fb53135a94382eaa68",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-3016c2278c7a58832b444fc860428f13e4b7253753fe26afed1ac72f8b8a3b79",
+      "work_id": "work-2a1c64b6bf95c6f23476c4f3a557169565ee2b87c9888b6eb80ca163cbb7ef2c",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-38b8356227d0e6bcba922d1dd577be9a6b9a68dc9957950ce17498f98c382592",
+      "work_id": "work-34bd2514c9816d9ad3d4279657d483f20afe68d2914bc205d26d34331d0cd3d5",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-3a18b197e561b7e227c497ed28d2ca7c6bf9f1480b832d3a6c9579c85bf65c8f",
+      "work_id": "work-3a7160dc3aac301f5e73f581ebaec7863cc6fa410d2f7e7d227b996166d96f5b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-3de7a8f97f0f584866d65ee1473afdc4fed99eea36aaef2f80cb327afa1e6f4b",
+      "work_id": "work-3d4bf0c4137b867ed191abdeba116777de731f549076a4b026d1141bec6e4c59",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-438cb9f176002f0cb9ab018a89f21e2326766df6a9ea2fa6d3720639f5b695e2",
+      "work_id": "work-432904112bc689dce758ee2c755d286cdb4338746438519e4a80fd0f0a34c4bf",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-43cbfb68bde1dc77863e669f839ac072169d87f155b06216f52c302eca982faa",
+      "work_id": "work-438dbb2e6caf629c115959169174463c814e70f188eeb5a1c79801a6bb2f175f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-45457586dcb090a53a69adbd8a8124d4cd760d49cdda33293e79562e3e7523b0",
+      "work_id": "work-44704f02da3e1a66fc1bfe6af2a67affebcf51d256be07ac6b6ff174705a1579",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-4d2800d77c37f2c0ea5575f184b8356b57e29168b6d71803208c7c4360da0f59",
+      "work_id": "work-53b90003b5de74a83e6ee92a065b924cd2e0d2e4000ba2f2b24713d95bb2feb0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-4d80a69e06195e193c67100394a6a0172ab2540b95402a83402f857e40d6150b",
+      "work_id": "work-5840700e55d44e12d3d65241dd7df3f3443c736b2171e2bf76c197707473521d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-5332cb68f29a7df1cfe59288f3d2d8f9b17ba03a1f852b77eb6d790f54ded522",
+      "work_id": "work-5a5b725b8c05cc5297ed40631d2fa9e6f6b1af0b5031518db3292b3f7a9d1f68",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-5c5cbfd364bc8e114acb96b06cb0bb549fc2ebf431bf18b60cc633f9679f25d1",
+      "work_id": "work-5add6757178c33f5cf569a361ada010143718fc08ec2258de7a115f9af9513f0",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-6af66fa89767ff73cffd8e947395dde14edaecf324a553bedb7d847d7b4c9d2d",
+      "work_id": "work-60c1bca187565c1da354570b37395faddb1a048370e5f4ad08085986ff09cfdd",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-732d83d2fee2e51320c15ce24f959a0967c1122b617ebd94c639fe75d8f92245",
+      "work_id": "work-6475f14ed8063082936cc8d9ee1b1ddd57b7b2f31904131b240c395e41a1ce0f",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-7aaeb122c0290e5ae09000df2752cee05f50af3dfcc34f9771686fff18b23f91",
+      "work_id": "work-684c593a5d606802f58a65ab2aa162ddf1ebc640a54766236678aea69710c7ee",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-83bbf1e41d6d389119d911ed347a6a5f85bfcb4208ef5d53ff45643b0a8c9810",
+      "work_id": "work-70b4fdbf09ab9df443cfbc2a93dc2ac7ff3115d4a519e5075023d66a4a0c68fc",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-95b5634ccf24413bc2c882323367dd1d68d554f802fef2f3ddbbe49830ecc5c1",
+      "work_id": "work-7c3e4a94b421e9670ec65321dad6a8b60808c81b34e996e00bd22e3359ec194a",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-a402f856c2cdad3d6de51d91ea9f0d8f7f7d4c3130cf15e07eb82072e34f673a",
+      "work_id": "work-8b0e8442d7ba56b5f5244991b0df0c06494b47bf1aeca5a3ac32686f2c9924b9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-afa7544eefbf69859e2222ae6b660a591444d66ac73b4997c48516b9841f428f",
+      "work_id": "work-906d5d0580535a24044807a6e741a4903c329f2ad78ed337c7bb1c96522e1f3d",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-b405fb5818e03ae995c10f1d5814d8b8634e8d6838739e647a3afe211de1dbc3",
+      "work_id": "work-9390deee50757a16f5b38381d7a15b43b915d238c40392322d012cb9c009bd01",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-b6218e87bc9f3a6ea063aeddb248364632c434b7f1ce2e2d161ddfd11517269a",
+      "work_id": "work-955c63836dfda2eb1279a5526f4ba2bfeaa7c86f43d9d43e82c9cb40338d7ad1",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-bad0e4d0c37fe62e70c7fff189c2ee35ad2561263d1e0a6d5cfad87efb68c198",
+      "work_id": "work-9575403448d27aca609f9449e71627c89eece0cc52105802b0f738f8e66f5140",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-c3d0239c5bc8372deada2e35f9b888a12198462dc71bc345607d2e4c2628690c",
+      "work_id": "work-9e8b72612546bb6093e2c5a888d00a5aba37a17449bc4c5e1a4a2df50040e06b",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-c46f836f950c79d9d34c5b5b1deb638be5c926078d7a97e287a0c2f28f66ddbf",
+      "work_id": "work-9e8bd3b3001c6f4e216d5f09c2d07fc68326649b0de7ba77ceebc6e246a06aa8",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-c61c11bd8f2551cac782692330eef63281f47e26c326e748b043140da1d4910e",
+      "work_id": "work-9ea0c21b71d9bc3faff5287a9ac366b354076fe2929a93f786fded09de982c00",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-c7ef26c2313ea264911c80623938bc67623e0f2a7812222aa0f336fe7f530035",
+      "work_id": "work-a0ba2c68ea7a6883a4b8293446bb824a0d4bbe841e65bba6a6346ed41ebcfc47",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-cb6fc42235c57182a341a06ed34826cba9926de8973e51d1f6e3d47b1c43d3c8",
+      "work_id": "work-a32393e72245d0e8d318a7a6e5c66d3f8c2ce9d9efcee0ab83af6936e96053f4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-d9facfa4d1be63913f3134b6e08c8696a0ad5ca50be44db0ee0cee1aa7975520",
+      "work_id": "work-a8d44f2d777da70b571ef817ef13bc9c5d4cce7bf8f00d910a9072bed95db6c4",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-db9494a103d21ef7b761e028d4714312a3ba03d2d492b7edb3b8845f857175e4",
+      "work_id": "work-ac772c1847c50f26c007542cf5b3e81599987de325e7a872a80a38b11fa90dc9",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-ea0c68bec1feac478582aa754dcf85079448eb9a89aedf13cad7545240b22acd",
+      "work_id": "work-ae13b5206dfd36cd22000a2a87bad08cecb49c723e5c1882b3551ef2951cd121",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     },
     {
-      "work_id": "work-ea5e3e5e3a0d082581eba4e6917a85fd538cd4ad22cb7817f6dfb3810d4c7ab8",
+      "work_id": "work-aed2e2702a35547a0cc794278aab1b01112d0275cd1ed2b6d7889aefb23dc5e3",
       "decision": "hold_pending_placement",
       "coordinates": null,
-      "rationale": "Exact owner-linked Yi-Chia Wang or Martin Jinye Zhang work; spatial placement remains pending while the current map is retained."
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-bee7b3f7004cdf1bc4241284875d247c07e65a00536e1fa99c117c6ed94e55a9",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-c07989c2f989802cf1ffd485173cfb8c68c205e40efce90788a9bff1a313899d",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-c269fb69db5416ff82b452c23abd98c05e7550db2e20ba36bcec8ec27733f84e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-dd5946a9181baa4c0c33d7a612fa7dd2e4d5ec1fd8baeba27d5598ccc5266f2e",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-e3a00de1f88b39efe23bb024dcb9c647f7fa976ace80b81b2efd51ae1176c359",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-eb2649723d8f6842accb9f577191ff0f77ed981282544182d4c62e6fdbf2cf70",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-ec842d467062653eed4a63b89d0e01de4dee864dbd80d09d718d9175e6a94f20",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
+    },
+    {
+      "work_id": "work-fb9fb0ab14051c6d926df5349120d91fd865055cd268efdce7a9b1408874a3cd",
+      "decision": "hold_pending_placement",
+      "coordinates": null,
+      "rationale": "Exact owner-linked Sean Welleck work; spatial placement remains pending while the current research map is retained."
     }
   ]
 }
