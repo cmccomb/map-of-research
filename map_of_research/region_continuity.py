@@ -111,6 +111,15 @@ WORK_FINGERPRINT_FIELDS = (
     "source_verified_at",
     "source_verification_urls",
 )
+UNORDERED_FINGERPRINT_FIELDS = frozenset(
+    {
+        "metadata_correction_fields",
+        "source_native_ids",
+        "source_types",
+        "source_urls",
+        "source_verification_urls",
+    }
+)
 PRIOR_WORK_FIELDS = (
     "work_id",
     "map_eligible",
@@ -190,6 +199,30 @@ def _fingerprint(row: Mapping[str, Any]) -> str:
 
 def _fingerprint_fields(row: Mapping[str, Any], fields: tuple[str, ...]) -> str:
     payload = {field: _value(row.get(field)) for field in fields}
+    for field in ("year", "citation_count"):
+        if field in payload and payload[field] is not None:
+            payload[field] = int(payload[field])
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, default=str)
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _retained_visibility_work_fingerprint(row: Mapping[str, Any]) -> str:
+    """Canonicalize evidence sets only when guarding an existing visible work.
+
+    Reordering evidence must not make a retained work disappear, but it also
+    must not count as new evidence that promotes a previously excluded work.
+    """
+
+    payload = {field: _value(row.get(field)) for field in WORK_FINGERPRINT_FIELDS}
+    for field in UNORDERED_FINGERPRINT_FIELDS & payload.keys():
+        values = payload[field]
+        if isinstance(values, list):
+            payload[field] = sorted(
+                values,
+                key=lambda value: json.dumps(
+                    value, ensure_ascii=False, sort_keys=True, default=str
+                ),
+            )
     for field in ("year", "citation_count"):
         if field in payload and payload[field] is not None:
             payload[field] = int(payload[field])
@@ -466,14 +499,21 @@ def reconcile_region_decisions(
         }
         if prior_departments != current_departments:
             continue
-        if _fingerprint_fields(prior, WORK_FINGERPRINT_FIELDS) != _fingerprint_fields(
-            row, WORK_FINGERPRINT_FIELDS
-        ):
-            continue
         previous_outlier = bool(prior.get("map_region_outlier"))
         previous_mapped = bool(prior.get("map_eligible"))
         current_outlier = bool(row.map_region_outlier)
         current_mapped = bool(row.map_eligible)
+        exact_work_match = _fingerprint_fields(
+            prior, WORK_FINGERPRINT_FIELDS
+        ) == _fingerprint_fields(row, WORK_FINGERPRINT_FIELDS)
+        retained_visibility_match = (
+            previous_mapped
+            and current_outlier
+            and _retained_visibility_work_fingerprint(prior)
+            == _retained_visibility_work_fingerprint(row)
+        )
+        if not (exact_work_match or retained_visibility_match):
+            continue
         if not (previous_mapped or previous_outlier) or not (
             current_mapped or current_outlier
         ):
