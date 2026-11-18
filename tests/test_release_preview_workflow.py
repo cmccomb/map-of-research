@@ -342,6 +342,7 @@ def _run_preview(
     prior_person_continuity_review: Path | None = None,
     presentation_gate_failure: bool = False,
     import_origin_mismatch: bool = False,
+    authenticated_read: bool = True,
 ):
     preview = _load_script()
     producer = tmp_path / "producer"
@@ -389,6 +390,10 @@ def _run_preview(
         prior_person_continuity_review=prior_person_continuity_review,
     )
     monkeypatch.setattr(preview, "_parse_args", lambda: args)
+    if authenticated_read:
+        monkeypatch.setenv("HF_TOKEN", "oidc-read-token")
+    else:
+        monkeypatch.delenv("HF_TOKEN", raising=False)
     monkeypatch.setattr(
         preview,
         "_git_head",
@@ -415,7 +420,7 @@ def _run_preview(
 
     class FakeHfApi:
         def __init__(self, token=None):
-            assert token is None
+            assert token == "oidc-read-token"
 
         def repo_info(self, repo_id, repo_type):
             assert repo_id == "ccm/cmu-engineering-publications"
@@ -433,6 +438,7 @@ def _run_preview(
         pass
 
     def fake_publish(*_args, atomic_intent_sink, **kwargs):
+        assert kwargs["hf_token"] == "oidc-read-token"
         approval_path = producer / "data/curated/bio-mcmanus-poster-loss-approval.json"
         assert kwargs["historical_loss_approval_path"] == (
             approval_path if approval and require_bio_release else None
@@ -499,7 +505,7 @@ def _run_preview(
             }
         )
         try:
-            FakeHfApi().create_commit(
+            FakeHfApi(token="oidc-read-token").create_commit(
                 repo_id="ccm/cmu-engineering-publications",
                 repo_type="dataset",
                 parent_commit=PARENT,
@@ -550,6 +556,19 @@ def test_preview_rejects_wrong_import_before_any_hub_access(monkeypatch, tmp_pat
     assert receipt["status"] == "failed_before_hub_write"
     assert "another editable checkout" in receipt["error"]
     assert "hub_head_before" not in receipt
+    assert receipt["blocked_hub_write_calls"] == receipt["hub_writes_completed"] == 0
+
+
+def test_preview_requires_authenticated_hub_reads(monkeypatch, tmp_path):
+    code, receipt = _run_preview(
+        monkeypatch,
+        tmp_path,
+        fail_before_write=False,
+        authenticated_read=False,
+    )
+    assert code == 1
+    assert receipt["status"] == "failed_before_hub_write"
+    assert receipt["error"] == "Read-only preview requires an OIDC read token"
     assert receipt["blocked_hub_write_calls"] == receipt["hub_writes_completed"] == 0
 
 
@@ -671,7 +690,7 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     )
     upload = (ROOT / ".github/workflows/upload.yml").read_text(encoding="utf-8")
     assert "permissions:\n  contents: read" in workflow
-    assert "id-token: write" not in workflow
+    assert "id-token: write" in workflow
     assert "persist-credentials: false" in workflow
     assert "--bio-binding-approval" in upload
     assert "fetch-depth: 0" in workflow
@@ -693,5 +712,6 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "validate_primary_homes.py" in workflow
     assert "upload-artifact@" in workflow
     assert "git push" not in workflow
-    assert "hf auth token" not in workflow
+    assert 'HF_TOKEN="$(hf auth token)"' in workflow
+    assert "HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications" in workflow
     assert "MAP_DURABLE_INTENT_REPO" not in workflow

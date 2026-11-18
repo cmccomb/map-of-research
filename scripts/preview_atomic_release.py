@@ -344,14 +344,15 @@ def main() -> int:
             or baseline.get("artifact_commit") != args.prior_revision
         ):
             raise ValueError("Successful source receipt differs from the Hub parent")
-        for name in ("HF_TOKEN", "HUGGING_FACE_HUB_TOKEN", "HUGGINGFACE_HUB_TOKEN"):
-            os.environ.pop(name, None)
+        token = os.environ.get("HF_TOKEN", "").strip()
+        if not token:
+            raise ValueError("Read-only preview requires an OIDC read token")
         os.environ["HF_HUB_DISABLE_IMPLICIT_TOKEN"] = "1"
         os.environ.pop("MAP_DURABLE_INTENT_REPO", None)
         os.environ.pop("MAP_DURABLE_INTENT_BRANCH", None)
         os.environ["MAP_PRODUCER_COMMIT"] = args.producer_commit
         os.environ["MAP_SOURCE_COMMIT"] = args.snapshot_commit
-        api = HfApi(token=None)
+        api = HfApi(token=token)
         before = api.repo_info(publisher.REPO_ID, repo_type="dataset").sha
         receipt["hub_head_before"] = before
         if before != args.prior_revision:
@@ -419,7 +420,7 @@ def main() -> int:
             publisher.publish_snapshot(
                 raw,
                 manifest,
-                hf_token=None,
+                hf_token=token,
                 people_path=producer / "registry/people.csv",
                 memberships_path=producer / "registry/memberships.csv",
                 departments_path=producer / "registry/departments.csv",
@@ -486,7 +487,7 @@ def main() -> int:
                 raise
         else:
             raise AssertionError("Publisher returned without an intercepted write")
-        after = HfApi(token=None).repo_info(publisher.REPO_ID, repo_type="dataset").sha
+        after = HfApi(token=token).repo_info(publisher.REPO_ID, repo_type="dataset").sha
         receipt["hub_head_after"] = after
         if after != before or receipt["blocked_hub_write_calls"] != 1:
             raise RuntimeError("Hub moved or preview did not block exactly one write")

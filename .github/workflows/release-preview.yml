@@ -36,6 +36,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 # Share the upload lane, so a preview and a real release cannot run together.
 concurrency:
@@ -55,6 +56,7 @@ jobs:
       REQUIRE_BIO_RELEASE: ${{ inputs.require_bio_release }}
       USE_ADDITIVE_PRESENTATION_REVIEW: ${{ inputs.use_additive_presentation_review }}
       HF_HUB_DISABLE_IMPLICIT_TOKEN: "1"
+      HF_OIDC_RESOURCE: datasets/ccm/cmu-engineering-publications
     steps:
       - name: Require the exact main dispatch
         run: |
@@ -160,6 +162,9 @@ jobs:
             --snapshot snapshot/snapshots/cmu-engineering-publications.parquet
       - name: Stage and validate the seven-file release without uploading
         run: |
+          HF_TOKEN="$(hf auth token)"
+          test -n "$HF_TOKEN"
+          export HF_TOKEN
           BIO_RELEASE_ARGS=()
           if [ "$REQUIRE_BIO_RELEASE" = "true" ]; then
             BIO_RELEASE_ARGS+=(--require-bio-release)
