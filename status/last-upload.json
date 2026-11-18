@@ -8,7 +8,7 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "error_message": "Region release-diff gate failed: 2 unexplained losses, 0 unexplained gains, 0 mapped binding changes, 0 unused binding approvals, 0 unused Bio binding approvals, 0 unused Sullivan approvals; 0 unused person-hold approvals; first IDs: ['person-carolynrose-0ff383b5/BMydCgcAAAAJ/BMydCgcAAAAJ:35N4QoGY0k4C/scholar', 'person-yichiawang-9a5deef3/9gMgFPQAAAAJ/9gMgFPQAAAAJ:UeHWp8X0CEIC/scholar'] []",
   "error_type": "RegionReleaseDiffError",
-  "finished_at_utc": "2026-11-18T00:22:34.209025+00:00",
+  "finished_at_utc": "2026-11-18T00:46:23.490838+00:00",
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -71,7 +71,7 @@
     "reconciled_prior_ids": 19
   },
   "snapshot_commit": "39e1e6084b2c7fcc61a27017dbc6c196c9339545",
-  "started_at_utc": "2026-11-18T00:07:40.650693+00:00",
+  "started_at_utc": "2026-11-18T00:33:48.099099+00:00",
   "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/44204885654"
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/44208497283"
 }
