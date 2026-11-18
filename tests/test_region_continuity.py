@@ -180,6 +180,44 @@ def test_unchanged_source_preserves_both_region_decisions_and_person_identity():
     assert receipt["unexplained_gains"] == []
 
 
+def test_set_valued_work_evidence_order_does_not_create_false_region_loss():
+    prior_rows = [observation("person-one", "one")]
+    current_rows = copy.deepcopy(prior_rows)
+    prior_work = work("one", eligible=True, outlier=False)
+    prior_work.update(
+        source_native_ids=["scholar:first", "scholar:second"],
+        source_types=["scholar", "curated_verified"],
+        source_urls=["https://example.test/first", "https://example.test/second"],
+        source_verification_urls=[
+            "https://publisher.test/first",
+            "https://publisher.test/second",
+        ],
+    )
+    current_work = copy.deepcopy(prior_work)
+    for field in (
+        "source_native_ids",
+        "source_types",
+        "source_urls",
+        "source_verification_urls",
+    ):
+        current_work[field].reverse()
+    current_work.update(
+        map_eligible=False,
+        map_region_outlier=True,
+        map_exclusion_reasons=["low_information_region"],
+    )
+
+    result, receipt = reconcile(
+        [current_work], current_rows, [prior_work], prior_rows
+    )
+
+    assert result.map_eligible.tolist() == [True]
+    assert result.map_region_outlier.tolist() == [False]
+    assert receipt["stable_works"] == 1
+    assert receipt["prior_eligible_overrides"] == 1
+    assert receipt["unexplained_losses"] == []
+
+
 def test_parent_pending_carryforward_leaves_unrelated_gain_region_gated():
     pending = work("pending", eligible=False, outlier=False)
     pending.update(
