@@ -71,7 +71,7 @@ if TYPE_CHECKING:
     from .poster_loss_approval import PosterLossApproval
 
 REVISION_PATTERN = re.compile(r"^[0-9a-f]{40}$")
-CONTINUITY_VERSION = "exact-observation-region-continuity-v1"
+CONTINUITY_VERSION = "exact-observation-region-continuity-v2"
 IDENTITY_FIELDS = ("person_id", "scholar_id", "author_pub_id", "source_type")
 FINGERPRINT_FIELDS = (
     "source_record_json",
@@ -119,6 +119,13 @@ UNORDERED_FINGERPRINT_FIELDS = frozenset(
         "source_urls",
         "source_verification_urls",
     }
+)
+# These fields are selected from one of several source observations when a
+# canonical work is assembled.  Their aggregate value may vary with source
+# iteration order even when every underlying observation is byte-for-byte
+# unchanged.  They do not define the work identity or its map geometry.
+NON_GEOMETRIC_AGGREGATE_FIELDS = frozenset(
+    {"authors", "venue", "publication_type", "source_urls"}
 )
 PRIOR_WORK_FIELDS = (
     "work_id",
@@ -228,6 +235,38 @@ def _retained_visibility_work_fingerprint(row: Mapping[str, Any]) -> str:
             payload[field] = int(payload[field])
     encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, default=str)
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _retained_exact_member_aggregate_match(
+    prior_work: Mapping[str, Any],
+    current_work: Mapping[str, Any],
+    members: set[ObservationKey],
+    previous_rows: Mapping[ObservationKey, Mapping[str, Any]],
+    current_rows: Mapping[ObservationKey, Mapping[str, Any]],
+) -> bool:
+    """Accept only multi-source aggregate drift over unchanged observations.
+
+    A single-source canonical metadata change remains release-gated.  For a
+    shared work, however, the aggregate display fields above may be chosen from
+    a different member solely because upstream iteration order changed.  Carry
+    forward a prior inclusion only when every member observation is exact and
+    no identity-, evidence-, year-, title-, or geometry-bearing work field
+    changed.
+    """
+
+    if len(members) < 2 or any(
+        identity not in previous_rows
+        or identity not in current_rows
+        or _fingerprint(previous_rows[identity]) != _fingerprint(current_rows[identity])
+        for identity in members
+    ):
+        return False
+    differences = {
+        field
+        for field in WORK_FINGERPRINT_FIELDS
+        if _value(prior_work.get(field)) != _value(current_work.get(field))
+    }
+    return bool(differences) and differences <= NON_GEOMETRIC_AGGREGATE_FIELDS
 
 
 def _indexed_observations(
@@ -512,7 +551,22 @@ def reconcile_region_decisions(
             and _retained_visibility_work_fingerprint(prior)
             == _retained_visibility_work_fingerprint(row)
         )
-        if not (exact_work_match or retained_visibility_match):
+        retained_exact_member_aggregate_match = (
+            previous_mapped
+            and current_outlier
+            and _retained_exact_member_aggregate_match(
+                prior,
+                row,
+                current_work_members,
+                previous_rows,
+                current_rows,
+            )
+        )
+        if not (
+            exact_work_match
+            or retained_visibility_match
+            or retained_exact_member_aggregate_match
+        ):
             continue
         if not (previous_mapped or previous_outlier) or not (
             current_mapped or current_outlier

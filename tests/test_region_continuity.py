@@ -790,6 +790,44 @@ def test_changed_canonical_work_metadata_does_not_inherit_prior_region_decision(
     }
 
 
+def test_exact_shared_observations_retain_region_decision_across_aggregate_drift():
+    prior_rows = [observation("person-one", "one"), observation("person-two", "one")]
+    current_rows = copy.deepcopy(prior_rows)
+    prior_work = {
+        **work("one", eligible=True, outlier=False),
+        "publication_type": "conference",
+        "source_urls": ["https://source.test/first"],
+    }
+    current_work = {
+        **prior_work,
+        "authors": "A Author and B Author",
+        "venue": "Another aggregate venue",
+        "publication_type": "preprint",
+        "source_urls": ["https://source.test/second"],
+        "map_eligible": False,
+        "map_region_outlier": True,
+        "map_exclusion_reasons": ["low_information_region"],
+    }
+
+    result, receipt = reconcile([current_work], current_rows, [prior_work], prior_rows)
+
+    assert result.map_eligible.tolist() == [True]
+    assert result.map_region_outlier.tolist() == [False]
+    assert receipt["stable_works"] == 1
+    assert receipt["prior_eligible_overrides"] == 1
+    assert receipt["unexplained_losses"] == []
+
+
+def test_exact_shared_observations_do_not_cover_identity_bearing_work_drift():
+    rows = [observation("person-one", "one"), observation("person-two", "one")]
+    changed = {
+        **work("one", eligible=False, outlier=True),
+        "title": "A different canonical work",
+    }
+    with pytest.raises(RegionReleaseDiffError, match="2 unexplained losses"):
+        reconcile([changed], rows, [work("one", eligible=True, outlier=False)], rows)
+
+
 def test_new_eligible_member_does_not_inherit_prior_work_decision():
     old = observation("person-one", "one")
     new = observation("person-two", "one")
