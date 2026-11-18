@@ -207,9 +207,7 @@ def test_set_valued_work_evidence_order_does_not_create_false_region_loss():
         map_exclusion_reasons=["low_information_region"],
     )
 
-    result, receipt = reconcile(
-        [current_work], current_rows, [prior_work], prior_rows
-    )
+    result, receipt = reconcile([current_work], current_rows, [prior_work], prior_rows)
 
     assert result.map_eligible.tolist() == [True]
     assert result.map_region_outlier.tolist() == [False]
