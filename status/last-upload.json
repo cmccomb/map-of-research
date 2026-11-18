@@ -8,7 +8,7 @@
   "dataset_id": "ccm/cmu-engineering-publications",
   "error_message": "Region release-diff gate failed: 2 unexplained losses, 0 unexplained gains, 0 mapped binding changes, 0 unused binding approvals, 0 unused Bio binding approvals, 0 unused Sullivan approvals; 0 unused person-hold approvals; first IDs: ['person-carolynrose-0ff383b5/BMydCgcAAAAJ/BMydCgcAAAAJ:35N4QoGY0k4C/scholar', 'person-yichiawang-9a5deef3/9gMgFPQAAAAJ/9gMgFPQAAAAJ:UeHWp8X0CEIC/scholar'] []",
   "error_type": "RegionReleaseDiffError",
-  "finished_at_utc": "2026-11-18T00:46:23.490838+00:00",
+  "finished_at_utc": "2026-11-18T01:47:07.221945+00:00",
   "math_coverage": {
     "complete_scholar_profiles": 36,
     "complete_scholar_rows": 4080,
@@ -16,7 +16,7 @@
     "unresolved_scholar_id_people": 29
   },
   "prior_revision": "8860ff772612311c6248c5d53b57d6ea3e66cfe0",
-  "producer_commit": "2a8351f8089f69f6242efd1c6a49db44f81203ad",
+  "producer_commit": "5158f9ee78164e10a5c011473284030bf385e60f",
   "region_comparison_revision": "8860ff772612311c6248c5d53b57d6ea3e66cfe0",
   "region_continuity": {
     "approved_bio_binding_changes": [],
@@ -36,8 +36,8 @@
     "missing_sullivan_curated_targets": [],
     "new_source_gains": 50,
     "poster_loss_approval_sha256": null,
-    "prior_eligible_overrides": 161,
-    "prior_excluded_overrides": 90,
+    "prior_eligible_overrides": 170,
+    "prior_excluded_overrides": 103,
     "prior_revision": "8860ff772612311c6248c5d53b57d6ea3e66cfe0",
     "prior_visible_observations": 60797,
     "reviewed_composite_observation_gains": [],
@@ -70,8 +70,8 @@
     "legacy_profiles": 284,
     "reconciled_prior_ids": 19
   },
-  "snapshot_commit": "39e1e6084b2c7fcc61a27017dbc6c196c9339545",
-  "started_at_utc": "2026-11-18T00:33:48.099099+00:00",
+  "snapshot_commit": "b08b2a41875e4b47d5012488ee7e7acaa6675fd8",
+  "started_at_utc": "2026-11-18T01:39:16.441315+00:00",
   "status": "failure",
-  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/44208497283"
+  "workflow_url": "https://github.com/cmccomb/map-of-research/actions/runs/44217186272"
 }
