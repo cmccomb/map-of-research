@@ -37,6 +37,11 @@ on:
         required: false
         default: false
         type: boolean
+      no_write_preview:
+        description: Exercise the authenticated publisher through its first Hub write without sending it
+        required: false
+        default: false
+        type: boolean
       expected_parent_revision:
         description: Exact live Hub parent for a Chemistry delta dispatch
         required: false
@@ -62,6 +67,7 @@ jobs:
     env:
       RELEASE_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.release_mode || 'snapshot' }}
       SNAPSHOT_REF: ${{ github.event_name == 'workflow_dispatch' && inputs.snapshot_ref || github.sha }}
+      NO_WRITE_PREVIEW: ${{ github.event_name == 'workflow_dispatch' && inputs.no_write_preview || false }}
     steps:
       - name: Require an exact release dispatch
         shell: bash
@@ -282,6 +288,22 @@ jobs:
               --public-subset-selection-manifest "$SUBSET_SELECTION"
             )
           fi
+          if [ "$NO_WRITE_PREVIEW" = "true" ]; then
+            python source/scripts/preview_atomic_release.py \
+              "${BIO_RELEASE_ARGS[@]}" \
+              "${ADDITIVE_REVIEW_ARGS[@]}" \
+              --producer-dir source \
+              --snapshot-dir snapshot \
+              --receipt-dir receipt \
+              --output-dir preview \
+              --producer-commit "$MAP_PRODUCER_COMMIT" \
+              --snapshot-commit "$MAP_SOURCE_COMMIT" \
+              --status-commit "$(git -C receipt rev-parse HEAD)" \
+              --snapshot-sha256 "$SNAPSHOT_SHA" \
+              --prior-revision "${{ steps.baseline.outputs.revision }}" \
+              --region-comparison-revision "${{ steps.region.outputs.revision }}"
+            exit 0
+          fi
           map-publish-snapshot \
             "${BIO_RELEASE_ARGS[@]}" \
             "${ADDITIVE_REVIEW_ARGS[@]}" \
@@ -320,7 +342,7 @@ jobs:
             --provisional-holds source/data/curated/scholar-provisional-holds.json \
             --status-file receipt/status/last-upload.json
       - name: Record upload receipt
-        if: ${{ always() && env.RELEASE_MODE == 'snapshot' }}
+        if: ${{ always() && env.RELEASE_MODE == 'snapshot' && env.NO_WRITE_PREVIEW != 'true' }}
         working-directory: receipt
         env:
           RESTORE_PRIOR_REGIONS: ${{ github.event_name == 'workflow_dispatch' && inputs.restore_prior_regions || false }}
@@ -348,6 +370,17 @@ jobs:
           fi
           git commit -m "Record central dataset upload [skip ci]"
           git push origin HEAD:automation/map-snapshot
+      - name: Save authenticated no-write preview
+        if: ${{ always() && env.RELEASE_MODE == 'snapshot' && env.NO_WRITE_PREVIEW == 'true' }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: central-publication-no-write-preview
+          path: |
+            preview/receipt.json
+            preview/stage/
+          if-no-files-found: error
+          retention-days: 3
+          compression-level: 0
       - name: Validate, checkpoint remotely, and publish Chemistry delta
         if: ${{ env.RELEASE_MODE == 'chemistry' }}
         env:

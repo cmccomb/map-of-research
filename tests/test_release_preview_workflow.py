@@ -704,6 +704,11 @@ def test_hosted_preview_has_read_only_permissions_and_upload_lane_lock():
     assert "cache: pip" not in workflow
     assert "cache: pip" not in upload
     assert "preview_atomic_release.py" in workflow
+    assert "no_write_preview:" in upload
+    assert 'if [ "$NO_WRITE_PREVIEW" = "true" ]; then' in upload
+    assert "source/scripts/preview_atomic_release.py" in upload
+    assert "env.NO_WRITE_PREVIEW != 'true'" in upload
+    assert "Save authenticated no-write preview" in upload
     assert "map-validate-math-coverage" in workflow
     assert "map-validate-scholar-coverage" in workflow
     assert (

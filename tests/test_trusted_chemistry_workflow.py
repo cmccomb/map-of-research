@@ -89,6 +89,7 @@ def test_trusted_job_keeps_normal_and_chemistry_paths_mutually_exclusive() -> No
     assert workflow["concurrency"]["group"] == "central-publication-upload-v1"
     assert job["environment"] == "huggingface"
     assert "inputs.release_mode || 'snapshot'" in job["env"]["RELEASE_MODE"]
+    assert "inputs.no_write_preview || false" in job["env"]["NO_WRITE_PREVIEW"]
     assert steps["Set up Python"]["with"] == {"python-version": "3.12"}
 
     snapshot_only = (
@@ -113,7 +114,12 @@ def test_trusted_job_keeps_normal_and_chemistry_paths_mutually_exclusive() -> No
     for name in chemistry_only:
         assert steps[name]["if"] == "${{ env.RELEASE_MODE == 'chemistry' }}"
     assert steps["Record upload receipt"]["if"] == (
-        "${{ always() && env.RELEASE_MODE == 'snapshot' }}"
+        "${{ always() && env.RELEASE_MODE == 'snapshot' "
+        "&& env.NO_WRITE_PREVIEW != 'true' }}"
+    )
+    assert steps["Save authenticated no-write preview"]["if"] == (
+        "${{ always() && env.RELEASE_MODE == 'snapshot' "
+        "&& env.NO_WRITE_PREVIEW == 'true' }}"
     )
     assert (
         "env.RELEASE_MODE == 'snapshot'"
