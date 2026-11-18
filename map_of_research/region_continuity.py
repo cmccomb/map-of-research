@@ -753,6 +753,51 @@ def reconcile_region_decisions(
         - approved_person_hold_losses
         - approved_mccomb_losses
     )
+    unexplained_loss_diagnostics = []
+    for identity in unexplained_losses:
+        prior_work_id = str(previous_rows[identity].get("work_id") or "")
+        current = current_rows.get(identity)
+        current_work_id = str(current.get("work_id") or "") if current else ""
+        prior_work = previous_works.get(prior_work_id) or {}
+        current_work = final_works.get(current_work_id) or {}
+        prior_members = previous_members.get(prior_work_id, set())
+        current_work_members = current_members.get(current_work_id, set())
+        unexplained_loss_diagnostics.append(
+            {
+                "observation": _display(identity),
+                "prior_work_id": prior_work_id,
+                "current_work_id": current_work_id,
+                "same_work_id": prior_work_id == current_work_id,
+                "same_members": prior_members == current_work_members,
+                "same_departments": set(_value(prior_work.get("department_ids")) or [])
+                == set(_value(current_work.get("department_ids")) or []),
+                "same_quality_version": prior_work.get("quality_assessment_version")
+                == current_work.get("quality_assessment_version"),
+                "exact_work_fingerprint": _fingerprint_fields(
+                    prior_work, WORK_FINGERPRINT_FIELDS
+                )
+                == _fingerprint_fields(current_work, WORK_FINGERPRINT_FIELDS),
+                "retained_work_fingerprint": _retained_visibility_work_fingerprint(
+                    prior_work
+                )
+                == _retained_visibility_work_fingerprint(current_work),
+                "exact_observation_fingerprint": bool(current)
+                and _fingerprint(previous_rows[identity]) == _fingerprint(current),
+                "prior_map_eligible": bool(prior_work.get("map_eligible")),
+                "current_map_eligible": bool(current_work.get("map_eligible")),
+                "current_map_region_outlier": bool(
+                    current_work.get("map_region_outlier")
+                ),
+                "current_exclusion_reasons": list(
+                    _value(current_work.get("map_exclusion_reasons")) or []
+                ),
+                "work_fingerprint_field_differences": [
+                    field
+                    for field in WORK_FINGERPRINT_FIELDS
+                    if _value(prior_work.get(field)) != _value(current_work.get(field))
+                ],
+            }
+        )
     verified_gains = sorted(
         identity
         for identity in gains
@@ -802,6 +847,7 @@ def reconcile_region_decisions(
             output["map_region_prior_excluded_override"].sum()
         ),
         "reviewed_losses": [_display(item) for item in reviewed_losses],
+        "unexplained_loss_diagnostics": unexplained_loss_diagnostics,
         "approved_sullivan_held_losses": (
             [_display(item) for item in sorted(sullivan_loss_approval.held_identities)]
             if sullivan_loss_approval is not None

@@ -763,13 +763,31 @@ def test_changed_raw_source_does_not_inherit_prior_inclusion():
 def test_changed_canonical_work_metadata_does_not_inherit_prior_region_decision():
     row = observation("person", "one")
     changed = {**work("one", eligible=False, outlier=True), "authors": "Another Author"}
-    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses"):
+    with pytest.raises(RegionReleaseDiffError, match="1 unexplained losses") as error:
         reconcile(
             [changed],
             [row],
             [work("one", eligible=True, outlier=False)],
             [row],
         )
+    diagnostic = error.value.receipt["unexplained_loss_diagnostics"][0]
+    assert diagnostic == {
+        "observation": "person/profile/profile:shared-row/scholar",
+        "prior_work_id": "one",
+        "current_work_id": "one",
+        "same_work_id": True,
+        "same_members": True,
+        "same_departments": True,
+        "same_quality_version": True,
+        "exact_work_fingerprint": False,
+        "retained_work_fingerprint": False,
+        "exact_observation_fingerprint": True,
+        "prior_map_eligible": True,
+        "current_map_eligible": False,
+        "current_map_region_outlier": True,
+        "current_exclusion_reasons": ["low_information_region"],
+        "work_fingerprint_field_differences": ["authors"],
+    }
 
 
 def test_new_eligible_member_does_not_inherit_prior_work_decision():
