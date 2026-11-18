@@ -809,9 +809,7 @@ def test_exact_shared_observations_retain_region_decision_across_aggregate_drift
         "map_exclusion_reasons": ["low_information_region"],
     }
 
-    result, receipt = reconcile(
-        [current_work], current_rows, [prior_work], prior_rows
-    )
+    result, receipt = reconcile([current_work], current_rows, [prior_work], prior_rows)
 
     assert result.map_eligible.tolist() == [True]
     assert result.map_region_outlier.tolist() == [False]
